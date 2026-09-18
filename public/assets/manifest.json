@@ -1,0 +1,71 @@
+{
+  "hero": [
+    "hero-0.png",
+    "hero-1.png",
+    "hero-2.png",
+    "hero-3.png",
+    "hero-4.png",
+    "hero-5.png"
+  ],
+  "trader": [
+    "trader-0.png"
+  ],
+  "chest": [
+    "chest-0.png"
+  ],
+  "stash": [
+    "stash-0.png"
+  ],
+  "skeleton": [
+    "skeleton-0.png",
+    "skeleton-1.png",
+    "skeleton-2.png",
+    "skeleton-3.png",
+    "skeleton-4.png",
+    "skeleton-5.png",
+    "skeleton-6.png"
+  ],
+  "zombie": [
+    "zombie-0.png",
+    "zombie-1.png",
+    "zombie-2.png",
+    "zombie-3.png",
+    "zombie-4.png",
+    "zombie-5.png",
+    "zombie-6.png",
+    "zombie-7.png"
+  ],
+  "torch": [
+    "torch-0.png",
+    "torch-1.png",
+    "torch-2.png",
+    "torch-3.png"
+  ],
+  "staff": [
+    "staff-0.png"
+  ],
+  "sword": [
+    "sword-0.png"
+  ],
+  "gem": [
+    "gem-0.png"
+  ],
+  "support": [
+    "support-0.png"
+  ],
+  "barrel": [
+    "barrel-0.png"
+  ],
+  "armor": [
+    "armor-0.png"
+  ],
+  "bow": [
+    "bow-0.png"
+  ],
+  "key": [
+    "key-0.png"
+  ],
+  "relic": [
+    "relic-0.png"
+  ]
+}
