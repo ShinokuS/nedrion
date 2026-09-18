@@ -2,6 +2,8 @@
 
 User-provided Hero Siege assets, copied from D:/Temp/HERO_SIEGE. These are reference assets for this prototype; no redistribution license is granted by this repository.
 
+The canvas UI and world pass use the curated files under `public/assets/hs/`. The exact copied filenames and their source directories are recorded in `public/assets/hs/manifest.json`.
+
 - hero: Adventurer_Npc_spr
 - trader: Brynjar_NPC_spr
 - chest: Dungeon_Chest_Closed_spr
