@@ -1,4 +1,6 @@
 import Phaser from "phaser";
+import { installWorld } from './world.js';
+import { preloadOriginal, installPresentation } from './presentation.js';
 import {
   state,
   openPanel,
@@ -33,6 +35,7 @@ export class RaidScene extends Phaser.Scene {
     super("world");
   }
   preload() {
+    preloadOriginal(this);
     const counts = {
       hero: 6,
       skeleton: 7,
@@ -42,6 +45,7 @@ export class RaidScene extends Phaser.Scene {
       stash: 1,
       trader: 1,
       barrel: 1,
+      staff: 1, sword: 1, bow: 1, armor: 1, gem: 1, support: 1, key: 1, relic: 1,
     };
     for (const [key, count] of Object.entries(counts))
       for (let n = 0; n < count; n++)
@@ -121,6 +125,7 @@ export class RaidScene extends Phaser.Scene {
     );
     this.input.keyboard.addCapture(["SPACE", "UP", "DOWN", "LEFT", "RIGHT"]);
     this.input.keyboard.on("keydown", (event) => {
+      if (state.mode === "result" || state.panel === "level") return;
       if (event.code === "KeyI") state.panel ? closePanel() : openPanel("inventory");
       if (event.code === "Escape") state.panel ? closePanel() : openPanel("pause");
     });
@@ -165,7 +170,8 @@ export class RaidScene extends Phaser.Scene {
       fontSize: "12px",
       color: "#c7c4af",
       stroke: "#101516",
-      strokeThickness: 4,
+      strokeThickness: 1,
+      resolution: 2,
     };
   }
   startHub() {
@@ -250,7 +256,7 @@ export class RaidScene extends Phaser.Scene {
         })
         .setOrigin(0.5);
     });
-    [8, 10, 11].forEach((n, i) => {
+    [rooms.length-1, rooms.length-3, rooms.length-5].forEach((n, i) => {
       const r = rooms[n],
         o = this.addObject(
           "exit",
@@ -270,7 +276,7 @@ export class RaidScene extends Phaser.Scene {
     this.createFog();
     this.createCanvasHud();
     this.renderOverlay(true);
-    toast("Найдите добычу и выход. До прихода тьмы — 3:30.");
+
   }
   drawMap(hub) {
     const random = rng(hub ? 72 : this.seed);
@@ -407,7 +413,8 @@ export class RaidScene extends Phaser.Scene {
     this.fog.setBlendMode(Phaser.BlendModes.NORMAL);
   }
   uiText(key, x, y, text, style = {}) {
-    const t = this.add.text(x, y, text, {fontFamily: "Georgia, serif", fontSize: "14px", color: "#f0dfb0", stroke: "#150b0c", strokeThickness: 4, ...style});
+    const t = this.add.text(x, y, text, {fontFamily: "Georgia, serif", fontSize: "14px", color: "#f0dfb0", stroke: "#150b0c", strokeThickness: 1,
+      resolution: 2, ...style});
     this.ui.add(t); this.uiTexts[key] = t; return t;
   }
   createCanvasHud() {
@@ -628,6 +635,7 @@ export class RaidScene extends Phaser.Scene {
     this.heroLight.setPosition(this.hero.x, this.hero.y).setDepth(1);
     if (this.heroGear) this.heroGear.setPosition(this.hero.x, this.hero.y).setDepth(this.hero.y + 21).setScale(dx < 0 ? -1 : 1, 1);
     const nearby = this.objects
+      .filter((o) => o === this.hoverObject)
       .filter((o) => Math.hypot(o.x - this.hero.x, o.y - this.hero.y) < 76)
       .sort(
         (a, b) =>
@@ -672,7 +680,7 @@ export class RaidScene extends Phaser.Scene {
     if (this.flowTime <= 0) {
       this.flowTime = 0.5;
       this.flow = flowField(
-        this.map,
+        this.navigationMap || this.map,
         Math.floor(this.hero.x / T),
         Math.floor(this.hero.y / T),
       );
@@ -810,9 +818,10 @@ export class RaidScene extends Phaser.Scene {
     const roll = this.random();
     const type = this.wave < 2 ? (roll < 0.45 ? "skeleton" : "zombie") : roll < 0.18 ? "bat" : roll < 0.38 ? "rat" : roll < 0.58 ? "imp" : roll < 0.76 ? "archer" : roll < 0.88 ? "skeleton" : "zombie";
     const base = type === "skeleton" ? "hs-skeleton-down-0" : type === "zombie" ? "hs-zombie-down-0" : `hs-${type}-down-0`;
-    const sprite = this.add.sprite(x, y, base).play(`hs-${type}-down`);
+    const mobAnim=this.anims.exists(`mob-${type}-walk-down`)?`mob-${type}-walk-down`:`hs-${type}-down`;
+    const sprite = this.add.sprite(x, y, base).play(mobAnim);
     const scale = type === "bat" ? 0.8 : type === "rat" ? 0.78 : type === "imp" ? 0.95 : type === "archer" ? 1.05 : type === "zombie" ? 1.15 : 1;
-    sprite.setScale(scale);
+    sprite.setScale(scale).setOrigin(.5,1);
     const stats = {skeleton: [53, 1], zombie: [39, 1.15], bat: [92, 0.65], rat: [78, 0.6], imp: [48, 0.9], archer: [31, 1.05]}[type];
     this.enemies.push({
       sprite,
@@ -847,18 +856,25 @@ export class RaidScene extends Phaser.Scene {
       }
       const distance = Math.hypot(s.x - this.hero.x, s.y - this.hero.y);
       const a = Math.atan2(target.y - s.y, target.x - s.x);
+      const aim = Math.atan2(this.hero.y - s.y, this.hero.x - s.x);
       if (e.type !== "archer" || distance > 240) this.moveBody(s, Math.cos(a) * e.speed * dt, Math.sin(a) * e.speed * dt, 8);
-      const horizontal = Math.abs(Math.cos(a)) > Math.abs(Math.sin(a));
-      const direction = horizontal ? "left" : Math.sin(a) < 0 ? "up" : "down";
-      const anim = `hs-${e.type}-${direction}`;
+      const facing = e.type === "archer" && distance < 240 ? aim : a;
+      const horizontal = Math.abs(Math.cos(facing)) > Math.abs(Math.sin(facing));
+      const direction = horizontal ? "left" : Math.sin(facing) < 0 ? "up" : "down";
+      e.strike = Math.max(0,(e.strike||0)-dt);
+      const attack = this.anims.exists(`mob-${e.type}-attack-${direction}`)?`mob-${e.type}-attack-${direction}`:`original-atk-${e.type}-${direction}`;
+      const movement = e.type === "archer" && distance < 240 ? "idle" : "walk";
+      const locomotion = this.anims.exists(`mob-${e.type}-${movement}-${direction}`)?`mob-${e.type}-${movement}-${direction}`:`hs-${e.type}-${direction}`;
+      const anim = e.strike>0 && this.anims.exists(attack) ? attack : locomotion;
       if (s.anims.currentAnim?.key !== anim) s.play(anim);
-      s.setDepth(s.y + 15).setFlipX(horizontal && Math.cos(a) > 0);
+      s.setDepth(s.y + 15).setFlipX(horizontal && Math.cos(facing) > 0);
       if (e.type === "archer") {
         e.shoot -= dt;
         if (e.shoot <= 0 && distance < 330) {
           e.shoot = Math.max(0.7, 2.3 - this.wave * 0.08);
-          const projectile = this.add.image(s.x, s.y, "hs-archer-projectile-0").setScale(0.75).setDepth(s.y + 4);
-          this.enemyBullets.push({sprite: projectile, vx: Math.cos(a) * 210, vy: Math.sin(a) * 210, life: 2.1, damage: 7 + this.wave});
+          e.strike = .5;
+          const projectile = this.add.image(s.x+Math.cos(aim)*12, s.y-12, "hs-archer-projectile-0").setRotation(aim).setScale(1).setDepth(s.y + 4);
+          this.enemyBullets.push({sprite: projectile, vx: Math.cos(aim) * 210, vy: Math.sin(aim) * 210, life: 2.1, damage: 7 + this.wave});
         }
       }
       e.hit = Math.max(0, e.hit - dt);
@@ -867,8 +883,8 @@ export class RaidScene extends Phaser.Scene {
         Math.hypot(s.x - this.hero.x, s.y - this.hero.y) < 24 &&
         this.invincible <= 0
       ) {
-        const armor = state.profile.equipment.armor;
-        const defense = armor ? armor.armor * RARITIES[armor.rarity].mult : 0;
+        const defense = Object.values(state.profile.equipment).reduce((sum, gear) => sum + (gear?.armor || 0) * RARITIES[gear?.rarity || 0].mult, 0);
+        e.strike = .55;
         this.hp -= Math.max(3, 11 + this.wave - defense);
         this.invincible = 0.65;
         this.extraction = null;
@@ -925,6 +941,7 @@ export class RaidScene extends Phaser.Scene {
         this.nova(skill);
         continue;
       }
+      this.attackUntil = this.clock + .3;
       const angle = Math.atan2(
           target.e.sprite.y - this.hero.y,
           target.e.sprite.x - this.hero.x,
@@ -938,16 +955,9 @@ export class RaidScene extends Phaser.Scene {
               : 0x9bc8ef;
       for (let n = 0; n < count; n++) {
         const a = angle + (n - (count - 1) / 2) * 0.19;
-        const sprite =
-          skill.type === "slash"
-            ? this.add.rectangle(this.hero.x, this.hero.y, 9, 32, color)
-            : this.add.ellipse(
-                this.hero.x,
-                this.hero.y,
-                skill.type === "arrow" ? 19 : 16,
-                skill.type === "arrow" ? 4 : 10,
-                color,
-              );
+        const sprite = this.add.sprite(this.hero.x, this.hero.y,
+          skill.type === "slash" ? "original-slash-0" : skill.type === "arrow" ? "hs-archer-projectile-0" : "original-fireball-0").setScale(skill.type === "slash" ? 0.55 : skill.type === "arrow" ? 0.7 : 0.65);
+        if(skill.type !== 'arrow') sprite.play(skill.type==='slash'?'original-slash':'original-fireball');
         sprite.setRotation(a).setDepth(4000);
         this.bullets.push({
           sprite,
@@ -988,10 +998,7 @@ export class RaidScene extends Phaser.Scene {
     this.enemies = this.enemies.filter((e) => {
       if (e.hp > 0) return true;
       this.kills++;
-      const orb = this.add
-        .circle(e.sprite.x, e.sprite.y, 4, 0x90c8bf)
-        .setStrokeStyle(1, 0xceedce, 0.6)
-        .setDepth(5);
+      const orb = this.add.image(e.sprite.x, e.sprite.y, 'original-experience-0').setScale(.55).setDepth(5);
       this.drops.push({ sprite: orb, xp: 3 });
       if (this.random() < 0.045) {
         const c = this.addObject(
@@ -1007,7 +1014,10 @@ export class RaidScene extends Phaser.Scene {
         c.progress = 0;
         this.add.circle(c.x, c.y, 5, 0xd0b068, 0.6);
       }
-      e.sprite.destroy();
+      const direction = e.sprite.anims.currentAnim?.key.split('-').at(-1)||'down';
+      const death = this.anims.exists(`mob-${e.type}-dies-${direction}`)?`mob-${e.type}-dies-${direction}`:`original-death-${e.type}-${direction}`;
+      if(this.anims.exists(death)) { e.sprite.clearTint().play(death).setDepth(e.sprite.y-1);this.tweens.add({targets:e.sprite,alpha:0,delay:8000,duration:2000,onComplete:()=>e.sprite.destroy()}); }
+      else e.sprite.destroy();
       return false;
     });
   }
@@ -1092,3 +1102,6 @@ export class RaidScene extends Phaser.Scene {
     if (this.hero) this.hudMap.fillStyle(0xece7c7).fillCircle(ox + (this.hero.x / T) * sx, oy + (this.hero.y / T) * sy, 3);
   }
 }
+const simulationRaid = RaidScene.prototype.startRaid;
+installPresentation(RaidScene);
+installWorld(RaidScene, simulationRaid);

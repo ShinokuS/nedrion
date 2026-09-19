@@ -20,3 +20,6 @@ The canvas UI and world pass use the curated files under `public/assets/hs/`. Th
 - bow: Weapon_Bow_Arrow_of_Niflheim_spr
 - key: Ancient_Key_spr
 - relic: Relic_Aarons_Staff_spr
+
+
+Дополнительный набор: `original/manifest.json` содержит численно отсортированные кадры с точными путями исходного архива. Импортёр `scripts/import-assets.py` копирует оригинальные PNG без перерисовки. Для интерфейса и костра используются отдельные прямоугольные области оригинальных текстур. Анимации героя — Armored_Knight; врагов — Skeleton_Crypt, Zombie, Rat, Imp, Crypt_Skeleton_Archer.

@@ -46,8 +46,12 @@ export const game = new Phaser.Game({
   backgroundColor: "#090708",
   pixelArt: true,
   antialias: false,
-  scale: { mode: Phaser.Scale.RESIZE, width: 1280, height: 720 },
+  scale: { mode: Phaser.Scale.RESIZE, autoCenter: Phaser.Scale.CENTER_BOTH, width: 1280, height: 720 },
   scene: [RaidScene],
   render: { roundPixels: true },
   audio: { noAudio: true },
 });
+
+if(import.meta.env.DEV && new URLSearchParams(location.search).has('smoke')) import('../tests/browser-smoke.js');
+
+if(import.meta.env.DEV && new URLSearchParams(location.search).has('inspect')) import('../tests/visual-fixture.js');

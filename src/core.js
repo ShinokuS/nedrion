@@ -115,6 +115,9 @@ export const DEFS = {
   coin: { name: "Древняя печать", kind: "loot", w: 1, h: 1, icon: "coin" },
   key: { name: "Ключ от костяных врат", kind: "key", w: 1, h: 2, icon: "key" },
 };
+for (const [type, name, armor] of [['shield','Щит стражника',2],['helmet','Басинет стражника',2],['gloves','Кожаные перчатки',1],['boots','Походные сапоги',1],['belt','Пояс искателя',1],['ring','Железное кольцо',1],['amulet','Серебряный амулет',1]]) {
+  DEFS[type] = { name, kind:'armor', slot:type, w:type === 'ring' ? 1 : 2, h:type === 'ring' || type === 'belt' ? 1 : 2, icon:type, armor, sockets:type === 'helmet' ? 2 : 1 };
+}
 let serial = 0;
 export function item(type, rarity = 0) {
   const d = DEFS[type];
@@ -129,7 +132,7 @@ export function item(type, rarity = 0) {
     value: Math.round((d.kind === "loot" ? 30 : 15) * RARITIES[rarity].mult),
   };
 }
-export function grid(w = 8, h = 5) {
+export function grid(w = 12, h = 5) {
   return { w, h, items: [] };
 }
 export function fits(g, it, x, y, ignoreId) {
@@ -197,7 +200,9 @@ export function equippedSkills(equip) {
 export function starter() {
   const weapon = item("staff");
   weapon.sockets = [item("fire"), item("multi"), item("haste")];
-  return { weapon, armor: item("armor") };
+  const kit = { weapon, armor: item("armor"), helmet:item('helmet'), boots:item('boots') };
+  for (const gear of Object.values(kit)) { gear.free = true; for (const gem of gear.sockets || []) if (gem) gem.free = true; }
+  return kit;
 }
 export function newProfile() {
   const bag = grid();
@@ -227,6 +232,7 @@ export function recoverProfile(raw) {
     if (p.version !== 1 || !p.bag?.items || !p.stash?.items || !p.equipment)
       throw Error();
     if (p.inRaid) loseRaid(p);
+    p.bag.w = Math.max(12, p.bag.w);
     return p;
   } catch {
     return newProfile();
@@ -243,51 +249,43 @@ export function rng(seed) {
   };
 }
 export function generateDungeon(seed) {
-  const random = rng(seed),
-    w = 76,
-    h = 58,
-    tiles = Array.from({ length: h }, () => Array(w).fill(0)),
-    rooms = [];
-  const carve = (x, y) => {
-    if (x > 0 && y > 0 && x < w - 1 && y < h - 1) tiles[y][x] = 1;
-  };
-  for (let row = 0; row < 3; row++)
-    for (let col = 0; col < 4; col++) {
-      const rw = 10 + Math.floor(random() * 5),
-        rh = 9 + Math.floor(random() * 4),
-        x = 3 + col * 18 + Math.floor(random() * 3),
-        y = 3 + row * 18 + Math.floor(random() * 3);
-      const room = {
-        x,
-        y,
-        w: rw,
-        h: rh,
-        cx: x + Math.floor(rw / 2),
-        cy: y + Math.floor(rh / 2),
-      };
-      for (let yy = y; yy < y + rh; yy++)
-        for (let xx = x; xx < x + rw; xx++) carve(xx, yy);
-      if (rooms.length) {
-        const prev = rooms.reduce((a, b) =>
-          Math.hypot(a.cx - room.cx, a.cy - room.cy) <
-          Math.hypot(b.cx - room.cx, b.cy - room.cy)
-            ? a
-            : b,
-        );
-        let xx = prev.cx,
-          yy = prev.cy;
-        while (xx !== room.cx) {
-          xx += Math.sign(room.cx - xx);
-          for (let d = -1; d <= 1; d++) carve(xx, yy + d);
-        }
-        while (yy !== room.cy) {
-          yy += Math.sign(room.cy - yy);
-          for (let d = -1; d <= 1; d++) carve(xx + d, yy);
-        }
-      }
-      rooms.push(room);
+  const random = rng(seed), w = 160, h = 120;
+  const tiles = Array.from({length:h},()=>Array(w).fill(0)), rooms=[];
+  const carve=(x,y)=>{if(x>1&&y>1&&x<w-2&&y<h-2)tiles[y][x]=1;};
+  for(let attempt=0;attempt<1500&&rooms.length<28;attempt++){
+    const rw=10+Math.floor(random()*13),rh=9+Math.floor(random()*11);
+    const x=8+Math.floor(random()*(w-rw-16)),y=8+Math.floor(random()*(h-rh-16));
+    if(rooms.some(r=>x<r.x+r.w+5&&x+rw+5>r.x&&y<r.y+r.h+5&&y+rh+5>r.y))continue;
+    const shape=Math.floor(random()*3);
+    const r={x,y,w:rw,h:rh,cx:x+Math.floor(rw/2),cy:y+Math.floor(rh/2),theme:rooms.length%5,shape};
+    for(let yy=y;yy<y+rh;yy++)for(let xx=x;xx<x+rw;xx++){
+      const corner=(xx<x+2||xx>=x+rw-2)&&(yy<y+2||yy>=y+rh-2);
+      const alcove=shape===2&&xx>x+Math.floor(rw/2)+2&&yy<y+Math.floor(rh/2)-2;
+      if((shape===0||!corner)&&!alcove)carve(xx,yy);
     }
-  return { w, h, tiles, rooms, seed };
+    rooms.push(r);
+  }
+  rooms.sort((a,b)=>Math.hypot(a.cx-w/2,a.cy-h/2)-Math.hypot(b.cx-w/2,b.cy-h/2));
+  const edges=[],joined=new Set([0]);
+  while(joined.size<rooms.length){
+    let best=null;
+    for(const a of joined)for(let b=0;b<rooms.length;b++)if(!joined.has(b)){
+      const d=Math.hypot(rooms[a].cx-rooms[b].cx,rooms[a].cy-rooms[b].cy);
+      if(!best||d<best.d)best={a,b,d};
+    }
+    edges.push([best.a,best.b]);joined.add(best.b);
+  }
+  // Extra connections create loops and alternative routes rather than a single chain.
+  for(let i=0;i<rooms.length;i++)if(random()<.4){
+    const nearest=rooms.map((r,j)=>({j,d:Math.hypot(r.cx-rooms[i].cx,r.cy-rooms[i].cy)})).filter(v=>v.j!==i&&!edges.some(([a,b])=>a===i&&b===v.j||b===i&&a===v.j)).sort((a,b)=>a.d-b.d)[0];
+    if(nearest)edges.push([i,nearest.j]);
+  }
+  for(const [a,b] of edges){
+    let x=rooms[a].cx,y=rooms[a].cy;const dest=rooms[b],horizontal=random()<.5,width=random()<.3?2:1;
+    const step=(axis)=>{while(axis==='x'?x!==dest.cx:y!==dest.cy){if(axis==='x')x+=Math.sign(dest.cx-x);else y+=Math.sign(dest.cy-y);for(let d=-width;d<=width;d++)carve(x+(axis==='y'?d:0),y+(axis==='x'?d:0));}};
+    step(horizontal?'x':'y');step(horizontal?'y':'x');
+  }
+  return {w,h,tiles,rooms,edges,seed};
 }
 export function flowField(map, x, y) {
   const dist = Array.from({ length: map.h }, () => Array(map.w).fill(Infinity)),
@@ -325,7 +323,7 @@ export function rollLoot(random = Math.random) {
     "multi",
     "haste",
     "pierce",
-    "relic",
+    "helmet", "gloves", "boots", "belt", "ring", "amulet", "relic",
     "coin",
   ];
   const r = random();

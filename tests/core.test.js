@@ -69,7 +69,8 @@ test("100 procedural seeds have connected, reachable rooms", () => {
     const m = generateDungeon(seed),
       r = m.rooms[0],
       field = flowField(m, r.cx, r.cy);
-    assert.equal(m.rooms.length, 12);
+    assert.ok(m.rooms.length >= 18 && m.rooms.length <= 28);
+    assert.ok(m.edges.length >= m.rooms.length - 1);
     for (const room of m.rooms)
       assert.ok(Number.isFinite(field[room.cy][room.cx]), `seed ${seed}`);
     for (let y = 0; y < m.h; y++)
