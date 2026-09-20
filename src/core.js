@@ -1,3 +1,6 @@
+import {RAID_MAPS} from './raid-maps.js';
+import gearArt from './gear-art.json' with {type:'json'};
+import {linkedSupports} from './skill-rules.js';
 export const RARITIES = [
   { name: "Обычный", color: "#a0aaa5", mult: 1 },
   { name: "Магический", color: "#6aa5e5", mult: 1.35 },
@@ -87,7 +90,7 @@ export const DEFS = {
     w: 1,
     h: 1,
     icon: "support",
-    description: "Рядом с камнем умения: открывает улучшение +1 снаряд.",
+    description: "В связанной цепочке умения: открывает улучшение +1 снаряд.",
   },
   haste: {
     name: "Ускорение",
@@ -95,7 +98,7 @@ export const DEFS = {
     w: 1,
     h: 1,
     icon: "support",
-    description: "Рядом с камнем умения: открывает улучшение скорости атак.",
+    description: "В связанной цепочке умения: открывает улучшение скорости атак.",
   },
   pierce: {
     name: "Пробитие",
@@ -103,7 +106,7 @@ export const DEFS = {
     w: 1,
     h: 1,
     icon: "support",
-    description: "Рядом с камнем умения: открывает пробитие ещё одной цели.",
+    description: "В связанной цепочке умения: открывает пробитие ещё одной цели.",
   },
   relic: {
     name: "Реликвия забытого культа",
@@ -116,7 +119,29 @@ export const DEFS = {
   key: { name: "Ключ от костяных врат", kind: "key", w: 1, h: 2, icon: "key" },
 };
 for (const [type, name, armor] of [['shield','Щит стражника',2],['helmet','Басинет стражника',2],['gloves','Кожаные перчатки',1],['boots','Походные сапоги',1],['belt','Пояс искателя',1],['ring','Железное кольцо',1],['amulet','Серебряный амулет',1]]) {
-  DEFS[type] = { name, kind:'armor', slot:type, w:type === 'ring' ? 1 : 2, h:type === 'ring' || type === 'belt' ? 1 : 2, icon:type, armor, sockets:type === 'helmet' ? 2 : 1 };
+  DEFS[type] = { name, kind:'armor', slot:type, w:['ring','amulet'].includes(type) ? 1 : 2, h:['ring','amulet','belt'].includes(type) ? 1 : 2, icon:type, armor, sockets:type === 'helmet' ? 2 : 1 };
+}
+for(const [type,name,extra] of [
+ ['meteor','Метеорит',{accept:['staff'],hostWeapons:['staff'],description:'Посох • метеорит падает на цель, нанося урон по области.'}],
+ ['rain','Дождь стрел',{accept:['bow'],hostWeapons:['bow'],duration:3,description:'Лук • обстреливает область в течение 3 секунд.'}],
+ ['juggernaut','Джаггернаут',{accept:['sword'],hostWeapons:['sword'],duration:4,description:'Меч • вращающийся клинок на 4 секунды.'}],
+ ['healing','Исцеление',{acceptSlots:['ring','amulet'],activeOnly:true,description:'Кольцо или амулет • активное лечение 35 здоровья.'}],
+ ['blink','Скачок',{acceptSlots:['boots'],activeOnly:true,description:'Сапоги • активный скачок в направлении курсора.'}],
+ ['duration','Длительность',{kind:'support',description:'Связанный камень: +25% длительности; открывает улучшения длительности.'}]
+])DEFS[type]={kind:'skill',w:1,h:1,icon:'gem',name,...extra};
+for(const [type,base,name,stats]of [
+ ['warstaff','staff','Боевой посох',{damage:20,sockets:3}],
+ ['longsword','sword','Длинный клинок',{damage:25,sockets:3}],
+ ['hunterbow','bow','Лук охотника',{damage:22,sockets:4}],
+ ['plate','armor','Усиленная броня',{armor:7,sockets:4}],
+ ['swiftboots','boots','Сапоги следопыта',{armor:2,sockets:2,movement:0.08}],
+ ['lifering','ring','Кольцо жизненной силы',{armor:2,sockets:1,healingBonus:0.25}]
+])DEFS[type]={...DEFS[base],name,...stats};
+for(const [type,def]of Object.entries(RAID_MAPS))DEFS[type]={kind:'map',w:1,h:1,icon:'map',...def};
+export function acceptsGem(gear,gem){
+ if(gem.kind==='support')return true;
+ if(gem.acceptSlots)return gem.acceptSlots.includes(gear.slot||gear.kind);
+ return !gem.hostWeapons||gem.hostWeapons.includes(gear.weapon);
 }
 let serial = 0;
 export function item(type, rarity = 0) {
@@ -128,10 +153,13 @@ export function item(type, rarity = 0) {
     x: 0,
     y: 0,
     ...d,
+    visualSprite: gearArt[d.slot||d.weapon||(d.kind==='armor'?'armor':type)]?.[serial%gearArt[d.slot||d.weapon||(d.kind==='armor'?'armor':type)].length],
     sockets: d.sockets ? Array(d.sockets).fill(null) : undefined,
     value: Math.round((d.kind === "loot" ? 30 : 15) * RARITIES[rarity].mult),
   };
 }
+// Temporary prototype economy: all merchant purchases are free. Resale values stay intact.
+export function vendorPrice(_item) { return 0; }
 export function grid(w = 12, h = 5) {
   return { w, h, items: [] };
 }
@@ -179,18 +207,12 @@ export function equippedSkills(equip) {
     .filter(Boolean)
     .flatMap((gear) =>
       (gear.sockets || []).flatMap((gem, index) =>
-        gem?.kind === "skill" && gem.accept.includes(equip.weapon?.weapon)
+        gem?.kind === "skill" && acceptsGem(gear,gem) && (gem.acceptSlots || gem.accept?.includes(equip.weapon?.weapon))
           ? [
               {
                 ...gem,
                 gear: gear.id,
-                supports: [gear.sockets[index - 1], gear.sockets[index + 1]]
-                  .filter(
-                    (g) =>
-                      g?.kind === "support" &&
-                      (gem.type !== "nova" || g.type === "haste"),
-                  )
-                  .map((g) => g.type),
+                supports: linkedSupports(gear,index,gem.type),
               },
             ]
           : [],
@@ -224,6 +246,7 @@ export function loseRaid(p) {
   p.bag = grid();
   p.equipment = { weapon: null, armor: null };
   p.active = null;
+  p.activeSlots = [null,null,null,null];
   p.inRaid = false;
 }
 export function recoverProfile(raw) {
@@ -233,6 +256,9 @@ export function recoverProfile(raw) {
       throw Error();
     if (p.inRaid) loseRaid(p);
     p.bag.w = Math.max(12, p.bag.w);
+    for (const it of [...p.bag.items, ...p.stash.items, ...Object.values(p.equipment)]) {
+      if (it && (it.slot === "amulet" || it.type === "amulet")) { it.w = 1; it.h = 1; }
+    }
     return p;
   } catch {
     return newProfile();
@@ -249,45 +275,30 @@ export function rng(seed) {
   };
 }
 export function generateDungeon(seed) {
-  const random = rng(seed), w = 160, h = 120;
-  const tiles = Array.from({length:h},()=>Array(w).fill(0)), rooms=[];
+  const random=rng(seed),w=248,h=206,tiles=Array.from({length:h},()=>Array(w).fill(0)),rooms=[],paths=[];
   const carve=(x,y)=>{if(x>1&&y>1&&x<w-2&&y<h-2)tiles[y][x]=1;};
-  for(let attempt=0;attempt<1500&&rooms.length<28;attempt++){
-    const rw=10+Math.floor(random()*13),rh=9+Math.floor(random()*11);
-    const x=8+Math.floor(random()*(w-rw-16)),y=8+Math.floor(random()*(h-rh-16));
-    if(rooms.some(r=>x<r.x+r.w+5&&x+rw+5>r.x&&y<r.y+r.h+5&&y+rh+5>r.y))continue;
-    const shape=Math.floor(random()*3);
-    const r={x,y,w:rw,h:rh,cx:x+Math.floor(rw/2),cy:y+Math.floor(rh/2),theme:rooms.length%5,shape};
+  // Clearings form districts of an abandoned village, connected by winding woodland paths.
+  for(let row=0;row<6;row++)for(let col=0;col<8;col++){
+    const rw=22+Math.floor(random()*6),rh=22+Math.floor(random()*7);
+    const x=3+col*30+Math.floor(random()*3),y=4+row*33+Math.floor(random()*3);
+    const theme=Math.floor(random()*5),phase=random()*6.28,mirror=random()<.5?-1:1;
+    const r={x,y,w:rw,h:rh,cx:x+Math.floor(rw/2),cy:y+Math.floor(rh/2),theme,mirror,wing:row*8+col};rooms.push(r);
     for(let yy=y;yy<y+rh;yy++)for(let xx=x;xx<x+rw;xx++){
-      const corner=(xx<x+2||xx>=x+rw-2)&&(yy<y+2||yy>=y+rh-2);
-      const alcove=shape===2&&xx>x+Math.floor(rw/2)+2&&yy<y+Math.floor(rh/2)-2;
-      if((shape===0||!corner)&&!alcove)carve(xx,yy);
+      const nx=(xx-r.cx)/(rw/2),ny=(yy-r.cy)/(rh/2),angle=Math.atan2(ny,nx);
+      if(Math.hypot(nx,ny)<.9+Math.sin(angle*3+phase)*.06+Math.cos(angle*5-phase)*.04)carve(xx,yy);
     }
-    rooms.push(r);
   }
-  rooms.sort((a,b)=>Math.hypot(a.cx-w/2,a.cy-h/2)-Math.hypot(b.cx-w/2,b.cy-h/2));
+  rooms.sort((a,b)=>Math.hypot(a.cx-w/2,a.cy-h/2)-Math.hypot(b.cx-w/2,b.cy-h/2));rooms[0].theme=0;
   const edges=[],joined=new Set([0]);
-  while(joined.size<rooms.length){
-    let best=null;
-    for(const a of joined)for(let b=0;b<rooms.length;b++)if(!joined.has(b)){
-      const d=Math.hypot(rooms[a].cx-rooms[b].cx,rooms[a].cy-rooms[b].cy);
-      if(!best||d<best.d)best={a,b,d};
-    }
-    edges.push([best.a,best.b]);joined.add(best.b);
+  while(joined.size<rooms.length){let best=null;for(const a of joined)for(let b=0;b<rooms.length;b++)if(!joined.has(b)){const d=Math.hypot(rooms[a].cx-rooms[b].cx,rooms[a].cy-rooms[b].cy);if(!best||d<best.d)best={a,b,d};}edges.push([best.a,best.b]);joined.add(best.b);}
+  for(let i=0;i<rooms.length;i++)for(let j=i+1;j<rooms.length;j++){const a=rooms[i].wing,b=rooms[j].wing,adjacent=Math.abs(a-b)===8||Math.floor(a/8)===Math.floor(b/8)&&Math.abs(a-b)===1;if(adjacent&&random()<.3&&!edges.some(([u,v])=>u===i&&v===j||u===j&&v===i))edges.push([i,j]);}
+  for(const [a,b]of edges){const p=rooms[a],q=rooms[b],dx=q.cx-p.cx,dy=q.cy-p.cy,len=Math.hypot(dx,dy),bend=(random()-.5)*12,points=[];
+    for(let n=0;n<=Math.ceil(len*2);n++){const t=n/Math.ceil(len*2),offset=Math.sin(t*Math.PI)*bend,x=p.cx+dx*t-dy/len*offset,y=p.cy+dy*t+dx/len*offset;points.push([x*32+16,y*32+16]);for(let sy=-3;sy<=3;sy++)for(let sx=-3;sx<=3;sx++)if(sx*sx+sy*sy<=11)carve(Math.round(x)+sx,Math.round(y)+sy);}
+    paths.push(points);
   }
-  // Extra connections create loops and alternative routes rather than a single chain.
-  for(let i=0;i<rooms.length;i++)if(random()<.4){
-    const nearest=rooms.map((r,j)=>({j,d:Math.hypot(r.cx-rooms[i].cx,r.cy-rooms[i].cy)})).filter(v=>v.j!==i&&!edges.some(([a,b])=>a===i&&b===v.j||b===i&&a===v.j)).sort((a,b)=>a.d-b.d)[0];
-    if(nearest)edges.push([i,nearest.j]);
-  }
-  for(const [a,b] of edges){
-    let x=rooms[a].cx,y=rooms[a].cy;const dest=rooms[b],horizontal=random()<.5,width=random()<.3?2:1;
-    const step=(axis)=>{while(axis==='x'?x!==dest.cx:y!==dest.cy){if(axis==='x')x+=Math.sign(dest.cx-x);else y+=Math.sign(dest.cy-y);for(let d=-width;d<=width;d++)carve(x+(axis==='y'?d:0),y+(axis==='x'?d:0));}};
-    step(horizontal?'x':'y');step(horizontal?'y':'x');
-  }
-  return {w,h,tiles,rooms,edges,seed};
+  return {w,h,tiles,rooms,edges,paths,seed,biome:'autumn-ruins'};
 }
-export function flowField(map, x, y) {
+  export function flowField(map, x, y) {
   const dist = Array.from({ length: map.h }, () => Array(map.w).fill(Infinity)),
     q = [[x, y]];
   if (!map.tiles[y]?.[x]) return dist;
@@ -302,7 +313,7 @@ export function flowField(map, x, y) {
     ]) {
       const xx = cx + dx,
         yy = cy + dy;
-      if (map.tiles[yy]?.[xx] && dist[yy][xx] === Infinity) {
+      if (map.tiles[yy]?.[xx] && dist[yy][xx] === Infinity && (!map.links || map.links[cy][cx].some(([x,y])=>x===xx&&y===yy))) {
         dist[yy][xx] = dist[cy][cx] + 1;
         q.push([xx, yy]);
       }
@@ -322,15 +333,17 @@ export function rollLoot(random = Math.random) {
     "nova",
     "multi",
     "haste",
-    "pierce",
+    "pierce", "meteor", "rain", "juggernaut", "healing", "blink", "duration", "warstaff", "longsword", "hunterbow", "plate", "swiftboots", "lifering",
     "helmet", "gloves", "boots", "belt", "ring", "amulet", "relic",
     "coin",
   ];
   const r = random();
-  return item(
+  const result = item(
     types[Math.floor(random() * types.length)],
     r > 0.97 ? 3 : r > 0.8 ? 2 : r > 0.45 ? 1 : 0,
   );
+  if(result.sockets){const max=Math.min(6,result.w*result.h);const count=Math.max(1,Math.min(max,result.sockets.length+Math.floor(random()*3)-1));result.sockets=Array(count).fill(null);result.links=Array.from({length:count-1},()=>random()<.75);if(result.damage)result.damage=Math.round(result.damage*(.85+random()*.3));if(result.armor)result.armor+=Math.floor(random()*3);}
+  return result;
 }
 export function upgradeOptions(skills) {
   const out = [
@@ -359,6 +372,7 @@ export function upgradeOptions(skills) {
         multi: ["Эхо снаряда", "+1 снаряд"],
         haste: ["Ускоренный ритуал", "+18% скорости атак"],
         pierce: ["Сквозь кости", "+1 пробитая цель"],
+        duration: ["Долгое эхо", "+25% длительности"],
       };
       out.push({
         id: support,

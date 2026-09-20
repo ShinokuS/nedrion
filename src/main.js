@@ -1,3 +1,4 @@
+import {actionSlots} from './action-slots.js';
 import Phaser from "phaser";
 import { RaidScene } from "./scene.js";
 import { equippedSkills, loseRaid, newProfile, recoverProfile } from "./core.js";
@@ -23,14 +24,15 @@ export const state = {
 };
 
 export function save() {
-  if (state.profile.active && !equippedSkills(state.profile.equipment).some((skill) => skill.id === state.profile.active)) state.profile.active = null;
+  actionSlots(state.profile);
+  if(import.meta.env.DEV&&(new URLSearchParams(location.search).has('inspect')||new URLSearchParams(location.search).has('smoke')))return;
   try { localStorage.setItem(SAVE, JSON.stringify(state.profile)); } catch { toast("Невозможно сохранить профиль"); }
 }
 export function toast(message) { state.scene?.toastCanvas(message); }
 export function renderHUD() { state.scene?.renderOverlay(true); }
 export function openPanel(panel, search = null) { state.panel = panel; state.search = search; state.selected = null; state.scene?.openCanvasPanel(panel, search); }
 export function closePanel() { state.panel = null; state.search = null; state.selected = null; state.scene?.closeCanvasPanel(); }
-export function isPaused() { return !!state.panel && !["container", "inventory"].includes(state.panel); }
+export function isPaused() { return !!state.panel && !["container", "inventory", "vendor", "stash"].includes(state.panel); }
 export function updateSearch() { state.scene?.refreshCanvasSearch(); }
 export function showLevel(options, apply) { state.panel = "level"; state.scene?.openCanvasLevel(options, apply); }
 export function finishRaid(success) {

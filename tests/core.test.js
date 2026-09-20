@@ -49,9 +49,9 @@ test("within-grid move preserves exactly one item", () => {
   assert.equal(g.items.length, 1);
   assert.equal(g.items[0].x, 5);
 });
-test("only adjacent supports are linked and weapon compatibility is enforced", () => {
+test("connected socket groups share supports and weapon compatibility is enforced", () => {
   const eq = starter();
-  assert.deepEqual(equippedSkills(eq)[0].supports, ["multi"]);
+  assert.deepEqual(equippedSkills(eq)[0].supports, ["multi", "haste"]);
   eq.weapon.sockets = [item("haste"), item("fire"), item("pierce")];
   assert.deepEqual(equippedSkills(eq)[0].supports, ["haste", "pierce"]);
   eq.weapon.sockets[1] = item("arrow");
@@ -62,14 +62,14 @@ test("only adjacent supports are linked and weapon compatibility is enforced", (
 test("level choices are determined by linked supports", () => {
   const choices = upgradeOptions(equippedSkills(starter()));
   assert.ok(choices.some((o) => o.id === "multi"));
-  assert.ok(!choices.some((o) => o.id === "haste"));
+  assert.ok(choices.some((o) => o.id === "haste"));
 });
 test("100 procedural seeds have connected, reachable rooms", () => {
   for (let seed = 1; seed <= 100; seed++) {
     const m = generateDungeon(seed),
       r = m.rooms[0],
       field = flowField(m, r.cx, r.cy);
-    assert.ok(m.rooms.length >= 18 && m.rooms.length <= 28);
+    assert.ok(m.rooms.length === 48);
     assert.ok(m.edges.length >= m.rooms.length - 1);
     for (const room of m.rooms)
       assert.ok(Number.isFinite(field[room.cy][room.cx]), `seed ${seed}`);

@@ -1,0 +1,9 @@
+# Readability, merchants and boss attack timing
+
+- UI scale is independent of world zoom. Panels use a 640-unit layout, with larger desktop scaling, readable body text and 20-pixel socket icons. Inventory art retains its bottom border. The item footprint remains identical in equipment, backpack and on the cursor.
+- F10, the top-left fullscreen control and the pause menu request browser fullscreen. Phaser captures movement/Alt combinations before cancelling browser defaults. Fullscreen also attempts Keyboard Lock where supported; Escape is not locked. Z toggles persistent loot labels as an alternative to holding Alt. Browser/OS-reserved shortcuts cannot be guaranteed across every browser.
+- Four animated native NPCs have separate, replenishing inventories: blacksmith (weapons), tailor (cloth/leather equipment), armorer (helmet/shield/plate), jeweler (jewelry and gems). Purchases remain free. Distance checks use the selected merchant rather than the first NPC.
+- Boss casting takes 1.6 seconds, with attacks released after a 1.05-second warning. Locomotion resumes after recovery. Native idle/cast sequences retain bottom anchoring, with a small hover displacement for the floating bosses. Gurag impacts use stone debris/cracks; Reaper impacts use animated ghost flames, shadow bursts and scythes. These are authored combat timings using supplied assets, not a claim of recovered Hero Siege AI or missing directional walk animations.
+- New source sprites and provenance are recorded by `scripts/import-assets.py` and the asset manifest.
+
+Validation: 30 Node tests; 27 browser integration checks, including merchant access/catalog separation/restocking, Alt event delivery, resized UI hit areas, delayed boss attacks and impact cleanup. Visual checks covered trading, socket icons, HUD, multiple boss bars and F10 switching to a larger fullscreen canvas and back. Development fixtures do not write the player's saved profile.

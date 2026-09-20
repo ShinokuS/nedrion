@@ -1,3 +1,9 @@
+import {effectiveSkillStats} from './skill-stats.js';
+import {contactDamage} from './raid-maps.js';
+import {skillModifiers} from './skill-rules.js';
+import {installExpansion} from './expansion.js';
+import {actionSlots,ACTION_KEYS} from './action-slots.js';
+import {pursuitTarget,reachableAnchor,clearSegment} from './navigation.js';
 import Phaser from "phaser";
 import { installWorld } from './world.js';
 import { preloadOriginal, installPresentation } from './presentation.js';
@@ -29,7 +35,7 @@ import {
 } from "./core.js";
 
 const T = 32,
-  RAID_TIME = 210;
+  RAID_TIME = 600;
 export class RaidScene extends Phaser.Scene {
   constructor() {
     super("world");
@@ -121,13 +127,15 @@ export class RaidScene extends Phaser.Scene {
     this.anims.create({key: "hs-fx-fire", frames: Array.from({length: 9}, (_, n) => ({key: `hs-fx-fire-${n}`})), frameRate: 18, repeat: 0});
     this.anims.create({key: "hs-fx-lightning", frames: Array.from({length: 8}, (_, n) => ({key: `hs-fx-lightning-${n}`})), frameRate: 18, repeat: 0});
     this.keys = this.input.keyboard.addKeys(
-      "W,A,S,D,E,Q,SPACE,UP,DOWN,LEFT,RIGHT",
+      "W,A,S,D,E,Q,SPACE,ALT,UP,DOWN,LEFT,RIGHT",
     );
-    this.input.keyboard.addCapture(["SPACE", "UP", "DOWN", "LEFT", "RIGHT"]);
+    this.input.keyboard.addCapture(["ALT", "SPACE", "UP", "DOWN", "LEFT", "RIGHT"]);
     this.input.keyboard.on("keydown", (event) => {
-      if (state.mode === "result" || state.panel === "level") return;
+      if (state.mode === "result") { if(event.code === "Enter" || event.code === "Escape") this.returnToHub(); return; }
+      if (state.panel === "level") return;
+      if(!event.repeat&&!isPaused()){if(ACTION_KEYS.some(k=>event.code==='Key'+k))this.activeRequested=ACTION_KEYS.indexOf(event.code.slice(3))+1;}
       if (event.code === "KeyI") state.panel ? closePanel() : openPanel("inventory");
-      if (event.code === "Escape") state.panel ? closePanel() : openPanel("pause");
+      if (event.code === "Escape") { if(state.panel==='destroy'){this.confirmDiscard(false);return;}if(this.mapExpanded){this.mapExpanded=false;this.mapStamp=null;this.drawMinimap();} else state.panel ? closePanel() : openPanel("pause"); }
     });
     this.scale.on("resize", () => this.resize());
     this.startHub();
@@ -143,6 +151,7 @@ export class RaidScene extends Phaser.Scene {
     this.objects = [];
     this.decor = [];
     this.clock = 0;
+    this.interactionRequested=false;this.dashRequested=false;this.activeRequested=false;
     this.elapsed = 0;
     this.flowTime = 0;
     this.spawnTime = 4;
@@ -153,9 +162,9 @@ export class RaidScene extends Phaser.Scene {
     this.extraction = null;
     this.lastDirection = { x: 0, y: 1 };
     this.dashCooldown = 0;
-    this.qCooldown = 0;
+    this.qCooldown = 0;this.shotDurations={};
     this.dashDuration = 0;
-    this.invincible = 0;
+    this.invincible = 0;this.hurtFlash=0;this.resumePanel=null;this.pendingDiscard=null;
     this.discovered = new Set();
     this.runes = 0;
     this.hp = 100;
@@ -214,47 +223,22 @@ export class RaidScene extends Phaser.Scene {
     this.renderOverlay(true);
   }
   startRaid() {
-    this.resetWorld();
+    this.resetWorld();this.raidModifiers={health:1,damage:1,speed:1,loot:0,...this.pendingRaidMap?.mapMods};this.pendingRaidMap=null;
     this.seed = Date.now() & 0x7fffffff;
     this.random = rng(this.seed);
     this.map = generateDungeon(this.seed);
     this.drawMap(false);
     const rooms = this.map.rooms;
-    for (let n = 0; n < rooms.length; n++) {
-      const r = rooms[n],
-        g = grid(5, 4);
-      if (n === 5) put(g, item("key", 2));
-      const count = 2 + Math.floor(this.random() * 3);
-      for (let k = 0; k < count; k++) put(g, rollLoot(this.random));
-      const o = this.addObject(
-        "container",
-        (r.x + 2) * T + 16,
-        (r.y + 2) * T + 16,
-        n % 3 === 1 ? "barrel-0" : "chest-0",
-        n % 3 === 1 ? "Старая бочка" : "Забытый сундук",
-      );
-      Object.assign(o, { grid: g, revealed: 0, progress: 0 });
-    }
     [2, 6, 9].forEach((n, i) => {
       const r = rooms[n],
         o = this.addObject(
           "rune",
           r.cx * T + 16,
           (r.cy + 2) * T + 16,
-          null,
+          "original-rune-stone-0",
           `Руна ${["I", "II", "III"][i]}`,
         );
       o.order = i;
-      this.add
-        .circle(o.x, o.y, 18, 0x9e81c0, 0.2)
-        .setStrokeStyle(1, 0xbfa2e4, 0.6);
-      this.add
-        .text(o.x, o.y, ["I", "II", "III"][i], {
-          ...this.textStyle,
-          fontSize: "22px",
-          color: "#b9a0e0",
-        })
-        .setOrigin(0.5);
     });
     [rooms.length-1, rooms.length-3, rooms.length-5].forEach((n, i) => {
       const r = rooms[n],
@@ -561,7 +545,7 @@ export class RaidScene extends Phaser.Scene {
   drawCanvasExpedition() { const x = this.scale.width / 2, y = 180; this.canvasPanel.add(this.add.image(x, y + 70, "hs-guide-0").setScale(0.65)); this.canvasPanel.add(this.add.text(x, y + 150, "3:30 ДО ПРИХОДА ТЬМЫ\n12 КОМНАТ • 3 ВЫХОДА • БЕСКОНЕЧНЫЕ ВОЛНЫ", {fontFamily: "monospace", fontSize: "14px", color: "#dfc98f", align: "center", lineSpacing: 10}).setOrigin(0.5)); this.createCanvasButton(x, y + 245, 220, 40, "СПУСТИТЬСЯ В ДАНЖ", () => { state.mode = "raid"; state.profile.inRaid = true; state.profile.runs++; save(); closePanel(); this.startRaid(); }); }
   drawCanvasVendor() { const x = this.scale.width / 2 - 250, y = 140; this.canvasPanel.add(this.add.image(x - 60, y + 80, "trader-0").setScale(2.2)); this.canvasPanel.add(this.add.text(x, y, "ТОРГОВЕЦ РЕН", {fontFamily: "Georgia, serif", fontSize: "25px", color: "#e0c886"})); ["staff", "sword", "armor", "fire", "multi", "haste"].forEach((type, i) => { const ix = x + (i % 3) * 170, iy = y + 80 + Math.floor(i / 3) * 110; this.canvasPanel.add(this.add.image(ix, iy, this.itemTexture({icon: DEFS[type].icon})).setDisplaySize(40, 55)); this.createCanvasButton(ix + 62, iy, 100, 30, `${DEFS[type].name}\n◈ ${DEFS[type].kind === "weapon" ? 45 : 25}`, () => { const cost = DEFS[type].kind === "weapon" ? 45 : 25; if (state.profile.gold < cost || !put(state.profile.bag, item(type, 1))) return toast("Не хватает золота или места"); state.profile.gold -= cost; save(); this.openCanvasPanel("vendor"); }); }); this.createCanvasButton(x + 210, y + 330, 220, 34, "БЕСПЛАТНЫЙ НАБОР", () => { if (state.profile.equipment.weapon || state.profile.bag.items.some((i) => i.kind === "weapon") || state.profile.stash.items.some((i) => i.kind === "weapon")) return toast("Оружие уже есть"); const kit = starter(); state.profile.equipment.weapon = kit.weapon; state.profile.equipment.armor ||= kit.armor; save(); this.openCanvasPanel("vendor"); }); }
   drawCanvasHelp() { const x = this.scale.width / 2, y = 145; this.canvasPanel.add(this.add.text(x - 300, y, "ПАМЯТКА СТРАННИКА", {fontFamily: "Georgia, serif", fontSize: "25px", color: "#e0c886"})); this.canvasPanel.add(this.add.text(x - 300, y + 58, "WASD — движение\nE — обыск, руны, выход\nI — инвентарь\nSPACE — рывок\nQ — назначенное ледяное кольцо\n\nКамни поддержки действуют рядом с камнем умения.\nУспейте вынести добычу до прихода тьмы.", {fontFamily: "monospace", fontSize: "14px", color: "#cdbf9c", lineSpacing: 9})); }
-  showCanvasResult(success) { this.resultSuccess = success; this.openCanvasPanel("result"); }
+  showCanvasResult(success) { this.resultSuccess=success;this.extraction=null;this.uiTexts?.hint?.setText('');this.hpFill?.setDisplaySize(Math.max(.01,132*Math.max(0,this.hp)/this.maxHP),8);this.uiTexts?.hp?.setText(`${Math.max(0,Math.ceil(this.hp))} / ${this.maxHP}`);this.openCanvasPanel("result"); }
 
   drawCanvasResult() { const success = this.resultSuccess === true; const x = this.scale.width / 2, y = 190; this.canvasPanel.add(this.add.text(x, y, success ? "ЭВАКУАЦИЯ УСПЕШНА" : "ВЫЛАЗКА ПОТЕРЯНА", {fontFamily: "Georgia, serif", fontSize: "28px", color: success ? "#d9d09a" : "#d47565"}).setOrigin(0.5)); this.canvasPanel.add(this.add.text(x, y + 70, success ? "Добыча сохранена в вашем профиле." : "Рюкзак, экипировка и вставленные камни исчезли. Тайник уцелел.", {fontFamily: "monospace", fontSize: "13px", color: "#cbbd9c"}).setOrigin(0.5)); this.createCanvasButton(x, y + 150, 220, 40, "ВЕРНУТЬСЯ В УБЕЖИЩЕ", () => { state.panel = null; state.mode = "hub"; this.startHub(); }); }
   openCanvasLevel(options, apply) { this.closeCanvasPanel(); this.canvasPanel = this.add.container(0, 0).setScrollFactor(0).setDepth(12000); this.canvasPanel.add(this.add.rectangle(this.scale.width / 2, this.scale.height / 2, 650, 450, 0x120b0d, 0.96).setStrokeStyle(2, 0xc89f5d)); this.canvasPanel.add(this.add.text(this.scale.width / 2, 120, "СИЛА ПРОБУЖДАЕТСЯ", {fontFamily: "Georgia, serif", fontSize: "26px", color: "#e4d19c"}).setOrigin(0.5)); options.forEach((option, i) => { const y = 200 + i * 84, card = this.add.rectangle(this.scale.width / 2, y, 520, 64, 0x2b171d, 0.9).setStrokeStyle(1, 0x8e633d).setInteractive({useHandCursor: true}); const tx = this.add.text(this.scale.width / 2 - 220, y - 20, `${option.icon}  ${option.name}\n${option.text}`, {fontFamily: "monospace", fontSize: "12px", color: "#e1cc94", lineSpacing: 4}); card.on("pointerdown", () => { apply(option); state.panel = null; this.closeCanvasPanel(); this.renderOverlay(true); }); this.canvasPanel.add([card, tx]); }); }
@@ -607,16 +591,17 @@ export class RaidScene extends Phaser.Scene {
       this.lastDirection = { x: dx, y: dy };
       this.setHeroDirection(dx, dy);
     }
+    const dashRequested=this.dashRequested;this.dashRequested=false;
     if (
       raid &&
-      Phaser.Input.Keyboard.JustDown(this.keys.SPACE) &&
+      dashRequested &&
       this.dashCooldown === 0
     ) {
       this.dashDuration = 0.17;
       this.dashCooldown = 4;
       this.invincible = 0.3;
     }
-    const speed = raid ? 185 * this.bonuses.speed : 165;
+    const speed = raid ? 185 * this.bonuses.speed * (1+Object.values(state.profile.equipment).reduce((n,g)=>n+(g?.movement||0),0)) : 165;
     if (this.dashDuration > 0) {
       this.dashDuration -= dt;
       dx = this.lastDirection.x;
@@ -624,7 +609,7 @@ export class RaidScene extends Phaser.Scene {
       this.moveBody(this.hero, dx * speed * 3 * dt, dy * speed * 3 * dt);
     } else this.moveBody(this.hero, dx * speed * dt, dy * speed * dt);
     this.hero.setDepth(this.hero.y + 20).setFlipX(dx < 0);
-    this.hero.setTint(this.invincible > 0 ? 0xf4ce83 : 0xffffff);
+    this.hurtFlash=Math.max(0,(this.hurtFlash||0)-dt);this.hero.setTint(this.hurtFlash>0?0xff8e8e:this.invincible>0?0xb0e7ff:0xffffff);
     if (this.heroModel) this.heroModel.setPosition(this.hero.x, this.hero.y).setDepth(this.hero.y + 20);
     this.shadow
       .setPosition(this.hero.x, this.hero.y + 17)
@@ -645,13 +630,13 @@ export class RaidScene extends Phaser.Scene {
     this.setInteractionText(this.extraction
       ? `ЭВАКУАЦИЯ ${Math.max(0, 3 - this.extraction.progress).toFixed(1)} С • НЕ ДВИГАЙТЕСЬ`
       : nearby
-        ? `E  ${nearby.label.text}${nearby.type === "exit" ? " • " + this.exitCondition(nearby.exitType) : ""}`
+        ? `${nearby.label.text}${nearby.type === "exit" ? " • " + this.exitCondition(nearby.exitType) : ""}`
         : "");
-    if (nearby && !state.panel && Phaser.Input.Keyboard.JustDown(this.keys.E))
-      this.interact(nearby);
+    this.interactionRequested=false;
+    if(['vendor','stash'].includes(state.panel)){const o=state.panel==='vendor'?this.activeVendor:this.objects.find(o=>o.type===state.panel);if(o&&Math.hypot(o.x-this.hero.x,o.y-this.hero.y)>120)closePanel();}
     if (!raid) return;
     this.elapsed += dt;
-    this.wave = 1 + Math.floor(this.elapsed / 25);
+    this.wave = 1 + Math.floor(this.elapsed / 40);
     for (let i = 0; i < this.map.rooms.length; i++) {
       const r = this.map.rooms[i];
       if (
@@ -679,23 +664,21 @@ export class RaidScene extends Phaser.Scene {
     this.flowTime -= dt;
     if (this.flowTime <= 0) {
       this.flowTime = 0.5;
-      this.flow = flowField(
-        this.navigationMap || this.map,
-        Math.floor(this.hero.x / T),
-        Math.floor(this.hero.y / T),
-      );
+      const nav=this.navigationMap||this.map,anchor=nav.links?reachableAnchor(nav,this.hero.x,this.hero.y,this.canWalk.bind(this)):{x:Math.floor(this.hero.x/T),y:Math.floor(this.hero.y/T)};
+      if(anchor)this.flow=flowField(nav,anchor.x,anchor.y);
+
     }
     this.spawnTime -= dt;
     if (this.spawnTime <= 0) {
-      this.spawnTime = Math.max(0.35, 2.3 - this.elapsed / 110);
-      for (let n = 0; n < 2 + Math.floor(this.wave / 3); n++) this.spawnEnemy();
+      this.spawnTime = Math.max(.95, 2.2 - this.elapsed / 540);
+      for (let n = 0; n < Math.max(2,3 + Math.floor(this.wave / 3) - (this.enemies.some(e=>e.boss)?2:0)); n++) this.spawnEnemy();
     }
     this.updateEnemies(dt);
     if (state.mode !== "raid") return;
     this.updateCombat(dt);
     this.updateDrops(dt);
     if (this.elapsed > RAID_TIME) {
-      this.zoneRadius = Math.max(0, 1800 - (this.elapsed - RAID_TIME) * 13);
+      this.zoneRadius = Math.max(0, Math.hypot(this.map.w*16,this.map.h*16) - (this.elapsed - RAID_TIME) * 32);
       const c = this.map.rooms[0],
         cx = c.cx * T + 16,
         cy = c.cy * T + 16;
@@ -704,7 +687,7 @@ export class RaidScene extends Phaser.Scene {
       this.zone.strokeCircle(cx, cy, this.zoneRadius);
       if (Math.hypot(this.hero.x - cx, this.hero.y - cy) > this.zoneRadius) {
         this.extraction = null;
-        this.hp -= dt * (10 + (this.elapsed - RAID_TIME) * 0.13);
+        this.takeHeroDamage(dt * (10 + (this.elapsed - RAID_TIME) * 0.13),true);
         this.vignette.setTint(0xed6f86);
         if (this.hp <= 0) {
           finishRaid(false);
@@ -730,7 +713,7 @@ export class RaidScene extends Phaser.Scene {
         }
       }
     }
-    if (this.xp >= this.level * 10 && !state.panel) {
+    if (this.xp >= this.level * 10 && !isPaused()) {this.resumePanel=state.panel?{panel:state.panel,search:state.search}:null;
       this.xp -= this.level * 10;
       this.level++;
       const options = upgradeOptions(equippedSkills(state.profile.equipment));
@@ -750,7 +733,7 @@ export class RaidScene extends Phaser.Scene {
         } else if (o.id === "speed") this.bonuses.speed += 0.08;
         else {
           this.skillBonuses[o.skill] ??= { multi: 0, haste: 0, pierce: 0 };
-          this.skillBonuses[o.skill][o.id]++;
+          this.skillBonuses[o.skill][o.id]=(this.skillBonuses[o.skill][o.id]||0)+1;
         }
       });
     }
@@ -768,7 +751,8 @@ export class RaidScene extends Phaser.Scene {
     if (o.type === "rune") {
       if (o.order === this.runes) {
         this.runes++;
-        o.label.setText("Руна активирована").setColor("#a4d8b4");
+        o.title="Руна активирована";
+        o.label.setText(o.title).setColor("#a4d8b4");
         toast(`Руна активирована: ${this.runes} / 3`);
       } else if (o.order > this.runes)
         toast("Древние знаки требуют порядка: I → II → III.");
@@ -800,81 +784,76 @@ export class RaidScene extends Phaser.Scene {
         : `Враги: ${Math.min(35, this.kills)} / 35`;
   }
   spawnEnemy() {
-    if (this.enemies.length >= 140) return;
+    if (this.enemies.length >= 160) return;
     let x,
       y,
       found = false;
     for (let n = 0; n < 35; n++) {
       const a = this.random() * Math.PI * 2,
-        d = 270 + this.random() * 230;
+        d = 420 + this.random() * 200;
       x = this.hero.x + Math.cos(a) * d;
       y = this.hero.y + Math.sin(a) * d;
       if (this.canWalk(x, y, 11)) {
+        const anchor=this.navigationMap?.links?reachableAnchor(this.navigationMap,x,y,this.canWalk.bind(this)):null;
+        if(anchor&&!Number.isFinite(this.flow?.[anchor.y]?.[anchor.x]))continue;
+        if(this.navigationMap?.links&&!anchor)continue;
         found = true;
         break;
       }
     }
     if (!found) return;
     const roll = this.random();
-    const type = this.wave < 2 ? (roll < 0.45 ? "skeleton" : "zombie") : roll < 0.18 ? "bat" : roll < 0.38 ? "rat" : roll < 0.58 ? "imp" : roll < 0.76 ? "archer" : roll < 0.88 ? "skeleton" : "zombie";
-    const base = type === "skeleton" ? "hs-skeleton-down-0" : type === "zombie" ? "hs-zombie-down-0" : `hs-${type}-down-0`;
+    const type = roll<.3?"ent":roll<.55?"mushroom":roll<.72?"rat":roll<.86?"scarecrow":"archer";
+    const base = this.textures.exists(`original-mob-${type}-walk-down-0`)?`original-mob-${type}-walk-down-0`:`hs-${type}-down-0`;
     const mobAnim=this.anims.exists(`mob-${type}-walk-down`)?`mob-${type}-walk-down`:`hs-${type}-down`;
     const sprite = this.add.sprite(x, y, base).play(mobAnim);
-    const scale = type === "bat" ? 0.8 : type === "rat" ? 0.78 : type === "imp" ? 0.95 : type === "archer" ? 1.05 : type === "zombie" ? 1.15 : 1;
+    const scale = 1;
     sprite.setScale(scale).setOrigin(.5,1);
-    const stats = {skeleton: [53, 1], zombie: [39, 1.15], bat: [92, 0.65], rat: [78, 0.6], imp: [48, 0.9], archer: [31, 1.05]}[type];
+    const stats = {ent:[42,1.2],mushroom:[36,.8],scarecrow:[50,1.4],skeleton: [53, 1], zombie: [39, 1.15], bat: [92, 0.65], rat: [78, 0.6], imp: [48, 0.9], archer: [31, 1.05]}[type];
     this.enemies.push({
       sprite,
       type,
-      hp: Math.round((22 + this.wave * 8) * stats[1]),
-      maxHP: Math.round((22 + this.wave * 8) * stats[1]),
-      speed: stats[0] + Math.min(60, this.wave * 3),
+      hp: Math.round((15 + this.wave * 3.5) * stats[1]),
+      maxHP: Math.round((15 + this.wave * 3.5) * stats[1]),
+      speed: stats[0] + Math.min(38, this.wave * 2),
       hit: 0,
       shoot: 1.5 + this.random(),
     });
+  }
+  takeHeroDamage(amount,environment=false){
+    if(state.mode!=='raid'||amount<=0||!environment&&this.invincible>0)return;
+    this.hp=Math.max(0,this.hp-amount*(environment?1:this.raidModifiers?.damage||1));this.hurtFlash=.22;this.extraction=null;
+    if(this.clock>(this.lastHurtShake||0)+.25){this.cameras.main.shake(55,.0015);this.lastHurtShake=this.clock;}
+    if(this.hp<=0)finishRaid(false);
   }
   updateEnemies(dt) {
     for (const e of this.enemies) {
       const s = e.sprite,
         tx = Math.floor(s.x / T),
         ty = Math.floor(s.y / T);
-      let target = { x: this.hero.x, y: this.hero.y };
-      if (Math.hypot(s.x - this.hero.x, s.y - this.hero.y) > 42) {
-        let best = this.flow?.[ty]?.[tx] ?? Infinity;
-        for (const [dx, dy] of [
-          [1, 0],
-          [-1, 0],
-          [0, 1],
-          [0, -1],
-        ]) {
-          const d = this.flow?.[ty + dy]?.[tx + dx] ?? Infinity;
-          if (d < best) {
-            best = d;
-            target = { x: (tx + dx) * T + 16, y: (ty + dy) * T + 16 };
-          }
-        }
-      }
+      const target=this.navigationMap?.links?pursuitTarget(e,this.hero,this.flow,this.navigationMap,this.canWalk.bind(this)):{x:this.hero.x,y:this.hero.y};
       const distance = Math.hypot(s.x - this.hero.x, s.y - this.hero.y);
+      const canShoot=e.type==="archer"&&clearSegment(this.canWalk.bind(this),s.x,s.y,this.hero.x,this.hero.y,1);
       const a = Math.atan2(target.y - s.y, target.x - s.x);
       const aim = Math.atan2(this.hero.y - s.y, this.hero.x - s.x);
-      if (e.type !== "archer" || distance > 240) this.moveBody(s, Math.cos(a) * e.speed * dt, Math.sin(a) * e.speed * dt, 8);
-      const facing = e.type === "archer" && distance < 240 ? aim : a;
+      if (e.type !== "archer" || distance > 240 || !canShoot) this.moveBody(s, Math.cos(a) * Math.min(e.speed*dt,Math.hypot(target.x-s.x,target.y-s.y)), Math.sin(a) * Math.min(e.speed*dt,Math.hypot(target.x-s.x,target.y-s.y)), 8);
+      const facing = e.type === "archer" && distance < 240 && canShoot ? aim : a;
       const horizontal = Math.abs(Math.cos(facing)) > Math.abs(Math.sin(facing));
       const direction = horizontal ? "left" : Math.sin(facing) < 0 ? "up" : "down";
       e.strike = Math.max(0,(e.strike||0)-dt);
       const attack = this.anims.exists(`mob-${e.type}-attack-${direction}`)?`mob-${e.type}-attack-${direction}`:`original-atk-${e.type}-${direction}`;
-      const movement = e.type === "archer" && distance < 240 ? "idle" : "walk";
+      const movement = e.type === "archer" && distance < 240 && canShoot ? "idle" : "walk";
       const locomotion = this.anims.exists(`mob-${e.type}-${movement}-${direction}`)?`mob-${e.type}-${movement}-${direction}`:`hs-${e.type}-${direction}`;
       const anim = e.strike>0 && this.anims.exists(attack) ? attack : locomotion;
       if (s.anims.currentAnim?.key !== anim) s.play(anim);
       s.setDepth(s.y + 15).setFlipX(horizontal && Math.cos(facing) > 0);
       if (e.type === "archer") {
         e.shoot -= dt;
-        if (e.shoot <= 0 && distance < 330) {
+        if (e.shoot <= 0 && distance < 330 && canShoot) {
           e.shoot = Math.max(0.7, 2.3 - this.wave * 0.08);
           e.strike = .5;
-          const projectile = this.add.image(s.x+Math.cos(aim)*12, s.y-12, "hs-archer-projectile-0").setRotation(aim).setScale(1).setDepth(s.y + 4);
-          this.enemyBullets.push({sprite: projectile, vx: Math.cos(aim) * 210, vy: Math.sin(aim) * 210, life: 2.1, damage: 7 + this.wave});
+          const projectile = this.add.image(s.x+Math.cos(aim)*12, s.y-12, "original-hostile-arrow-0").setTint(0xff7363).setRotation(aim).setScale(1).setDepth(s.y + 4);
+          this.enemyBullets.push({sprite: projectile, vx: Math.cos(aim) * 210, vy: Math.sin(aim) * 210, life: 2.1, damage: (7 + this.wave)*(e.damageMultiplier||1)});
         }
       }
       e.hit = Math.max(0, e.hit - dt);
@@ -885,63 +864,46 @@ export class RaidScene extends Phaser.Scene {
       ) {
         const defense = Object.values(state.profile.equipment).reduce((sum, gear) => sum + (gear?.armor || 0) * RARITIES[gear?.rarity || 0].mult, 0);
         e.strike = .55;
-        this.hp -= Math.max(3, 11 + this.wave - defense);
-        this.invincible = 0.65;
-        this.extraction = null;
-        this.cameras.main.shake(70, 0.003);
-        if (this.hp <= 0) {
-          finishRaid(false);
-          return;
-        }
+        this.takeHeroDamage(contactDamage(this.wave,defense,dt)*(e.damageMultiplier||1));if(state.mode==='result')return;
       }
     }
     this.enemyBullets = this.enemyBullets.filter((b) => {
       b.life -= dt; b.sprite.x += b.vx * dt; b.sprite.y += b.vy * dt;
       if (Math.hypot(b.sprite.x - this.hero.x, b.sprite.y - this.hero.y) < 18 && this.invincible <= 0) {
-        this.hp -= b.damage; this.invincible = 0.45; this.extraction = null; b.life = 0; this.cameras.main.shake(50, 0.002);
+        this.takeHeroDamage(b.damage); b.life = 0;
         if (this.hp <= 0) finishRaid(false);
       }
       const alive = b.life > 0 && this.canWalk(b.sprite.x, b.sprite.y, 1); if (!alive) b.sprite.destroy(); return alive;
     });
   }
   updateCombat(dt) {
+    const activeRequested=this.activeRequested;this.activeRequested=false;
     const skills = equippedSkills(state.profile.equipment);
     for (const skill of skills) {
-      const manual = state.profile.active === skill.id;
-      this.shotTimes[skill.id] = (this.shotTimes[skill.id] || 0) - dt;
-      if (manual) {
-        if (
-          skill.type === "nova" &&
-          Phaser.Input.Keyboard.JustDown(this.keys.Q) &&
-          this.qCooldown === 0
-        ) {
-          this.nova(skill);
-          this.qCooldown = 7;
-        }
-        continue;
-      }
+      const slot=actionSlots(state.profile).indexOf(skill.id),manual=slot>=0;
+      this.shotTimes[skill.id]=(this.shotTimes[skill.id]||0)-dt;
+      if(skill.activeOnly&&!manual)continue;
+      if(manual&&activeRequested!==slot+1)continue;
       if (this.shotTimes[skill.id] > 0) continue;
-      const target = this.enemies.reduce((best, e) => {
+      const target = manual?{e:{sprite:this.cameras.main.getWorldPoint(this.input.activePointer.x,this.input.activePointer.y)},dist:0}:this.enemies.reduce((best, e) => {
         const dist = Math.hypot(
           e.sprite.x - this.hero.x,
           e.sprite.y - this.hero.y,
         );
-        return dist < 440 && (!best || dist < best.dist) ? { e, dist } : best;
+        return !e.spawning && e.hp>0 && dist < 440 && (!best || dist < best.dist) ? { e, dist } : best;
       }, null);
       if (!target) continue;
-      const bonus = this.skillBonuses[skill.id] || {
-        multi: 0,
-        haste: 0,
-        pierce: 0,
-      };
+      const bonus = skillModifiers(skill,this.skillBonuses[skill.id]);
       this.shotTimes[skill.id] =
-        (skill.type === "nova" ? 3 : skill.type === "arrow" ? 0.65 : 1) /
-        (1 + bonus.haste * 0.18);
+        effectiveSkillStats(skill,this.skillBonuses[skill.id]).cooldown;
+      this.shotDurations[skill.id]=this.shotTimes[skill.id];
+      if(this.castExpansionSkill(skill,target.e.sprite,bonus))continue;
       if (skill.type === "nova") {
         this.nova(skill);
         continue;
       }
-      this.attackUntil = this.clock + .3;
+      this.attackUntil = this.clock + .5;
+      if(!['W','A','S','D','UP','DOWN','LEFT','RIGHT'].some(k=>this.keys[k].isDown))this.setHeroDirection(target.e.sprite.x-this.hero.x,target.e.sprite.y-this.hero.y);
       const angle = Math.atan2(
           target.e.sprite.y - this.hero.y,
           target.e.sprite.x - this.hero.x,
@@ -956,14 +918,15 @@ export class RaidScene extends Phaser.Scene {
       for (let n = 0; n < count; n++) {
         const a = angle + (n - (count - 1) / 2) * 0.19;
         const sprite = this.add.sprite(this.hero.x, this.hero.y,
-          skill.type === "slash" ? "original-slash-0" : skill.type === "arrow" ? "hs-archer-projectile-0" : "original-fireball-0").setScale(skill.type === "slash" ? 0.55 : skill.type === "arrow" ? 0.7 : 0.65);
+          skill.type === "slash" ? "original-slash-0" : skill.type === "arrow" ? "original-friendly-arrow-0" : "original-fireball-0").setScale(skill.type === "slash" ? 0.55 : skill.type === "arrow" ? 1 : 0.65);
+        if(skill.type==='slash')sprite.setBlendMode(Phaser.BlendModes.ADD);
         if(skill.type !== 'arrow') sprite.play(skill.type==='slash'?'original-slash':'original-fireball');
         sprite.setRotation(a).setDepth(4000);
         this.bullets.push({
           sprite,
           vx: Math.cos(a) * 360,
           vy: Math.sin(a) * 360,
-          life: 1.5,
+          life: 1.5*(1+bonus.duration*.25),
           damage: this.damage(skill),
           pierce: bonus.pierce + (skill.type === "arrow" ? 1 : 0),
           hit: new Set(),
@@ -979,7 +942,7 @@ export class RaidScene extends Phaser.Scene {
       if (alive)
         for (const e of this.enemies) {
           if (
-            e.hp > 0 &&
+            e.hp > 0 && !e.spawning &&
             !b.hit.has(e) &&
             Math.hypot(b.sprite.x - e.sprite.x, b.sprite.y - e.sprite.y) < 22
           ) {
@@ -997,26 +960,16 @@ export class RaidScene extends Phaser.Scene {
     });
     this.enemies = this.enemies.filter((e) => {
       if (e.hp > 0) return true;
+      e.healthBar?.destroy();
       this.kills++;
-      const orb = this.add.image(e.sprite.x, e.sprite.y, 'original-experience-0').setScale(.55).setDepth(5);
-      this.drops.push({ sprite: orb, xp: 3 });
-      if (this.random() < 0.045) {
-        const c = this.addObject(
-          "container",
-          e.sprite.x,
-          e.sprite.y,
-          null,
-          "Останки",
-        );
-        c.grid = grid(3, 3);
-        put(c.grid, rollLoot(this.random));
-        c.revealed = 0;
-        c.progress = 0;
-        this.add.circle(c.x, c.y, 5, 0xd0b068, 0.6);
-      }
+      const orb = this.add.image(e.sprite.x, e.sprite.y, 'original-experience-0').setScale(1).setDepth(5);
+      this.drops.push({ sprite: orb, xp: e.boss?80:e.elite?15:3 });
+      e.aura?.destroy();e.nameLabel?.destroy();e.buffIcons?.destroy();e.buffTip?.destroy();e.spawnPortal?.destroy();
+      if(e.boss||e.elite||this.random()<.045)this.spawnGroundItem(rollLoot(this.random),e.sprite.x,e.sprite.y);
+      if(e.boss){this.bossDeath(e);return false;}
       const direction = e.sprite.anims.currentAnim?.key.split('-').at(-1)||'down';
       const death = this.anims.exists(`mob-${e.type}-dies-${direction}`)?`mob-${e.type}-dies-${direction}`:`original-death-${e.type}-${direction}`;
-      if(this.anims.exists(death)) { e.sprite.clearTint().play(death).setDepth(e.sprite.y-1);this.tweens.add({targets:e.sprite,alpha:0,delay:8000,duration:2000,onComplete:()=>e.sprite.destroy()}); }
+      if(this.anims.exists(death)) { e.sprite.clearTint().play(death).setDepth(e.sprite.y-1);this.tweens.add({targets:e.sprite,alpha:0,delay:400,duration:500,onComplete:()=>e.sprite.destroy()}); }
       else e.sprite.destroy();
       return false;
     });
@@ -1031,32 +984,25 @@ export class RaidScene extends Phaser.Scene {
     );
   }
   nova(skill) {
-    const ring = this.add
-      .circle(this.hero.x, this.hero.y, 15, 0x9fd9eb, 0.15)
-      .setStrokeStyle(3, 0xa9e0ed)
-      .setDepth(3000);
-    this.tweens.add({
-      targets: ring,
-      scale: 10,
-      alpha: 0,
-      duration: 420,
-      onComplete: () => ring.destroy(),
-    });
+    this.add.sprite(this.hero.x,this.hero.y,'original-ice-nova-0').setDepth(this.hero.y+1).play('ice-nova').once('animationcomplete',function(){this.destroy();});
     for (const e of this.enemies)
       if (Math.hypot(e.sprite.x - this.hero.x, e.sprite.y - this.hero.y) < 155)
         this.hitEnemy(e, this.damage(skill) * 1.5, 0xa9e0ed);
   }
   hitEnemy(e, damage, color) {
+    if(e.spawning||e.hp<=0)return;
+    damage*=e.damageReduction||1;
     e.hp -= damage;
     e.hit = 0.1;
     e.sprite.setTintFill(color);
     const text = this.add
       .text(e.sprite.x, e.sprite.y - 25, `${Math.round(damage)}`, {
-        fontFamily: "monospace",
-        fontSize: "13px",
+        fontFamily: "Georgia, serif",
+        fontSize: "14px",
+        resolution: 4,
         color: "#e9d4aa",
         stroke: "#141818",
-        strokeThickness: 3,
+        strokeThickness: 1,
       })
       .setDepth(5000);
     this.tweens.add({
@@ -1105,3 +1051,5 @@ export class RaidScene extends Phaser.Scene {
 const simulationRaid = RaidScene.prototype.startRaid;
 installPresentation(RaidScene);
 installWorld(RaidScene, simulationRaid);
+
+installExpansion(RaidScene);

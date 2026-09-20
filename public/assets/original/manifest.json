@@ -826,61 +826,25 @@
   "weapon": [
     {
       "file": "weapon-0.png",
-      "source": "Weapon_Sword_Azurewrath_spr/Weapon_Sword_Azurewrath_spr_0.png",
+      "source": "Normal_Sword_Short_Sword_spr/Normal_Sword_Short_Sword_spr_0.png",
       "width": 34,
-      "height": 85
+      "height": 34
     }
   ],
   "staff": [
     {
       "file": "staff-0.png",
-      "source": "Weapon_Staff_Flame_of_Phoenix_spr/Weapon_Staff_Flame_of_Phoenix_spr_0.png",
-      "width": 61,
-      "height": 130
+      "source": "Normal_Staff_Arcane_Fork_spr/Normal_Staff_Arcane_Fork_spr_0.png",
+      "width": 31,
+      "height": 95
     }
   ],
   "bow": [
     {
       "file": "bow-0.png",
-      "source": "Weapon_Bow_Arrow_of_Niflheim_spr/Weapon_Bow_Arrow_of_Niflheim_spr_0.png",
-      "width": 72,
-      "height": 88
-    },
-    {
-      "file": "bow-1.png",
-      "source": "Weapon_Bow_Arrow_of_Niflheim_spr/Weapon_Bow_Arrow_of_Niflheim_spr_1.png",
-      "width": 72,
-      "height": 88
-    },
-    {
-      "file": "bow-2.png",
-      "source": "Weapon_Bow_Arrow_of_Niflheim_spr/Weapon_Bow_Arrow_of_Niflheim_spr_2.png",
-      "width": 72,
-      "height": 88
-    },
-    {
-      "file": "bow-3.png",
-      "source": "Weapon_Bow_Arrow_of_Niflheim_spr/Weapon_Bow_Arrow_of_Niflheim_spr_3.png",
-      "width": 72,
-      "height": 88
-    },
-    {
-      "file": "bow-4.png",
-      "source": "Weapon_Bow_Arrow_of_Niflheim_spr/Weapon_Bow_Arrow_of_Niflheim_spr_4.png",
-      "width": 72,
-      "height": 88
-    },
-    {
-      "file": "bow-5.png",
-      "source": "Weapon_Bow_Arrow_of_Niflheim_spr/Weapon_Bow_Arrow_of_Niflheim_spr_5.png",
-      "width": 72,
-      "height": 88
-    },
-    {
-      "file": "bow-6.png",
-      "source": "Weapon_Bow_Arrow_of_Niflheim_spr/Weapon_Bow_Arrow_of_Niflheim_spr_6.png",
-      "width": 72,
-      "height": 88
+      "source": "Normal_Bow_Long_Bow_spr/Normal_Bow_Long_Bow_spr_0.png",
+      "width": 48,
+      "height": 75
     }
   ],
   "armor": [
@@ -889,6 +853,246 @@
       "source": "Armor_Leather_Muscle_Breastplate_spr/Armor_Leather_Muscle_Breastplate_spr_0.png",
       "width": 33,
       "height": 36
+    }
+  ],
+  "friendly-arrow": [
+    {
+      "file": "friendly-arrow-0.png",
+      "source": "Arrow_Proj_Windforce_spr/Arrow_Proj_Windforce_spr_0.png",
+      "width": 33,
+      "height": 7
+    },
+    {
+      "file": "friendly-arrow-1.png",
+      "source": "Arrow_Proj_Windforce_spr/Arrow_Proj_Windforce_spr_1.png",
+      "width": 33,
+      "height": 7
+    },
+    {
+      "file": "friendly-arrow-2.png",
+      "source": "Arrow_Proj_Windforce_spr/Arrow_Proj_Windforce_spr_2.png",
+      "width": 33,
+      "height": 7
+    },
+    {
+      "file": "friendly-arrow-3.png",
+      "source": "Arrow_Proj_Windforce_spr/Arrow_Proj_Windforce_spr_3.png",
+      "width": 33,
+      "height": 7
+    }
+  ],
+  "hostile-arrow": [
+    {
+      "file": "hostile-arrow-0.png",
+      "source": "Corrupted_Archer_Arrow_spr/Corrupted_Archer_Arrow_spr_0.png",
+      "width": 37,
+      "height": 9
+    }
+  ],
+  "spawn-rift": [
+    {
+      "file": "spawn-rift-0.png",
+      "source": "Rift_Portal_spr/Rift_Portal_spr_0.png",
+      "width": 69,
+      "height": 65
+    },
+    {
+      "file": "spawn-rift-1.png",
+      "source": "Rift_Portal_spr/Rift_Portal_spr_1.png",
+      "width": 69,
+      "height": 65
+    },
+    {
+      "file": "spawn-rift-2.png",
+      "source": "Rift_Portal_spr/Rift_Portal_spr_2.png",
+      "width": 69,
+      "height": 65
+    },
+    {
+      "file": "spawn-rift-3.png",
+      "source": "Rift_Portal_spr/Rift_Portal_spr_3.png",
+      "width": 69,
+      "height": 65
+    },
+    {
+      "file": "spawn-rift-4.png",
+      "source": "Rift_Portal_spr/Rift_Portal_spr_4.png",
+      "width": 69,
+      "height": 65
+    },
+    {
+      "file": "spawn-rift-5.png",
+      "source": "Rift_Portal_spr/Rift_Portal_spr_5.png",
+      "width": 69,
+      "height": 65
+    }
+  ],
+  "chapel-top": [
+    {
+      "file": "chapel-top-0.png",
+      "source": "Fall_Chapel_Top_01_spr/Fall_Chapel_Top_01_spr_0.png",
+      "width": 415,
+      "height": 501
+    }
+  ],
+  "chapel-gate": [
+    {
+      "file": "chapel-gate-0.png",
+      "source": "Fall_Chapel_Bottom_01_spr/Fall_Chapel_Bottom_01_spr_0.png",
+      "width": 330,
+      "height": 203
+    }
+  ],
+  "house-tall": [
+    {
+      "file": "house-tall-0.png",
+      "source": "Fall_Castle_Town_House_02_spr/Fall_Castle_Town_House_02_spr_0.png",
+      "width": 218,
+      "height": 316
+    }
+  ],
+  "merchant-wagon": [
+    {
+      "file": "merchant-wagon-0.png",
+      "source": "Traveling_Merchant_Carriage_spr/Traveling_Merchant_Carriage_spr_0.png",
+      "width": 190,
+      "height": 122
+    },
+    {
+      "file": "merchant-wagon-1.png",
+      "source": "Traveling_Merchant_Carriage_spr/Traveling_Merchant_Carriage_spr_1.png",
+      "width": 190,
+      "height": 122
+    },
+    {
+      "file": "merchant-wagon-2.png",
+      "source": "Traveling_Merchant_Carriage_spr/Traveling_Merchant_Carriage_spr_2.png",
+      "width": 190,
+      "height": 122
+    },
+    {
+      "file": "merchant-wagon-3.png",
+      "source": "Traveling_Merchant_Carriage_spr/Traveling_Merchant_Carriage_spr_3.png",
+      "width": 190,
+      "height": 122
+    },
+    {
+      "file": "merchant-wagon-4.png",
+      "source": "Traveling_Merchant_Carriage_spr/Traveling_Merchant_Carriage_spr_4.png",
+      "width": 190,
+      "height": 122
+    },
+    {
+      "file": "merchant-wagon-5.png",
+      "source": "Traveling_Merchant_Carriage_spr/Traveling_Merchant_Carriage_spr_5.png",
+      "width": 190,
+      "height": 122
+    },
+    {
+      "file": "merchant-wagon-6.png",
+      "source": "Traveling_Merchant_Carriage_spr/Traveling_Merchant_Carriage_spr_6.png",
+      "width": 190,
+      "height": 122
+    },
+    {
+      "file": "merchant-wagon-7.png",
+      "source": "Traveling_Merchant_Carriage_spr/Traveling_Merchant_Carriage_spr_7.png",
+      "width": 190,
+      "height": 122
+    }
+  ],
+  "atlas-back": [
+    {
+      "file": "atlas-back-0.png",
+      "source": "Map_Screen_spr/Map_Screen_spr_0.png",
+      "width": 2902,
+      "height": 800
+    }
+  ],
+  "atlas-node": [
+    {
+      "file": "atlas-node-0.png",
+      "source": "Mapscreen_Zone_Big_spr/Mapscreen_Zone_Big_spr_0.png",
+      "width": 26,
+      "height": 26
+    },
+    {
+      "file": "atlas-node-1.png",
+      "source": "Mapscreen_Zone_Big_spr/Mapscreen_Zone_Big_spr_1.png",
+      "width": 26,
+      "height": 26
+    },
+    {
+      "file": "atlas-node-2.png",
+      "source": "Mapscreen_Zone_Big_spr/Mapscreen_Zone_Big_spr_2.png",
+      "width": 26,
+      "height": 26
+    },
+    {
+      "file": "atlas-node-3.png",
+      "source": "Mapscreen_Zone_Big_spr/Mapscreen_Zone_Big_spr_3.png",
+      "width": 26,
+      "height": 26
+    },
+    {
+      "file": "atlas-node-4.png",
+      "source": "Mapscreen_Zone_Big_spr/Mapscreen_Zone_Big_spr_4.png",
+      "width": 26,
+      "height": 26
+    }
+  ],
+  "atlas-town": [
+    {
+      "file": "atlas-town-0.png",
+      "source": "Mapscreen_Zone_Town_spr/Mapscreen_Zone_Town_spr_0.png",
+      "width": 26,
+      "height": 26
+    },
+    {
+      "file": "atlas-town-1.png",
+      "source": "Mapscreen_Zone_Town_spr/Mapscreen_Zone_Town_spr_1.png",
+      "width": 26,
+      "height": 26
+    },
+    {
+      "file": "atlas-town-2.png",
+      "source": "Mapscreen_Zone_Town_spr/Mapscreen_Zone_Town_spr_2.png",
+      "width": 26,
+      "height": 26
+    },
+    {
+      "file": "atlas-town-3.png",
+      "source": "Mapscreen_Zone_Town_spr/Mapscreen_Zone_Town_spr_3.png",
+      "width": 26,
+      "height": 26
+    },
+    {
+      "file": "atlas-town-4.png",
+      "source": "Mapscreen_Zone_Town_spr/Mapscreen_Zone_Town_spr_4.png",
+      "width": 26,
+      "height": 26
+    }
+  ],
+  "atlas-selected": [
+    {
+      "file": "atlas-selected-0.png",
+      "source": "Mapscreen_Chosen_Big_spr/Mapscreen_Chosen_Big_spr_0.png",
+      "width": 30,
+      "height": 32
+    }
+  ],
+  "atlas-link": [
+    {
+      "file": "atlas-link-0.png",
+      "source": "Mapscreen_Line_spr/Mapscreen_Line_spr_0.png",
+      "width": 16,
+      "height": 10
+    },
+    {
+      "file": "atlas-link-1.png",
+      "source": "Mapscreen_Line_spr/Mapscreen_Line_spr_1.png",
+      "width": 16,
+      "height": 10
     }
   ],
   "slot-weapon": [
@@ -3490,553 +3694,643 @@
   "mob-archer-walk-down": [
     {
       "file": "mob-archer-walk-down-0.png",
-      "source": "Crypt_Skeleton_Archer_Walk_Down_spr/Crypt_Skeleton_Archer_Walk_Down_spr_0.png",
-      "width": 33,
-      "height": 50
+      "source": "Corrupted_Archer_Walk_Down_spr/Corrupted_Archer_Walk_Down_spr_0.png",
+      "width": 61,
+      "height": 75
     },
     {
       "file": "mob-archer-walk-down-1.png",
-      "source": "Crypt_Skeleton_Archer_Walk_Down_spr/Crypt_Skeleton_Archer_Walk_Down_spr_1.png",
-      "width": 33,
-      "height": 50
+      "source": "Corrupted_Archer_Walk_Down_spr/Corrupted_Archer_Walk_Down_spr_1.png",
+      "width": 61,
+      "height": 75
     },
     {
       "file": "mob-archer-walk-down-2.png",
-      "source": "Crypt_Skeleton_Archer_Walk_Down_spr/Crypt_Skeleton_Archer_Walk_Down_spr_2.png",
-      "width": 33,
-      "height": 50
+      "source": "Corrupted_Archer_Walk_Down_spr/Corrupted_Archer_Walk_Down_spr_2.png",
+      "width": 61,
+      "height": 75
     },
     {
       "file": "mob-archer-walk-down-3.png",
-      "source": "Crypt_Skeleton_Archer_Walk_Down_spr/Crypt_Skeleton_Archer_Walk_Down_spr_3.png",
-      "width": 33,
-      "height": 50
+      "source": "Corrupted_Archer_Walk_Down_spr/Corrupted_Archer_Walk_Down_spr_3.png",
+      "width": 61,
+      "height": 75
     },
     {
       "file": "mob-archer-walk-down-4.png",
-      "source": "Crypt_Skeleton_Archer_Walk_Down_spr/Crypt_Skeleton_Archer_Walk_Down_spr_4.png",
-      "width": 33,
-      "height": 50
+      "source": "Corrupted_Archer_Walk_Down_spr/Corrupted_Archer_Walk_Down_spr_4.png",
+      "width": 61,
+      "height": 75
     },
     {
       "file": "mob-archer-walk-down-5.png",
-      "source": "Crypt_Skeleton_Archer_Walk_Down_spr/Crypt_Skeleton_Archer_Walk_Down_spr_5.png",
-      "width": 33,
-      "height": 50
+      "source": "Corrupted_Archer_Walk_Down_spr/Corrupted_Archer_Walk_Down_spr_5.png",
+      "width": 61,
+      "height": 75
     },
     {
       "file": "mob-archer-walk-down-6.png",
-      "source": "Crypt_Skeleton_Archer_Walk_Down_spr/Crypt_Skeleton_Archer_Walk_Down_spr_6.png",
-      "width": 33,
-      "height": 50
+      "source": "Corrupted_Archer_Walk_Down_spr/Corrupted_Archer_Walk_Down_spr_6.png",
+      "width": 61,
+      "height": 75
     },
     {
       "file": "mob-archer-walk-down-7.png",
-      "source": "Crypt_Skeleton_Archer_Walk_Down_spr/Crypt_Skeleton_Archer_Walk_Down_spr_7.png",
-      "width": 33,
-      "height": 50
+      "source": "Corrupted_Archer_Walk_Down_spr/Corrupted_Archer_Walk_Down_spr_7.png",
+      "width": 61,
+      "height": 75
     }
   ],
   "mob-archer-walk-left": [
     {
       "file": "mob-archer-walk-left-0.png",
-      "source": "Crypt_Skeleton_Archer_Walk_Left_spr/Crypt_Skeleton_Archer_Walk_Left_spr_0.png",
-      "width": 34,
-      "height": 50
+      "source": "Corrupted_Archer_Walk_Left_spr/Corrupted_Archer_Walk_Left_spr_0.png",
+      "width": 51,
+      "height": 73
     },
     {
       "file": "mob-archer-walk-left-1.png",
-      "source": "Crypt_Skeleton_Archer_Walk_Left_spr/Crypt_Skeleton_Archer_Walk_Left_spr_1.png",
-      "width": 34,
-      "height": 50
+      "source": "Corrupted_Archer_Walk_Left_spr/Corrupted_Archer_Walk_Left_spr_1.png",
+      "width": 51,
+      "height": 73
     },
     {
       "file": "mob-archer-walk-left-2.png",
-      "source": "Crypt_Skeleton_Archer_Walk_Left_spr/Crypt_Skeleton_Archer_Walk_Left_spr_2.png",
-      "width": 34,
-      "height": 50
+      "source": "Corrupted_Archer_Walk_Left_spr/Corrupted_Archer_Walk_Left_spr_2.png",
+      "width": 51,
+      "height": 73
     },
     {
       "file": "mob-archer-walk-left-3.png",
-      "source": "Crypt_Skeleton_Archer_Walk_Left_spr/Crypt_Skeleton_Archer_Walk_Left_spr_3.png",
-      "width": 34,
-      "height": 50
+      "source": "Corrupted_Archer_Walk_Left_spr/Corrupted_Archer_Walk_Left_spr_3.png",
+      "width": 51,
+      "height": 73
     },
     {
       "file": "mob-archer-walk-left-4.png",
-      "source": "Crypt_Skeleton_Archer_Walk_Left_spr/Crypt_Skeleton_Archer_Walk_Left_spr_4.png",
-      "width": 34,
-      "height": 50
+      "source": "Corrupted_Archer_Walk_Left_spr/Corrupted_Archer_Walk_Left_spr_4.png",
+      "width": 51,
+      "height": 73
     },
     {
       "file": "mob-archer-walk-left-5.png",
-      "source": "Crypt_Skeleton_Archer_Walk_Left_spr/Crypt_Skeleton_Archer_Walk_Left_spr_5.png",
-      "width": 34,
-      "height": 50
+      "source": "Corrupted_Archer_Walk_Left_spr/Corrupted_Archer_Walk_Left_spr_5.png",
+      "width": 51,
+      "height": 73
     },
     {
       "file": "mob-archer-walk-left-6.png",
-      "source": "Crypt_Skeleton_Archer_Walk_Left_spr/Crypt_Skeleton_Archer_Walk_Left_spr_6.png",
-      "width": 34,
-      "height": 50
+      "source": "Corrupted_Archer_Walk_Left_spr/Corrupted_Archer_Walk_Left_spr_6.png",
+      "width": 51,
+      "height": 73
     },
     {
       "file": "mob-archer-walk-left-7.png",
-      "source": "Crypt_Skeleton_Archer_Walk_Left_spr/Crypt_Skeleton_Archer_Walk_Left_spr_7.png",
-      "width": 34,
-      "height": 50
+      "source": "Corrupted_Archer_Walk_Left_spr/Corrupted_Archer_Walk_Left_spr_7.png",
+      "width": 51,
+      "height": 73
     }
   ],
   "mob-archer-walk-up": [
     {
       "file": "mob-archer-walk-up-0.png",
-      "source": "Crypt_Skeleton_Archer_Walk_Up_spr/Crypt_Skeleton_Archer_Walk_Up_spr_0.png",
-      "width": 25,
-      "height": 53
+      "source": "Corrupted_Archer_Walk_Up_spr/Corrupted_Archer_Walk_Up_spr_0.png",
+      "width": 61,
+      "height": 75
     },
     {
       "file": "mob-archer-walk-up-1.png",
-      "source": "Crypt_Skeleton_Archer_Walk_Up_spr/Crypt_Skeleton_Archer_Walk_Up_spr_1.png",
-      "width": 25,
-      "height": 53
+      "source": "Corrupted_Archer_Walk_Up_spr/Corrupted_Archer_Walk_Up_spr_1.png",
+      "width": 61,
+      "height": 75
     },
     {
       "file": "mob-archer-walk-up-2.png",
-      "source": "Crypt_Skeleton_Archer_Walk_Up_spr/Crypt_Skeleton_Archer_Walk_Up_spr_2.png",
-      "width": 25,
-      "height": 53
+      "source": "Corrupted_Archer_Walk_Up_spr/Corrupted_Archer_Walk_Up_spr_2.png",
+      "width": 61,
+      "height": 75
     },
     {
       "file": "mob-archer-walk-up-3.png",
-      "source": "Crypt_Skeleton_Archer_Walk_Up_spr/Crypt_Skeleton_Archer_Walk_Up_spr_3.png",
-      "width": 25,
-      "height": 53
+      "source": "Corrupted_Archer_Walk_Up_spr/Corrupted_Archer_Walk_Up_spr_3.png",
+      "width": 61,
+      "height": 75
     },
     {
       "file": "mob-archer-walk-up-4.png",
-      "source": "Crypt_Skeleton_Archer_Walk_Up_spr/Crypt_Skeleton_Archer_Walk_Up_spr_4.png",
-      "width": 25,
-      "height": 53
+      "source": "Corrupted_Archer_Walk_Up_spr/Corrupted_Archer_Walk_Up_spr_4.png",
+      "width": 61,
+      "height": 75
     },
     {
       "file": "mob-archer-walk-up-5.png",
-      "source": "Crypt_Skeleton_Archer_Walk_Up_spr/Crypt_Skeleton_Archer_Walk_Up_spr_5.png",
-      "width": 25,
-      "height": 53
+      "source": "Corrupted_Archer_Walk_Up_spr/Corrupted_Archer_Walk_Up_spr_5.png",
+      "width": 61,
+      "height": 75
     },
     {
       "file": "mob-archer-walk-up-6.png",
-      "source": "Crypt_Skeleton_Archer_Walk_Up_spr/Crypt_Skeleton_Archer_Walk_Up_spr_6.png",
-      "width": 25,
-      "height": 53
+      "source": "Corrupted_Archer_Walk_Up_spr/Corrupted_Archer_Walk_Up_spr_6.png",
+      "width": 61,
+      "height": 75
     },
     {
       "file": "mob-archer-walk-up-7.png",
-      "source": "Crypt_Skeleton_Archer_Walk_Up_spr/Crypt_Skeleton_Archer_Walk_Up_spr_7.png",
-      "width": 25,
-      "height": 53
+      "source": "Corrupted_Archer_Walk_Up_spr/Corrupted_Archer_Walk_Up_spr_7.png",
+      "width": 61,
+      "height": 75
     }
   ],
   "mob-archer-idle-down": [
     {
       "file": "mob-archer-idle-down-0.png",
-      "source": "Crypt_Skeleton_Archer_Idle_Down_spr/Crypt_Skeleton_Archer_Idle_Down_spr_0.png",
-      "width": 32,
-      "height": 47
+      "source": "Corrupted_Archer_Idle_Down_spr/Corrupted_Archer_Idle_Down_spr_0.png",
+      "width": 61,
+      "height": 73
     },
     {
       "file": "mob-archer-idle-down-1.png",
-      "source": "Crypt_Skeleton_Archer_Idle_Down_spr/Crypt_Skeleton_Archer_Idle_Down_spr_1.png",
-      "width": 32,
-      "height": 47
+      "source": "Corrupted_Archer_Idle_Down_spr/Corrupted_Archer_Idle_Down_spr_1.png",
+      "width": 61,
+      "height": 73
     },
     {
       "file": "mob-archer-idle-down-2.png",
-      "source": "Crypt_Skeleton_Archer_Idle_Down_spr/Crypt_Skeleton_Archer_Idle_Down_spr_2.png",
-      "width": 32,
-      "height": 47
+      "source": "Corrupted_Archer_Idle_Down_spr/Corrupted_Archer_Idle_Down_spr_2.png",
+      "width": 61,
+      "height": 73
     },
     {
       "file": "mob-archer-idle-down-3.png",
-      "source": "Crypt_Skeleton_Archer_Idle_Down_spr/Crypt_Skeleton_Archer_Idle_Down_spr_3.png",
-      "width": 32,
-      "height": 47
+      "source": "Corrupted_Archer_Idle_Down_spr/Corrupted_Archer_Idle_Down_spr_3.png",
+      "width": 61,
+      "height": 73
     },
     {
       "file": "mob-archer-idle-down-4.png",
-      "source": "Crypt_Skeleton_Archer_Idle_Down_spr/Crypt_Skeleton_Archer_Idle_Down_spr_4.png",
-      "width": 32,
-      "height": 47
+      "source": "Corrupted_Archer_Idle_Down_spr/Corrupted_Archer_Idle_Down_spr_4.png",
+      "width": 61,
+      "height": 73
     },
     {
       "file": "mob-archer-idle-down-5.png",
-      "source": "Crypt_Skeleton_Archer_Idle_Down_spr/Crypt_Skeleton_Archer_Idle_Down_spr_5.png",
-      "width": 32,
-      "height": 47
+      "source": "Corrupted_Archer_Idle_Down_spr/Corrupted_Archer_Idle_Down_spr_5.png",
+      "width": 61,
+      "height": 73
+    },
+    {
+      "file": "mob-archer-idle-down-6.png",
+      "source": "Corrupted_Archer_Idle_Down_spr/Corrupted_Archer_Idle_Down_spr_6.png",
+      "width": 61,
+      "height": 73
+    },
+    {
+      "file": "mob-archer-idle-down-7.png",
+      "source": "Corrupted_Archer_Idle_Down_spr/Corrupted_Archer_Idle_Down_spr_7.png",
+      "width": 61,
+      "height": 73
     }
   ],
   "mob-archer-idle-left": [
     {
       "file": "mob-archer-idle-left-0.png",
-      "source": "Crypt_Skeleton_Archer_Idle_Left_spr/Crypt_Skeleton_Archer_Idle_Left_spr_0.png",
-      "width": 28,
-      "height": 48
+      "source": "Corrupted_Archer_Idle_Left_spr/Corrupted_Archer_Idle_Left_spr_0.png",
+      "width": 51,
+      "height": 72
     },
     {
       "file": "mob-archer-idle-left-1.png",
-      "source": "Crypt_Skeleton_Archer_Idle_Left_spr/Crypt_Skeleton_Archer_Idle_Left_spr_1.png",
-      "width": 28,
-      "height": 48
+      "source": "Corrupted_Archer_Idle_Left_spr/Corrupted_Archer_Idle_Left_spr_1.png",
+      "width": 51,
+      "height": 72
     },
     {
       "file": "mob-archer-idle-left-2.png",
-      "source": "Crypt_Skeleton_Archer_Idle_Left_spr/Crypt_Skeleton_Archer_Idle_Left_spr_2.png",
-      "width": 28,
-      "height": 48
+      "source": "Corrupted_Archer_Idle_Left_spr/Corrupted_Archer_Idle_Left_spr_2.png",
+      "width": 51,
+      "height": 72
     },
     {
       "file": "mob-archer-idle-left-3.png",
-      "source": "Crypt_Skeleton_Archer_Idle_Left_spr/Crypt_Skeleton_Archer_Idle_Left_spr_3.png",
-      "width": 28,
-      "height": 48
+      "source": "Corrupted_Archer_Idle_Left_spr/Corrupted_Archer_Idle_Left_spr_3.png",
+      "width": 51,
+      "height": 72
     },
     {
       "file": "mob-archer-idle-left-4.png",
-      "source": "Crypt_Skeleton_Archer_Idle_Left_spr/Crypt_Skeleton_Archer_Idle_Left_spr_4.png",
-      "width": 28,
-      "height": 48
+      "source": "Corrupted_Archer_Idle_Left_spr/Corrupted_Archer_Idle_Left_spr_4.png",
+      "width": 51,
+      "height": 72
     },
     {
       "file": "mob-archer-idle-left-5.png",
-      "source": "Crypt_Skeleton_Archer_Idle_Left_spr/Crypt_Skeleton_Archer_Idle_Left_spr_5.png",
-      "width": 28,
-      "height": 48
+      "source": "Corrupted_Archer_Idle_Left_spr/Corrupted_Archer_Idle_Left_spr_5.png",
+      "width": 51,
+      "height": 72
+    },
+    {
+      "file": "mob-archer-idle-left-6.png",
+      "source": "Corrupted_Archer_Idle_Left_spr/Corrupted_Archer_Idle_Left_spr_6.png",
+      "width": 51,
+      "height": 72
+    },
+    {
+      "file": "mob-archer-idle-left-7.png",
+      "source": "Corrupted_Archer_Idle_Left_spr/Corrupted_Archer_Idle_Left_spr_7.png",
+      "width": 51,
+      "height": 72
     }
   ],
   "mob-archer-idle-up": [
     {
       "file": "mob-archer-idle-up-0.png",
-      "source": "Crypt_Skeleton_Archer_Idle_Up_spr/Crypt_Skeleton_Archer_Idle_Up_spr_0.png",
-      "width": 24,
-      "height": 49
+      "source": "Corrupted_Archer_Idle_Up_spr/Corrupted_Archer_Idle_Up_spr_0.png",
+      "width": 60,
+      "height": 73
     },
     {
       "file": "mob-archer-idle-up-1.png",
-      "source": "Crypt_Skeleton_Archer_Idle_Up_spr/Crypt_Skeleton_Archer_Idle_Up_spr_1.png",
-      "width": 24,
-      "height": 49
+      "source": "Corrupted_Archer_Idle_Up_spr/Corrupted_Archer_Idle_Up_spr_1.png",
+      "width": 60,
+      "height": 73
     },
     {
       "file": "mob-archer-idle-up-2.png",
-      "source": "Crypt_Skeleton_Archer_Idle_Up_spr/Crypt_Skeleton_Archer_Idle_Up_spr_2.png",
-      "width": 24,
-      "height": 49
+      "source": "Corrupted_Archer_Idle_Up_spr/Corrupted_Archer_Idle_Up_spr_2.png",
+      "width": 60,
+      "height": 73
     },
     {
       "file": "mob-archer-idle-up-3.png",
-      "source": "Crypt_Skeleton_Archer_Idle_Up_spr/Crypt_Skeleton_Archer_Idle_Up_spr_3.png",
-      "width": 24,
-      "height": 49
+      "source": "Corrupted_Archer_Idle_Up_spr/Corrupted_Archer_Idle_Up_spr_3.png",
+      "width": 60,
+      "height": 73
     },
     {
       "file": "mob-archer-idle-up-4.png",
-      "source": "Crypt_Skeleton_Archer_Idle_Up_spr/Crypt_Skeleton_Archer_Idle_Up_spr_4.png",
-      "width": 24,
-      "height": 49
+      "source": "Corrupted_Archer_Idle_Up_spr/Corrupted_Archer_Idle_Up_spr_4.png",
+      "width": 60,
+      "height": 73
     },
     {
       "file": "mob-archer-idle-up-5.png",
-      "source": "Crypt_Skeleton_Archer_Idle_Up_spr/Crypt_Skeleton_Archer_Idle_Up_spr_5.png",
-      "width": 24,
-      "height": 49
+      "source": "Corrupted_Archer_Idle_Up_spr/Corrupted_Archer_Idle_Up_spr_5.png",
+      "width": 60,
+      "height": 73
+    },
+    {
+      "file": "mob-archer-idle-up-6.png",
+      "source": "Corrupted_Archer_Idle_Up_spr/Corrupted_Archer_Idle_Up_spr_6.png",
+      "width": 60,
+      "height": 73
+    },
+    {
+      "file": "mob-archer-idle-up-7.png",
+      "source": "Corrupted_Archer_Idle_Up_spr/Corrupted_Archer_Idle_Up_spr_7.png",
+      "width": 60,
+      "height": 73
     }
   ],
   "mob-archer-attack-down": [
     {
       "file": "mob-archer-attack-down-0.png",
-      "source": "Crypt_Skeleton_Archer_Attack_Down_spr/Crypt_Skeleton_Archer_Attack_Down_spr_0.png",
-      "width": 32,
-      "height": 47
+      "source": "Corrupted_Archer_Attack_Down_spr/Corrupted_Archer_Attack_Down_spr_0.png",
+      "width": 61,
+      "height": 83
     },
     {
       "file": "mob-archer-attack-down-1.png",
-      "source": "Crypt_Skeleton_Archer_Attack_Down_spr/Crypt_Skeleton_Archer_Attack_Down_spr_1.png",
-      "width": 32,
-      "height": 47
+      "source": "Corrupted_Archer_Attack_Down_spr/Corrupted_Archer_Attack_Down_spr_1.png",
+      "width": 61,
+      "height": 83
     },
     {
       "file": "mob-archer-attack-down-2.png",
-      "source": "Crypt_Skeleton_Archer_Attack_Down_spr/Crypt_Skeleton_Archer_Attack_Down_spr_2.png",
-      "width": 32,
-      "height": 47
+      "source": "Corrupted_Archer_Attack_Down_spr/Corrupted_Archer_Attack_Down_spr_2.png",
+      "width": 61,
+      "height": 83
     },
     {
       "file": "mob-archer-attack-down-3.png",
-      "source": "Crypt_Skeleton_Archer_Attack_Down_spr/Crypt_Skeleton_Archer_Attack_Down_spr_3.png",
-      "width": 32,
-      "height": 47
+      "source": "Corrupted_Archer_Attack_Down_spr/Corrupted_Archer_Attack_Down_spr_3.png",
+      "width": 61,
+      "height": 83
     },
     {
       "file": "mob-archer-attack-down-4.png",
-      "source": "Crypt_Skeleton_Archer_Attack_Down_spr/Crypt_Skeleton_Archer_Attack_Down_spr_4.png",
-      "width": 32,
-      "height": 47
+      "source": "Corrupted_Archer_Attack_Down_spr/Corrupted_Archer_Attack_Down_spr_4.png",
+      "width": 61,
+      "height": 83
     },
     {
       "file": "mob-archer-attack-down-5.png",
-      "source": "Crypt_Skeleton_Archer_Attack_Down_spr/Crypt_Skeleton_Archer_Attack_Down_spr_5.png",
-      "width": 32,
-      "height": 47
+      "source": "Corrupted_Archer_Attack_Down_spr/Corrupted_Archer_Attack_Down_spr_5.png",
+      "width": 61,
+      "height": 83
     },
     {
       "file": "mob-archer-attack-down-6.png",
-      "source": "Crypt_Skeleton_Archer_Attack_Down_spr/Crypt_Skeleton_Archer_Attack_Down_spr_6.png",
-      "width": 32,
-      "height": 47
+      "source": "Corrupted_Archer_Attack_Down_spr/Corrupted_Archer_Attack_Down_spr_6.png",
+      "width": 61,
+      "height": 83
     },
     {
       "file": "mob-archer-attack-down-7.png",
-      "source": "Crypt_Skeleton_Archer_Attack_Down_spr/Crypt_Skeleton_Archer_Attack_Down_spr_7.png",
-      "width": 32,
-      "height": 47
-    },
-    {
-      "file": "mob-archer-attack-down-8.png",
-      "source": "Crypt_Skeleton_Archer_Attack_Down_spr/Crypt_Skeleton_Archer_Attack_Down_spr_8.png",
-      "width": 32,
-      "height": 47
-    },
-    {
-      "file": "mob-archer-attack-down-9.png",
-      "source": "Crypt_Skeleton_Archer_Attack_Down_spr/Crypt_Skeleton_Archer_Attack_Down_spr_9.png",
-      "width": 32,
-      "height": 47
+      "source": "Corrupted_Archer_Attack_Down_spr/Corrupted_Archer_Attack_Down_spr_7.png",
+      "width": 61,
+      "height": 83
     }
   ],
   "mob-archer-attack-left": [
     {
       "file": "mob-archer-attack-left-0.png",
-      "source": "Crypt_Skeleton_Archer_Attack_Left_spr/Crypt_Skeleton_Archer_Attack_Left_spr_0.png",
-      "width": 31,
-      "height": 49
+      "source": "Corrupted_Archer_Attack_Left_spr/Corrupted_Archer_Attack_Left_spr_0.png",
+      "width": 70,
+      "height": 71
     },
     {
       "file": "mob-archer-attack-left-1.png",
-      "source": "Crypt_Skeleton_Archer_Attack_Left_spr/Crypt_Skeleton_Archer_Attack_Left_spr_1.png",
-      "width": 31,
-      "height": 49
+      "source": "Corrupted_Archer_Attack_Left_spr/Corrupted_Archer_Attack_Left_spr_1.png",
+      "width": 70,
+      "height": 71
     },
     {
       "file": "mob-archer-attack-left-2.png",
-      "source": "Crypt_Skeleton_Archer_Attack_Left_spr/Crypt_Skeleton_Archer_Attack_Left_spr_2.png",
-      "width": 31,
-      "height": 49
+      "source": "Corrupted_Archer_Attack_Left_spr/Corrupted_Archer_Attack_Left_spr_2.png",
+      "width": 70,
+      "height": 71
     },
     {
       "file": "mob-archer-attack-left-3.png",
-      "source": "Crypt_Skeleton_Archer_Attack_Left_spr/Crypt_Skeleton_Archer_Attack_Left_spr_3.png",
-      "width": 31,
-      "height": 49
+      "source": "Corrupted_Archer_Attack_Left_spr/Corrupted_Archer_Attack_Left_spr_3.png",
+      "width": 70,
+      "height": 71
     },
     {
       "file": "mob-archer-attack-left-4.png",
-      "source": "Crypt_Skeleton_Archer_Attack_Left_spr/Crypt_Skeleton_Archer_Attack_Left_spr_4.png",
-      "width": 31,
-      "height": 49
+      "source": "Corrupted_Archer_Attack_Left_spr/Corrupted_Archer_Attack_Left_spr_4.png",
+      "width": 70,
+      "height": 71
     },
     {
       "file": "mob-archer-attack-left-5.png",
-      "source": "Crypt_Skeleton_Archer_Attack_Left_spr/Crypt_Skeleton_Archer_Attack_Left_spr_5.png",
-      "width": 31,
-      "height": 49
+      "source": "Corrupted_Archer_Attack_Left_spr/Corrupted_Archer_Attack_Left_spr_5.png",
+      "width": 70,
+      "height": 71
     },
     {
       "file": "mob-archer-attack-left-6.png",
-      "source": "Crypt_Skeleton_Archer_Attack_Left_spr/Crypt_Skeleton_Archer_Attack_Left_spr_6.png",
-      "width": 31,
-      "height": 49
+      "source": "Corrupted_Archer_Attack_Left_spr/Corrupted_Archer_Attack_Left_spr_6.png",
+      "width": 70,
+      "height": 71
     },
     {
       "file": "mob-archer-attack-left-7.png",
-      "source": "Crypt_Skeleton_Archer_Attack_Left_spr/Crypt_Skeleton_Archer_Attack_Left_spr_7.png",
-      "width": 31,
-      "height": 49
-    },
-    {
-      "file": "mob-archer-attack-left-8.png",
-      "source": "Crypt_Skeleton_Archer_Attack_Left_spr/Crypt_Skeleton_Archer_Attack_Left_spr_8.png",
-      "width": 31,
-      "height": 49
+      "source": "Corrupted_Archer_Attack_Left_spr/Corrupted_Archer_Attack_Left_spr_7.png",
+      "width": 70,
+      "height": 71
     }
   ],
   "mob-archer-attack-up": [
     {
       "file": "mob-archer-attack-up-0.png",
-      "source": "Crypt_Skeleton_Archer_Attack_Up_spr/Crypt_Skeleton_Archer_Attack_Up_spr_0.png",
-      "width": 24,
-      "height": 49
+      "source": "Corrupted_Archer_Attack_Up_spr/Corrupted_Archer_Attack_Up_spr_0.png",
+      "width": 57,
+      "height": 81
     },
     {
       "file": "mob-archer-attack-up-1.png",
-      "source": "Crypt_Skeleton_Archer_Attack_Up_spr/Crypt_Skeleton_Archer_Attack_Up_spr_1.png",
-      "width": 24,
-      "height": 49
+      "source": "Corrupted_Archer_Attack_Up_spr/Corrupted_Archer_Attack_Up_spr_1.png",
+      "width": 57,
+      "height": 81
     },
     {
       "file": "mob-archer-attack-up-2.png",
-      "source": "Crypt_Skeleton_Archer_Attack_Up_spr/Crypt_Skeleton_Archer_Attack_Up_spr_2.png",
-      "width": 24,
-      "height": 49
+      "source": "Corrupted_Archer_Attack_Up_spr/Corrupted_Archer_Attack_Up_spr_2.png",
+      "width": 57,
+      "height": 81
     },
     {
       "file": "mob-archer-attack-up-3.png",
-      "source": "Crypt_Skeleton_Archer_Attack_Up_spr/Crypt_Skeleton_Archer_Attack_Up_spr_3.png",
-      "width": 24,
-      "height": 49
+      "source": "Corrupted_Archer_Attack_Up_spr/Corrupted_Archer_Attack_Up_spr_3.png",
+      "width": 57,
+      "height": 81
     },
     {
       "file": "mob-archer-attack-up-4.png",
-      "source": "Crypt_Skeleton_Archer_Attack_Up_spr/Crypt_Skeleton_Archer_Attack_Up_spr_4.png",
-      "width": 24,
-      "height": 49
+      "source": "Corrupted_Archer_Attack_Up_spr/Corrupted_Archer_Attack_Up_spr_4.png",
+      "width": 57,
+      "height": 81
     },
     {
       "file": "mob-archer-attack-up-5.png",
-      "source": "Crypt_Skeleton_Archer_Attack_Up_spr/Crypt_Skeleton_Archer_Attack_Up_spr_5.png",
-      "width": 24,
-      "height": 49
+      "source": "Corrupted_Archer_Attack_Up_spr/Corrupted_Archer_Attack_Up_spr_5.png",
+      "width": 57,
+      "height": 81
     },
     {
       "file": "mob-archer-attack-up-6.png",
-      "source": "Crypt_Skeleton_Archer_Attack_Up_spr/Crypt_Skeleton_Archer_Attack_Up_spr_6.png",
-      "width": 24,
-      "height": 49
+      "source": "Corrupted_Archer_Attack_Up_spr/Corrupted_Archer_Attack_Up_spr_6.png",
+      "width": 57,
+      "height": 81
     },
     {
       "file": "mob-archer-attack-up-7.png",
-      "source": "Crypt_Skeleton_Archer_Attack_Up_spr/Crypt_Skeleton_Archer_Attack_Up_spr_7.png",
-      "width": 24,
-      "height": 49
-    },
-    {
-      "file": "mob-archer-attack-up-8.png",
-      "source": "Crypt_Skeleton_Archer_Attack_Up_spr/Crypt_Skeleton_Archer_Attack_Up_spr_8.png",
-      "width": 24,
-      "height": 49
+      "source": "Corrupted_Archer_Attack_Up_spr/Corrupted_Archer_Attack_Up_spr_7.png",
+      "width": 57,
+      "height": 81
     }
   ],
   "mob-archer-dies-down": [
     {
       "file": "mob-archer-dies-down-0.png",
-      "source": "Crypt_Skeleton_Archer_Dies_Down_spr/Crypt_Skeleton_Archer_Dies_Down_spr_0.png",
-      "width": 27,
-      "height": 27
+      "source": "Corrupted_Archer_Dies_Down_spr/Corrupted_Archer_Dies_Down_spr_0.png",
+      "width": 51,
+      "height": 52
     },
     {
       "file": "mob-archer-dies-down-1.png",
-      "source": "Crypt_Skeleton_Archer_Dies_Down_spr/Crypt_Skeleton_Archer_Dies_Down_spr_1.png",
-      "width": 27,
-      "height": 27
+      "source": "Corrupted_Archer_Dies_Down_spr/Corrupted_Archer_Dies_Down_spr_1.png",
+      "width": 51,
+      "height": 52
     },
     {
       "file": "mob-archer-dies-down-2.png",
-      "source": "Crypt_Skeleton_Archer_Dies_Down_spr/Crypt_Skeleton_Archer_Dies_Down_spr_2.png",
-      "width": 27,
-      "height": 27
+      "source": "Corrupted_Archer_Dies_Down_spr/Corrupted_Archer_Dies_Down_spr_2.png",
+      "width": 51,
+      "height": 52
     },
     {
       "file": "mob-archer-dies-down-3.png",
-      "source": "Crypt_Skeleton_Archer_Dies_Down_spr/Crypt_Skeleton_Archer_Dies_Down_spr_3.png",
-      "width": 27,
-      "height": 27
+      "source": "Corrupted_Archer_Dies_Down_spr/Corrupted_Archer_Dies_Down_spr_3.png",
+      "width": 51,
+      "height": 52
     },
     {
       "file": "mob-archer-dies-down-4.png",
-      "source": "Crypt_Skeleton_Archer_Dies_Down_spr/Crypt_Skeleton_Archer_Dies_Down_spr_4.png",
-      "width": 27,
-      "height": 27
+      "source": "Corrupted_Archer_Dies_Down_spr/Corrupted_Archer_Dies_Down_spr_4.png",
+      "width": 51,
+      "height": 52
     },
     {
       "file": "mob-archer-dies-down-5.png",
-      "source": "Crypt_Skeleton_Archer_Dies_Down_spr/Crypt_Skeleton_Archer_Dies_Down_spr_5.png",
-      "width": 27,
-      "height": 27
+      "source": "Corrupted_Archer_Dies_Down_spr/Corrupted_Archer_Dies_Down_spr_5.png",
+      "width": 51,
+      "height": 52
+    },
+    {
+      "file": "mob-archer-dies-down-6.png",
+      "source": "Corrupted_Archer_Dies_Down_spr/Corrupted_Archer_Dies_Down_spr_6.png",
+      "width": 51,
+      "height": 52
+    },
+    {
+      "file": "mob-archer-dies-down-7.png",
+      "source": "Corrupted_Archer_Dies_Down_spr/Corrupted_Archer_Dies_Down_spr_7.png",
+      "width": 51,
+      "height": 52
+    },
+    {
+      "file": "mob-archer-dies-down-8.png",
+      "source": "Corrupted_Archer_Dies_Down_spr/Corrupted_Archer_Dies_Down_spr_8.png",
+      "width": 51,
+      "height": 52
+    },
+    {
+      "file": "mob-archer-dies-down-9.png",
+      "source": "Corrupted_Archer_Dies_Down_spr/Corrupted_Archer_Dies_Down_spr_9.png",
+      "width": 51,
+      "height": 52
+    },
+    {
+      "file": "mob-archer-dies-down-10.png",
+      "source": "Corrupted_Archer_Dies_Down_spr/Corrupted_Archer_Dies_Down_spr_10.png",
+      "width": 51,
+      "height": 52
+    },
+    {
+      "file": "mob-archer-dies-down-11.png",
+      "source": "Corrupted_Archer_Dies_Down_spr/Corrupted_Archer_Dies_Down_spr_11.png",
+      "width": 51,
+      "height": 52
     }
   ],
   "mob-archer-dies-left": [
     {
       "file": "mob-archer-dies-left-0.png",
-      "source": "Crypt_Skeleton_Archer_Dies_Left_spr/Crypt_Skeleton_Archer_Dies_Left_spr_0.png",
-      "width": 27,
-      "height": 27
+      "source": "Corrupted_Archer_Dies_Left_spr/Corrupted_Archer_Dies_Left_spr_0.png",
+      "width": 51,
+      "height": 53
     },
     {
       "file": "mob-archer-dies-left-1.png",
-      "source": "Crypt_Skeleton_Archer_Dies_Left_spr/Crypt_Skeleton_Archer_Dies_Left_spr_1.png",
-      "width": 27,
-      "height": 27
+      "source": "Corrupted_Archer_Dies_Left_spr/Corrupted_Archer_Dies_Left_spr_1.png",
+      "width": 51,
+      "height": 53
     },
     {
       "file": "mob-archer-dies-left-2.png",
-      "source": "Crypt_Skeleton_Archer_Dies_Left_spr/Crypt_Skeleton_Archer_Dies_Left_spr_2.png",
-      "width": 27,
-      "height": 27
+      "source": "Corrupted_Archer_Dies_Left_spr/Corrupted_Archer_Dies_Left_spr_2.png",
+      "width": 51,
+      "height": 53
     },
     {
       "file": "mob-archer-dies-left-3.png",
-      "source": "Crypt_Skeleton_Archer_Dies_Left_spr/Crypt_Skeleton_Archer_Dies_Left_spr_3.png",
-      "width": 27,
-      "height": 27
+      "source": "Corrupted_Archer_Dies_Left_spr/Corrupted_Archer_Dies_Left_spr_3.png",
+      "width": 51,
+      "height": 53
     },
     {
       "file": "mob-archer-dies-left-4.png",
-      "source": "Crypt_Skeleton_Archer_Dies_Left_spr/Crypt_Skeleton_Archer_Dies_Left_spr_4.png",
-      "width": 27,
-      "height": 27
+      "source": "Corrupted_Archer_Dies_Left_spr/Corrupted_Archer_Dies_Left_spr_4.png",
+      "width": 51,
+      "height": 53
     },
     {
       "file": "mob-archer-dies-left-5.png",
-      "source": "Crypt_Skeleton_Archer_Dies_Left_spr/Crypt_Skeleton_Archer_Dies_Left_spr_5.png",
-      "width": 27,
-      "height": 27
+      "source": "Corrupted_Archer_Dies_Left_spr/Corrupted_Archer_Dies_Left_spr_5.png",
+      "width": 51,
+      "height": 53
+    },
+    {
+      "file": "mob-archer-dies-left-6.png",
+      "source": "Corrupted_Archer_Dies_Left_spr/Corrupted_Archer_Dies_Left_spr_6.png",
+      "width": 51,
+      "height": 53
+    },
+    {
+      "file": "mob-archer-dies-left-7.png",
+      "source": "Corrupted_Archer_Dies_Left_spr/Corrupted_Archer_Dies_Left_spr_7.png",
+      "width": 51,
+      "height": 53
+    },
+    {
+      "file": "mob-archer-dies-left-8.png",
+      "source": "Corrupted_Archer_Dies_Left_spr/Corrupted_Archer_Dies_Left_spr_8.png",
+      "width": 51,
+      "height": 53
     }
   ],
   "mob-archer-dies-up": [
     {
       "file": "mob-archer-dies-up-0.png",
-      "source": "Crypt_Skeleton_Archer_Dies_Up_spr/Crypt_Skeleton_Archer_Dies_Up_spr_0.png",
-      "width": 22,
-      "height": 27
+      "source": "Corrupted_Archer_Dies_Up_spr/Corrupted_Archer_Dies_Up_spr_0.png",
+      "width": 51,
+      "height": 39
     },
     {
       "file": "mob-archer-dies-up-1.png",
-      "source": "Crypt_Skeleton_Archer_Dies_Up_spr/Crypt_Skeleton_Archer_Dies_Up_spr_1.png",
-      "width": 22,
-      "height": 27
+      "source": "Corrupted_Archer_Dies_Up_spr/Corrupted_Archer_Dies_Up_spr_1.png",
+      "width": 51,
+      "height": 39
     },
     {
       "file": "mob-archer-dies-up-2.png",
-      "source": "Crypt_Skeleton_Archer_Dies_Up_spr/Crypt_Skeleton_Archer_Dies_Up_spr_2.png",
-      "width": 22,
-      "height": 27
+      "source": "Corrupted_Archer_Dies_Up_spr/Corrupted_Archer_Dies_Up_spr_2.png",
+      "width": 51,
+      "height": 39
     },
     {
       "file": "mob-archer-dies-up-3.png",
-      "source": "Crypt_Skeleton_Archer_Dies_Up_spr/Crypt_Skeleton_Archer_Dies_Up_spr_3.png",
-      "width": 22,
-      "height": 27
+      "source": "Corrupted_Archer_Dies_Up_spr/Corrupted_Archer_Dies_Up_spr_3.png",
+      "width": 51,
+      "height": 39
     },
     {
       "file": "mob-archer-dies-up-4.png",
-      "source": "Crypt_Skeleton_Archer_Dies_Up_spr/Crypt_Skeleton_Archer_Dies_Up_spr_4.png",
-      "width": 22,
-      "height": 27
+      "source": "Corrupted_Archer_Dies_Up_spr/Corrupted_Archer_Dies_Up_spr_4.png",
+      "width": 51,
+      "height": 39
     },
     {
       "file": "mob-archer-dies-up-5.png",
-      "source": "Crypt_Skeleton_Archer_Dies_Up_spr/Crypt_Skeleton_Archer_Dies_Up_spr_5.png",
-      "width": 22,
-      "height": 27
+      "source": "Corrupted_Archer_Dies_Up_spr/Corrupted_Archer_Dies_Up_spr_5.png",
+      "width": 51,
+      "height": 39
+    },
+    {
+      "file": "mob-archer-dies-up-6.png",
+      "source": "Corrupted_Archer_Dies_Up_spr/Corrupted_Archer_Dies_Up_spr_6.png",
+      "width": 51,
+      "height": 39
+    },
+    {
+      "file": "mob-archer-dies-up-7.png",
+      "source": "Corrupted_Archer_Dies_Up_spr/Corrupted_Archer_Dies_Up_spr_7.png",
+      "width": 51,
+      "height": 39
+    },
+    {
+      "file": "mob-archer-dies-up-8.png",
+      "source": "Corrupted_Archer_Dies_Up_spr/Corrupted_Archer_Dies_Up_spr_8.png",
+      "width": 51,
+      "height": 39
+    },
+    {
+      "file": "mob-archer-dies-up-9.png",
+      "source": "Corrupted_Archer_Dies_Up_spr/Corrupted_Archer_Dies_Up_spr_9.png",
+      "width": 51,
+      "height": 39
     }
   ],
   "mob-imp-walk-down": [
@@ -6029,6 +6323,5146 @@
       "source": "Rat_Attack_Up_spr/Rat_Attack_Up_spr_7.png",
       "width": 10,
       "height": 26
+    }
+  ],
+  "forest-ground": [
+    {
+      "file": "forest-ground-0.png",
+      "source": "Fall_Ground_tile3/Fall_Ground_tile3_0.png",
+      "width": 448,
+      "height": 128
+    }
+  ],
+  "forest-dark": [
+    {
+      "file": "forest-dark-0.png",
+      "source": "Fall_Ground_tile4/Fall_Ground_tile4_0.png",
+      "width": 448,
+      "height": 128
+    }
+  ],
+  "forest-leaves": [
+    {
+      "file": "forest-leaves-0.png",
+      "source": "Fall_Ground_tile5/Fall_Ground_tile5_0.png",
+      "width": 448,
+      "height": 256
+    }
+  ],
+  "forest-road": [
+    {
+      "file": "forest-road-0.png",
+      "source": "Autotile_Fall_Path_tile/Autotile_Fall_Path_tile_0.png",
+      "width": 384,
+      "height": 160
+    }
+  ],
+  "tree-a": [
+    {
+      "file": "tree-a-0.png",
+      "source": "Fall_Dead_Tree_01_spr/Fall_Dead_Tree_01_spr_0.png",
+      "width": 231,
+      "height": 273
+    }
+  ],
+  "tree-b": [
+    {
+      "file": "tree-b-0.png",
+      "source": "Fall_Dead_Tree_02_spr/Fall_Dead_Tree_02_spr_0.png",
+      "width": 299,
+      "height": 273
+    }
+  ],
+  "tree-c": [
+    {
+      "file": "tree-c-0.png",
+      "source": "Fall_Dead_Tree_03_spr/Fall_Dead_Tree_03_spr_0.png",
+      "width": 299,
+      "height": 325
+    }
+  ],
+  "tree-leaves": [
+    {
+      "file": "tree-leaves-0.png",
+      "source": "Fall_Dead_Tree_Leaves_01_spr/Fall_Dead_Tree_Leaves_01_spr_0.png",
+      "width": 220,
+      "height": 278
+    }
+  ],
+  "cliff-a": [
+    {
+      "file": "cliff-a-0.png",
+      "source": "Fall_Cliff_01_spr/Fall_Cliff_01_spr_0.png",
+      "width": 495,
+      "height": 183
+    }
+  ],
+  "cliff-b": [
+    {
+      "file": "cliff-b-0.png",
+      "source": "Fall_Cliff_02_spr/Fall_Cliff_02_spr_0.png",
+      "width": 274,
+      "height": 299
+    }
+  ],
+  "cliff-stairs": [
+    {
+      "file": "cliff-stairs-0.png",
+      "source": "Fall_Cliff_03_spr/Fall_Cliff_03_spr_0.png",
+      "width": 356,
+      "height": 131
+    }
+  ],
+  "well": [
+    {
+      "file": "well-0.png",
+      "source": "Fall_Well_01_spr/Fall_Well_01_spr_0.png",
+      "width": 125,
+      "height": 154
+    }
+  ],
+  "cart": [
+    {
+      "file": "cart-0.png",
+      "source": "Fall_Cart_01_spr/Fall_Cart_01_spr_0.png",
+      "width": 108,
+      "height": 100
+    }
+  ],
+  "hay": [
+    {
+      "file": "hay-0.png",
+      "source": "Fall_Haystacks_01_spr/Fall_Haystacks_01_spr_0.png",
+      "width": 128,
+      "height": 131
+    },
+    {
+      "file": "hay-1.png",
+      "source": "Fall_Haystacks_01_spr/Fall_Haystacks_01_spr_1.png",
+      "width": 128,
+      "height": 131
+    }
+  ],
+  "logs": [
+    {
+      "file": "logs-0.png",
+      "source": "Fall_Logs_Stack_spr/Fall_Logs_Stack_spr_0.png",
+      "width": 88,
+      "height": 82
+    }
+  ],
+  "town-barrel": [
+    {
+      "file": "town-barrel-0.png",
+      "source": "Fall_Barrel_spr/Fall_Barrel_spr_0.png",
+      "width": 29,
+      "height": 35
+    }
+  ],
+  "town-house": [
+    {
+      "file": "town-house-0.png",
+      "source": "Fall_Castle_Town_House_01_spr/Fall_Castle_Town_House_01_spr_0.png",
+      "width": 320,
+      "height": 306
+    }
+  ],
+  "stone-fence": [
+    {
+      "file": "stone-fence-0.png",
+      "source": "Fall_Stone_Fence_Horizontal_01_spr/Fall_Stone_Fence_Horizontal_01_spr_0.png",
+      "width": 126,
+      "height": 34
+    }
+  ],
+  "map-frame": [
+    {
+      "file": "map-frame-0.png",
+      "source": "Minimap_Frames_spr/Minimap_Frames_spr_0.png",
+      "width": 280,
+      "height": 158
+    },
+    {
+      "file": "map-frame-1.png",
+      "source": "Minimap_Frames_spr/Minimap_Frames_spr_1.png",
+      "width": 280,
+      "height": 158
+    },
+    {
+      "file": "map-frame-2.png",
+      "source": "Minimap_Frames_spr/Minimap_Frames_spr_2.png",
+      "width": 280,
+      "height": 158
+    },
+    {
+      "file": "map-frame-3.png",
+      "source": "Minimap_Frames_spr/Minimap_Frames_spr_3.png",
+      "width": 280,
+      "height": 158
+    },
+    {
+      "file": "map-frame-4.png",
+      "source": "Minimap_Frames_spr/Minimap_Frames_spr_4.png",
+      "width": 280,
+      "height": 158
+    },
+    {
+      "file": "map-frame-5.png",
+      "source": "Minimap_Frames_spr/Minimap_Frames_spr_5.png",
+      "width": 280,
+      "height": 158
+    },
+    {
+      "file": "map-frame-6.png",
+      "source": "Minimap_Frames_spr/Minimap_Frames_spr_6.png",
+      "width": 280,
+      "height": 158
+    },
+    {
+      "file": "map-frame-7.png",
+      "source": "Minimap_Frames_spr/Minimap_Frames_spr_7.png",
+      "width": 280,
+      "height": 158
+    },
+    {
+      "file": "map-frame-8.png",
+      "source": "Minimap_Frames_spr/Minimap_Frames_spr_8.png",
+      "width": 280,
+      "height": 158
+    },
+    {
+      "file": "map-frame-9.png",
+      "source": "Minimap_Frames_spr/Minimap_Frames_spr_9.png",
+      "width": 280,
+      "height": 158
+    },
+    {
+      "file": "map-frame-10.png",
+      "source": "Minimap_Frames_spr/Minimap_Frames_spr_10.png",
+      "width": 280,
+      "height": 158
+    },
+    {
+      "file": "map-frame-11.png",
+      "source": "Minimap_Frames_spr/Minimap_Frames_spr_11.png",
+      "width": 280,
+      "height": 158
+    },
+    {
+      "file": "map-frame-12.png",
+      "source": "Minimap_Frames_spr/Minimap_Frames_spr_12.png",
+      "width": 280,
+      "height": 158
+    },
+    {
+      "file": "map-frame-13.png",
+      "source": "Minimap_Frames_spr/Minimap_Frames_spr_13.png",
+      "width": 280,
+      "height": 158
+    },
+    {
+      "file": "map-frame-14.png",
+      "source": "Minimap_Frames_spr/Minimap_Frames_spr_14.png",
+      "width": 280,
+      "height": 158
+    },
+    {
+      "file": "map-frame-15.png",
+      "source": "Minimap_Frames_spr/Minimap_Frames_spr_15.png",
+      "width": 280,
+      "height": 158
+    },
+    {
+      "file": "map-frame-16.png",
+      "source": "Minimap_Frames_spr/Minimap_Frames_spr_16.png",
+      "width": 280,
+      "height": 158
+    },
+    {
+      "file": "map-frame-17.png",
+      "source": "Minimap_Frames_spr/Minimap_Frames_spr_17.png",
+      "width": 280,
+      "height": 158
+    },
+    {
+      "file": "map-frame-18.png",
+      "source": "Minimap_Frames_spr/Minimap_Frames_spr_18.png",
+      "width": 280,
+      "height": 158
+    },
+    {
+      "file": "map-frame-19.png",
+      "source": "Minimap_Frames_spr/Minimap_Frames_spr_19.png",
+      "width": 280,
+      "height": 158
+    }
+  ],
+  "cursor": [
+    {
+      "file": "cursor-0.png",
+      "source": "Cursor_spr/Cursor_spr_0.png",
+      "width": 33,
+      "height": 31
+    },
+    {
+      "file": "cursor-1.png",
+      "source": "Cursor_spr/Cursor_spr_1.png",
+      "width": 33,
+      "height": 31
+    }
+  ],
+  "hud-inventory": [
+    {
+      "file": "hud-inventory-0.png",
+      "source": "Hud_Action_Button_Inventory_spr/Hud_Action_Button_Inventory_spr_0.png",
+      "width": 21,
+      "height": 41
+    },
+    {
+      "file": "hud-inventory-1.png",
+      "source": "Hud_Action_Button_Inventory_spr/Hud_Action_Button_Inventory_spr_1.png",
+      "width": 21,
+      "height": 41
+    },
+    {
+      "file": "hud-inventory-2.png",
+      "source": "Hud_Action_Button_Inventory_spr/Hud_Action_Button_Inventory_spr_2.png",
+      "width": 21,
+      "height": 41
+    }
+  ],
+  "hud-stats": [
+    {
+      "file": "hud-stats-0.png",
+      "source": "Hud_Action_Button_Stats_spr/Hud_Action_Button_Stats_spr_0.png",
+      "width": 21,
+      "height": 41
+    },
+    {
+      "file": "hud-stats-1.png",
+      "source": "Hud_Action_Button_Stats_spr/Hud_Action_Button_Stats_spr_1.png",
+      "width": 21,
+      "height": 41
+    },
+    {
+      "file": "hud-stats-2.png",
+      "source": "Hud_Action_Button_Stats_spr/Hud_Action_Button_Stats_spr_2.png",
+      "width": 21,
+      "height": 41
+    }
+  ],
+  "hud-teleport": [
+    {
+      "file": "hud-teleport-0.png",
+      "source": "Hud_Action_Button_Teleport_spr/Hud_Action_Button_Teleport_spr_0.png",
+      "width": 21,
+      "height": 41
+    },
+    {
+      "file": "hud-teleport-1.png",
+      "source": "Hud_Action_Button_Teleport_spr/Hud_Action_Button_Teleport_spr_1.png",
+      "width": 21,
+      "height": 41
+    },
+    {
+      "file": "hud-teleport-2.png",
+      "source": "Hud_Action_Button_Teleport_spr/Hud_Action_Button_Teleport_spr_2.png",
+      "width": 21,
+      "height": 41
+    }
+  ],
+  "hud-coin": [
+    {
+      "file": "hud-coin-0.png",
+      "source": "Hud_Coin_New_spr/Hud_Coin_New_spr_0.png",
+      "width": 18,
+      "height": 17
+    },
+    {
+      "file": "hud-coin-1.png",
+      "source": "Hud_Coin_New_spr/Hud_Coin_New_spr_1.png",
+      "width": 18,
+      "height": 17
+    },
+    {
+      "file": "hud-coin-2.png",
+      "source": "Hud_Coin_New_spr/Hud_Coin_New_spr_2.png",
+      "width": 18,
+      "height": 17
+    },
+    {
+      "file": "hud-coin-3.png",
+      "source": "Hud_Coin_New_spr/Hud_Coin_New_spr_3.png",
+      "width": 18,
+      "height": 17
+    },
+    {
+      "file": "hud-coin-4.png",
+      "source": "Hud_Coin_New_spr/Hud_Coin_New_spr_4.png",
+      "width": 18,
+      "height": 17
+    },
+    {
+      "file": "hud-coin-5.png",
+      "source": "Hud_Coin_New_spr/Hud_Coin_New_spr_5.png",
+      "width": 18,
+      "height": 17
+    },
+    {
+      "file": "hud-coin-6.png",
+      "source": "Hud_Coin_New_spr/Hud_Coin_New_spr_6.png",
+      "width": 18,
+      "height": 17
+    },
+    {
+      "file": "hud-coin-7.png",
+      "source": "Hud_Coin_New_spr/Hud_Coin_New_spr_7.png",
+      "width": 18,
+      "height": 17
+    },
+    {
+      "file": "hud-coin-8.png",
+      "source": "Hud_Coin_New_spr/Hud_Coin_New_spr_8.png",
+      "width": 18,
+      "height": 17
+    },
+    {
+      "file": "hud-coin-9.png",
+      "source": "Hud_Coin_New_spr/Hud_Coin_New_spr_9.png",
+      "width": 18,
+      "height": 17
+    },
+    {
+      "file": "hud-coin-10.png",
+      "source": "Hud_Coin_New_spr/Hud_Coin_New_spr_10.png",
+      "width": 18,
+      "height": 17
+    }
+  ],
+  "slot-background": [
+    {
+      "file": "slot-background-0.png",
+      "source": "Inventory_Slot_Background_Normal_spr/Inventory_Slot_Background_Normal_spr_0.png",
+      "width": 32,
+      "height": 32
+    },
+    {
+      "file": "slot-background-1.png",
+      "source": "Inventory_Slot_Background_Normal_spr/Inventory_Slot_Background_Normal_spr_1.png",
+      "width": 32,
+      "height": 32
+    },
+    {
+      "file": "slot-background-2.png",
+      "source": "Inventory_Slot_Background_Normal_spr/Inventory_Slot_Background_Normal_spr_2.png",
+      "width": 32,
+      "height": 32
+    },
+    {
+      "file": "slot-background-3.png",
+      "source": "Inventory_Slot_Background_Normal_spr/Inventory_Slot_Background_Normal_spr_3.png",
+      "width": 32,
+      "height": 32
+    },
+    {
+      "file": "slot-background-4.png",
+      "source": "Inventory_Slot_Background_Normal_spr/Inventory_Slot_Background_Normal_spr_4.png",
+      "width": 32,
+      "height": 32
+    },
+    {
+      "file": "slot-background-5.png",
+      "source": "Inventory_Slot_Background_Normal_spr/Inventory_Slot_Background_Normal_spr_5.png",
+      "width": 32,
+      "height": 32
+    },
+    {
+      "file": "slot-background-6.png",
+      "source": "Inventory_Slot_Background_Normal_spr/Inventory_Slot_Background_Normal_spr_6.png",
+      "width": 32,
+      "height": 32
+    },
+    {
+      "file": "slot-background-7.png",
+      "source": "Inventory_Slot_Background_Normal_spr/Inventory_Slot_Background_Normal_spr_7.png",
+      "width": 32,
+      "height": 32
+    },
+    {
+      "file": "slot-background-8.png",
+      "source": "Inventory_Slot_Background_Normal_spr/Inventory_Slot_Background_Normal_spr_8.png",
+      "width": 32,
+      "height": 32
+    },
+    {
+      "file": "slot-background-9.png",
+      "source": "Inventory_Slot_Background_Normal_spr/Inventory_Slot_Background_Normal_spr_9.png",
+      "width": 32,
+      "height": 32
+    },
+    {
+      "file": "slot-background-10.png",
+      "source": "Inventory_Slot_Background_Normal_spr/Inventory_Slot_Background_Normal_spr_10.png",
+      "width": 32,
+      "height": 32
+    },
+    {
+      "file": "slot-background-11.png",
+      "source": "Inventory_Slot_Background_Normal_spr/Inventory_Slot_Background_Normal_spr_11.png",
+      "width": 32,
+      "height": 32
+    },
+    {
+      "file": "slot-background-12.png",
+      "source": "Inventory_Slot_Background_Normal_spr/Inventory_Slot_Background_Normal_spr_12.png",
+      "width": 32,
+      "height": 32
+    },
+    {
+      "file": "slot-background-13.png",
+      "source": "Inventory_Slot_Background_Normal_spr/Inventory_Slot_Background_Normal_spr_13.png",
+      "width": 32,
+      "height": 32
+    },
+    {
+      "file": "slot-background-14.png",
+      "source": "Inventory_Slot_Background_Normal_spr/Inventory_Slot_Background_Normal_spr_14.png",
+      "width": 32,
+      "height": 32
+    },
+    {
+      "file": "slot-background-15.png",
+      "source": "Inventory_Slot_Background_Normal_spr/Inventory_Slot_Background_Normal_spr_15.png",
+      "width": 32,
+      "height": 32
+    }
+  ],
+  "town-portal": [
+    {
+      "file": "town-portal-0.png",
+      "source": "Town_Portal_New_spr/Town_Portal_New_spr_0.png",
+      "width": 39,
+      "height": 54
+    },
+    {
+      "file": "town-portal-1.png",
+      "source": "Town_Portal_New_spr/Town_Portal_New_spr_1.png",
+      "width": 39,
+      "height": 54
+    },
+    {
+      "file": "town-portal-2.png",
+      "source": "Town_Portal_New_spr/Town_Portal_New_spr_2.png",
+      "width": 39,
+      "height": 54
+    },
+    {
+      "file": "town-portal-3.png",
+      "source": "Town_Portal_New_spr/Town_Portal_New_spr_3.png",
+      "width": 39,
+      "height": 54
+    },
+    {
+      "file": "town-portal-4.png",
+      "source": "Town_Portal_New_spr/Town_Portal_New_spr_4.png",
+      "width": 39,
+      "height": 54
+    },
+    {
+      "file": "town-portal-5.png",
+      "source": "Town_Portal_New_spr/Town_Portal_New_spr_5.png",
+      "width": 39,
+      "height": 54
+    }
+  ],
+  "waypoint": [
+    {
+      "file": "waypoint-0.png",
+      "source": "Prison_Way_Point_spr/Prison_Way_Point_spr_0.png",
+      "width": 163,
+      "height": 137
+    }
+  ],
+  "waypoint-glow": [
+    {
+      "file": "waypoint-glow-0.png",
+      "source": "Way_Point_Glow_spr/Way_Point_Glow_spr_0.png",
+      "width": 110,
+      "height": 92
+    },
+    {
+      "file": "waypoint-glow-1.png",
+      "source": "Way_Point_Glow_spr/Way_Point_Glow_spr_1.png",
+      "width": 110,
+      "height": 92
+    },
+    {
+      "file": "waypoint-glow-2.png",
+      "source": "Way_Point_Glow_spr/Way_Point_Glow_spr_2.png",
+      "width": 110,
+      "height": 92
+    },
+    {
+      "file": "waypoint-glow-3.png",
+      "source": "Way_Point_Glow_spr/Way_Point_Glow_spr_3.png",
+      "width": 110,
+      "height": 92
+    },
+    {
+      "file": "waypoint-glow-4.png",
+      "source": "Way_Point_Glow_spr/Way_Point_Glow_spr_4.png",
+      "width": 110,
+      "height": 92
+    },
+    {
+      "file": "waypoint-glow-5.png",
+      "source": "Way_Point_Glow_spr/Way_Point_Glow_spr_5.png",
+      "width": 110,
+      "height": 92
+    },
+    {
+      "file": "waypoint-glow-6.png",
+      "source": "Way_Point_Glow_spr/Way_Point_Glow_spr_6.png",
+      "width": 110,
+      "height": 92
+    },
+    {
+      "file": "waypoint-glow-7.png",
+      "source": "Way_Point_Glow_spr/Way_Point_Glow_spr_7.png",
+      "width": 110,
+      "height": 92
+    }
+  ],
+  "rune-stone": [
+    {
+      "file": "rune-stone-0.png",
+      "source": "Helheim_Rune_Stone_01_spr/Helheim_Rune_Stone_01_spr_0.png",
+      "width": 76,
+      "height": 100
+    }
+  ],
+  "ruins-wide": [
+    {
+      "file": "ruins-wide-0.png",
+      "source": "Prison_Ruins_04_spr/Prison_Ruins_04_spr_0.png",
+      "width": 209,
+      "height": 133
+    }
+  ],
+  "ruins-corner": [
+    {
+      "file": "ruins-corner-0.png",
+      "source": "Prison_Ruins_03_spr/Prison_Ruins_03_spr_0.png",
+      "width": 156,
+      "height": 276
+    }
+  ],
+  "prison-pages": [
+    {
+      "file": "prison-pages-0.png",
+      "source": "Autotile_Prison_Pages_tile/Autotile_Prison_Pages_tile_0.png",
+      "width": 384,
+      "height": 160
+    }
+  ],
+  "prison-bones": [
+    {
+      "file": "prison-bones-0.png",
+      "source": "Autotile_Prison_Bones_tile/Autotile_Prison_Bones_tile_0.png",
+      "width": 384,
+      "height": 160
+    }
+  ],
+  "prison-hay": [
+    {
+      "file": "prison-hay-0.png",
+      "source": "Autotile_Prison_Hay_tile/Autotile_Prison_Hay_tile_0.png",
+      "width": 384,
+      "height": 160
+    }
+  ],
+  "prison-grate": [
+    {
+      "file": "prison-grate-0.png",
+      "source": "Autotile_Prison_Ornament_tile/Autotile_Prison_Ornament_tile_0.png",
+      "width": 384,
+      "height": 160
+    }
+  ],
+  "health-single": [
+    {
+      "file": "health-single-0.png",
+      "source": "Player_HP_Bar_No_Mana_spr/Player_HP_Bar_No_Mana_spr_0.png",
+      "width": 72,
+      "height": 11
+    },
+    {
+      "file": "health-single-1.png",
+      "source": "Player_HP_Bar_No_Mana_spr/Player_HP_Bar_No_Mana_spr_1.png",
+      "width": 72,
+      "height": 11
+    },
+    {
+      "file": "health-single-2.png",
+      "source": "Player_HP_Bar_No_Mana_spr/Player_HP_Bar_No_Mana_spr_2.png",
+      "width": 72,
+      "height": 11
+    },
+    {
+      "file": "health-single-3.png",
+      "source": "Player_HP_Bar_No_Mana_spr/Player_HP_Bar_No_Mana_spr_3.png",
+      "width": 72,
+      "height": 11
+    },
+    {
+      "file": "health-single-4.png",
+      "source": "Player_HP_Bar_No_Mana_spr/Player_HP_Bar_No_Mana_spr_4.png",
+      "width": 72,
+      "height": 11
+    },
+    {
+      "file": "health-single-5.png",
+      "source": "Player_HP_Bar_No_Mana_spr/Player_HP_Bar_No_Mana_spr_5.png",
+      "width": 72,
+      "height": 11
+    },
+    {
+      "file": "health-single-6.png",
+      "source": "Player_HP_Bar_No_Mana_spr/Player_HP_Bar_No_Mana_spr_6.png",
+      "width": 72,
+      "height": 11
+    },
+    {
+      "file": "health-single-7.png",
+      "source": "Player_HP_Bar_No_Mana_spr/Player_HP_Bar_No_Mana_spr_7.png",
+      "width": 72,
+      "height": 11
+    },
+    {
+      "file": "health-single-8.png",
+      "source": "Player_HP_Bar_No_Mana_spr/Player_HP_Bar_No_Mana_spr_8.png",
+      "width": 72,
+      "height": 11
+    },
+    {
+      "file": "health-single-9.png",
+      "source": "Player_HP_Bar_No_Mana_spr/Player_HP_Bar_No_Mana_spr_9.png",
+      "width": 72,
+      "height": 11
+    },
+    {
+      "file": "health-single-10.png",
+      "source": "Player_HP_Bar_No_Mana_spr/Player_HP_Bar_No_Mana_spr_10.png",
+      "width": 72,
+      "height": 11
+    },
+    {
+      "file": "health-single-11.png",
+      "source": "Player_HP_Bar_No_Mana_spr/Player_HP_Bar_No_Mana_spr_11.png",
+      "width": 72,
+      "height": 11
+    },
+    {
+      "file": "health-single-12.png",
+      "source": "Player_HP_Bar_No_Mana_spr/Player_HP_Bar_No_Mana_spr_12.png",
+      "width": 72,
+      "height": 11
+    }
+  ],
+  "vitals-fill": [
+    {
+      "file": "vitals-fill-0.png",
+      "source": "Enemy_HP_Fill_spr/Enemy_HP_Fill_spr_0.png",
+      "width": 1,
+      "height": 8
+    },
+    {
+      "file": "vitals-fill-1.png",
+      "source": "Enemy_HP_Fill_spr/Enemy_HP_Fill_spr_1.png",
+      "width": 1,
+      "height": 8
+    },
+    {
+      "file": "vitals-fill-2.png",
+      "source": "Enemy_HP_Fill_spr/Enemy_HP_Fill_spr_2.png",
+      "width": 1,
+      "height": 8
+    },
+    {
+      "file": "vitals-fill-3.png",
+      "source": "Enemy_HP_Fill_spr/Enemy_HP_Fill_spr_3.png",
+      "width": 1,
+      "height": 8
+    },
+    {
+      "file": "vitals-fill-4.png",
+      "source": "Enemy_HP_Fill_spr/Enemy_HP_Fill_spr_4.png",
+      "width": 1,
+      "height": 8
+    }
+  ],
+  "enemy-bar-back": [
+    {
+      "file": "enemy-bar-back-0.png",
+      "source": "Enemy_HP_Bar_Background_spr/Enemy_HP_Bar_Background_spr_0.png",
+      "width": 96,
+      "height": 12
+    },
+    {
+      "file": "enemy-bar-back-1.png",
+      "source": "Enemy_HP_Bar_Background_spr/Enemy_HP_Bar_Background_spr_1.png",
+      "width": 96,
+      "height": 12
+    },
+    {
+      "file": "enemy-bar-back-2.png",
+      "source": "Enemy_HP_Bar_Background_spr/Enemy_HP_Bar_Background_spr_2.png",
+      "width": 96,
+      "height": 12
+    },
+    {
+      "file": "enemy-bar-back-3.png",
+      "source": "Enemy_HP_Bar_Background_spr/Enemy_HP_Bar_Background_spr_3.png",
+      "width": 96,
+      "height": 12
+    },
+    {
+      "file": "enemy-bar-back-4.png",
+      "source": "Enemy_HP_Bar_Background_spr/Enemy_HP_Bar_Background_spr_4.png",
+      "width": 96,
+      "height": 12
+    }
+  ],
+  "autumn-road-ground": [
+    {
+      "file": "autumn-road-ground-0.png",
+      "source": "Fall_Ground_tile2/Fall_Ground_tile2_0.png",
+      "width": 448,
+      "height": 256
+    }
+  ],
+  "camp": [
+    {
+      "file": "camp-0.png",
+      "source": "Fall_Campment_spr/Fall_Campment_spr_0.png",
+      "width": 174,
+      "height": 203
+    },
+    {
+      "file": "camp-1.png",
+      "source": "Fall_Campment_spr/Fall_Campment_spr_1.png",
+      "width": 174,
+      "height": 203
+    },
+    {
+      "file": "camp-2.png",
+      "source": "Fall_Campment_spr/Fall_Campment_spr_2.png",
+      "width": 174,
+      "height": 203
+    },
+    {
+      "file": "camp-3.png",
+      "source": "Fall_Campment_spr/Fall_Campment_spr_3.png",
+      "width": 174,
+      "height": 203
+    },
+    {
+      "file": "camp-4.png",
+      "source": "Fall_Campment_spr/Fall_Campment_spr_4.png",
+      "width": 174,
+      "height": 203
+    },
+    {
+      "file": "camp-5.png",
+      "source": "Fall_Campment_spr/Fall_Campment_spr_5.png",
+      "width": 174,
+      "height": 203
+    }
+  ],
+  "tent": [
+    {
+      "file": "tent-0.png",
+      "source": "Fall_Tent_spr/Fall_Tent_spr_0.png",
+      "width": 135,
+      "height": 120
+    }
+  ],
+  "grave": [
+    {
+      "file": "grave-0.png",
+      "source": "Fall_Grave_spr/Fall_Grave_spr_0.png",
+      "width": 36,
+      "height": 45
+    },
+    {
+      "file": "grave-1.png",
+      "source": "Fall_Grave_spr/Fall_Grave_spr_1.png",
+      "width": 36,
+      "height": 45
+    }
+  ],
+  "wood-coffin": [
+    {
+      "file": "wood-coffin-0.png",
+      "source": "Fall_Coffin_01_spr/Fall_Coffin_01_spr_0.png",
+      "width": 52,
+      "height": 92
+    }
+  ],
+  "handcart": [
+    {
+      "file": "handcart-0.png",
+      "source": "Fall_Cart_spr/Fall_Cart_spr_0.png",
+      "width": 46,
+      "height": 51
+    }
+  ],
+  "wood-fence": [
+    {
+      "file": "wood-fence-0.png",
+      "source": "Fall_Wood_Fence_Horizontal_01_spr/Fall_Wood_Fence_Horizontal_01_spr_0.png",
+      "width": 71,
+      "height": 24
+    },
+    {
+      "file": "wood-fence-1.png",
+      "source": "Fall_Wood_Fence_Horizontal_01_spr/Fall_Wood_Fence_Horizontal_01_spr_1.png",
+      "width": 71,
+      "height": 24
+    },
+    {
+      "file": "wood-fence-2.png",
+      "source": "Fall_Wood_Fence_Horizontal_01_spr/Fall_Wood_Fence_Horizontal_01_spr_2.png",
+      "width": 71,
+      "height": 24
+    },
+    {
+      "file": "wood-fence-3.png",
+      "source": "Fall_Wood_Fence_Horizontal_01_spr/Fall_Wood_Fence_Horizontal_01_spr_3.png",
+      "width": 71,
+      "height": 24
+    },
+    {
+      "file": "wood-fence-4.png",
+      "source": "Fall_Wood_Fence_Horizontal_01_spr/Fall_Wood_Fence_Horizontal_01_spr_4.png",
+      "width": 71,
+      "height": 24
+    },
+    {
+      "file": "wood-fence-5.png",
+      "source": "Fall_Wood_Fence_Horizontal_01_spr/Fall_Wood_Fence_Horizontal_01_spr_5.png",
+      "width": 71,
+      "height": 24
+    },
+    {
+      "file": "wood-fence-6.png",
+      "source": "Fall_Wood_Fence_Horizontal_01_spr/Fall_Wood_Fence_Horizontal_01_spr_6.png",
+      "width": 71,
+      "height": 24
+    }
+  ],
+  "wood-fence-side": [
+    {
+      "file": "wood-fence-side-0.png",
+      "source": "Fall_Wood_Fence_Vertical_01_spr/Fall_Wood_Fence_Vertical_01_spr_0.png",
+      "width": 10,
+      "height": 88
+    },
+    {
+      "file": "wood-fence-side-1.png",
+      "source": "Fall_Wood_Fence_Vertical_01_spr/Fall_Wood_Fence_Vertical_01_spr_1.png",
+      "width": 10,
+      "height": 88
+    },
+    {
+      "file": "wood-fence-side-2.png",
+      "source": "Fall_Wood_Fence_Vertical_01_spr/Fall_Wood_Fence_Vertical_01_spr_2.png",
+      "width": 10,
+      "height": 88
+    },
+    {
+      "file": "wood-fence-side-3.png",
+      "source": "Fall_Wood_Fence_Vertical_01_spr/Fall_Wood_Fence_Vertical_01_spr_3.png",
+      "width": 10,
+      "height": 88
+    },
+    {
+      "file": "wood-fence-side-4.png",
+      "source": "Fall_Wood_Fence_Vertical_01_spr/Fall_Wood_Fence_Vertical_01_spr_4.png",
+      "width": 10,
+      "height": 88
+    }
+  ],
+  "rock-large": [
+    {
+      "file": "rock-large-0.png",
+      "source": "Fall_Rock_01_spr/Fall_Rock_01_spr_0.png",
+      "width": 99,
+      "height": 80
+    }
+  ],
+  "rock-small": [
+    {
+      "file": "rock-small-0.png",
+      "source": "Fall_Rock_02_spr/Fall_Rock_02_spr_0.png",
+      "width": 47,
+      "height": 36
+    }
+  ],
+  "wood-debris": [
+    {
+      "file": "wood-debris-0.png",
+      "source": "Fall_Wood_Debris_spr/Fall_Wood_Debris_spr_0.png",
+      "width": 168,
+      "height": 111
+    }
+  ],
+  "stone-debris": [
+    {
+      "file": "stone-debris-0.png",
+      "source": "Fall_Stone_Fence_Debris_spr/Fall_Stone_Fence_Debris_spr_0.png",
+      "width": 101,
+      "height": 75
+    }
+  ],
+  "haybale": [
+    {
+      "file": "haybale-0.png",
+      "source": "Fall_Haybale_01_spr/Fall_Haybale_01_spr_0.png",
+      "width": 49,
+      "height": 39
+    }
+  ],
+  "scarecrow": [
+    {
+      "file": "scarecrow-0.png",
+      "source": "Fall_Scarecrow_01_spr/Fall_Scarecrow_01_spr_0.png",
+      "width": 80,
+      "height": 84
+    }
+  ],
+  "corpse-pile": [
+    {
+      "file": "corpse-pile-0.png",
+      "source": "Fall_Corpse_Pile_01_spr/Fall_Corpse_Pile_01_spr_0.png",
+      "width": 97,
+      "height": 71
+    }
+  ],
+  "scaffold": [
+    {
+      "file": "scaffold-0.png",
+      "source": "Fall_Execution_Scaffold_spr/Fall_Execution_Scaffold_spr_0.png",
+      "width": 236,
+      "height": 253
+    }
+  ],
+  "fountain": [
+    {
+      "file": "fountain-0.png",
+      "source": "Fall_Fountain_01_spr/Fall_Fountain_01_spr_0.png",
+      "width": 235,
+      "height": 220
+    },
+    {
+      "file": "fountain-1.png",
+      "source": "Fall_Fountain_01_spr/Fall_Fountain_01_spr_1.png",
+      "width": 235,
+      "height": 220
+    },
+    {
+      "file": "fountain-2.png",
+      "source": "Fall_Fountain_01_spr/Fall_Fountain_01_spr_2.png",
+      "width": 235,
+      "height": 220
+    },
+    {
+      "file": "fountain-3.png",
+      "source": "Fall_Fountain_01_spr/Fall_Fountain_01_spr_3.png",
+      "width": 235,
+      "height": 220
+    },
+    {
+      "file": "fountain-4.png",
+      "source": "Fall_Fountain_01_spr/Fall_Fountain_01_spr_4.png",
+      "width": 235,
+      "height": 220
+    },
+    {
+      "file": "fountain-5.png",
+      "source": "Fall_Fountain_01_spr/Fall_Fountain_01_spr_5.png",
+      "width": 235,
+      "height": 220
+    }
+  ],
+  "ruined-house": [
+    {
+      "file": "ruined-house-0.png",
+      "source": "Fall_Building_Ruins_Top_01_spr/Fall_Building_Ruins_Top_01_spr_0.png",
+      "width": 356,
+      "height": 268
+    }
+  ],
+  "autumn-bush": [
+    {
+      "file": "autumn-bush-0.png",
+      "source": "Fall_Bush_01_spr/Fall_Bush_01_spr_0.png",
+      "width": 46,
+      "height": 45
+    }
+  ],
+  "bucket": [
+    {
+      "file": "bucket-0.png",
+      "source": "Fall_Bucket_01_spr/Fall_Bucket_01_spr_0.png",
+      "width": 22,
+      "height": 27
+    }
+  ],
+  "fall-branch": [
+    {
+      "file": "fall-branch-0.png",
+      "source": "Fall_Branch_01_spr/Fall_Branch_01_spr_0.png",
+      "width": 109,
+      "height": 198
+    }
+  ],
+  "hero-idle-down": [
+    {
+      "file": "hero-idle-down-0.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Idle_Down_spr/Tarot_Bard_Pit_Fighter_01_Idle_Down_spr_0.png",
+      "width": 30,
+      "height": 48
+    },
+    {
+      "file": "hero-idle-down-1.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Idle_Down_spr/Tarot_Bard_Pit_Fighter_01_Idle_Down_spr_1.png",
+      "width": 30,
+      "height": 48
+    },
+    {
+      "file": "hero-idle-down-2.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Idle_Down_spr/Tarot_Bard_Pit_Fighter_01_Idle_Down_spr_2.png",
+      "width": 30,
+      "height": 48
+    },
+    {
+      "file": "hero-idle-down-3.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Idle_Down_spr/Tarot_Bard_Pit_Fighter_01_Idle_Down_spr_3.png",
+      "width": 30,
+      "height": 48
+    },
+    {
+      "file": "hero-idle-down-4.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Idle_Down_spr/Tarot_Bard_Pit_Fighter_01_Idle_Down_spr_4.png",
+      "width": 30,
+      "height": 48
+    },
+    {
+      "file": "hero-idle-down-5.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Idle_Down_spr/Tarot_Bard_Pit_Fighter_01_Idle_Down_spr_5.png",
+      "width": 30,
+      "height": 48
+    }
+  ],
+  "hero-idle-left": [
+    {
+      "file": "hero-idle-left-0.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Idle_Left_spr/Tarot_Bard_Pit_Fighter_01_Idle_Left_spr_0.png",
+      "width": 17,
+      "height": 48
+    },
+    {
+      "file": "hero-idle-left-1.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Idle_Left_spr/Tarot_Bard_Pit_Fighter_01_Idle_Left_spr_1.png",
+      "width": 17,
+      "height": 48
+    },
+    {
+      "file": "hero-idle-left-2.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Idle_Left_spr/Tarot_Bard_Pit_Fighter_01_Idle_Left_spr_2.png",
+      "width": 17,
+      "height": 48
+    },
+    {
+      "file": "hero-idle-left-3.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Idle_Left_spr/Tarot_Bard_Pit_Fighter_01_Idle_Left_spr_3.png",
+      "width": 17,
+      "height": 48
+    },
+    {
+      "file": "hero-idle-left-4.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Idle_Left_spr/Tarot_Bard_Pit_Fighter_01_Idle_Left_spr_4.png",
+      "width": 17,
+      "height": 48
+    },
+    {
+      "file": "hero-idle-left-5.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Idle_Left_spr/Tarot_Bard_Pit_Fighter_01_Idle_Left_spr_5.png",
+      "width": 17,
+      "height": 48
+    }
+  ],
+  "hero-idle-up": [
+    {
+      "file": "hero-idle-up-0.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Idle_Up_spr/Tarot_Bard_Pit_Fighter_01_Idle_Up_spr_0.png",
+      "width": 30,
+      "height": 48
+    },
+    {
+      "file": "hero-idle-up-1.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Idle_Up_spr/Tarot_Bard_Pit_Fighter_01_Idle_Up_spr_1.png",
+      "width": 30,
+      "height": 48
+    },
+    {
+      "file": "hero-idle-up-2.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Idle_Up_spr/Tarot_Bard_Pit_Fighter_01_Idle_Up_spr_2.png",
+      "width": 30,
+      "height": 48
+    },
+    {
+      "file": "hero-idle-up-3.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Idle_Up_spr/Tarot_Bard_Pit_Fighter_01_Idle_Up_spr_3.png",
+      "width": 30,
+      "height": 48
+    },
+    {
+      "file": "hero-idle-up-4.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Idle_Up_spr/Tarot_Bard_Pit_Fighter_01_Idle_Up_spr_4.png",
+      "width": 30,
+      "height": 48
+    },
+    {
+      "file": "hero-idle-up-5.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Idle_Up_spr/Tarot_Bard_Pit_Fighter_01_Idle_Up_spr_5.png",
+      "width": 30,
+      "height": 48
+    }
+  ],
+  "hero-walk-down": [
+    {
+      "file": "hero-walk-down-0.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Run_Down_spr/Tarot_Bard_Pit_Fighter_01_Run_Down_spr_0.png",
+      "width": 32,
+      "height": 54
+    },
+    {
+      "file": "hero-walk-down-1.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Run_Down_spr/Tarot_Bard_Pit_Fighter_01_Run_Down_spr_1.png",
+      "width": 32,
+      "height": 54
+    },
+    {
+      "file": "hero-walk-down-2.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Run_Down_spr/Tarot_Bard_Pit_Fighter_01_Run_Down_spr_2.png",
+      "width": 32,
+      "height": 54
+    },
+    {
+      "file": "hero-walk-down-3.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Run_Down_spr/Tarot_Bard_Pit_Fighter_01_Run_Down_spr_3.png",
+      "width": 32,
+      "height": 54
+    },
+    {
+      "file": "hero-walk-down-4.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Run_Down_spr/Tarot_Bard_Pit_Fighter_01_Run_Down_spr_4.png",
+      "width": 32,
+      "height": 54
+    },
+    {
+      "file": "hero-walk-down-5.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Run_Down_spr/Tarot_Bard_Pit_Fighter_01_Run_Down_spr_5.png",
+      "width": 32,
+      "height": 54
+    }
+  ],
+  "hero-walk-left": [
+    {
+      "file": "hero-walk-left-0.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Run_Left_spr/Tarot_Bard_Pit_Fighter_01_Run_Left_spr_0.png",
+      "width": 25,
+      "height": 49
+    },
+    {
+      "file": "hero-walk-left-1.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Run_Left_spr/Tarot_Bard_Pit_Fighter_01_Run_Left_spr_1.png",
+      "width": 25,
+      "height": 49
+    },
+    {
+      "file": "hero-walk-left-2.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Run_Left_spr/Tarot_Bard_Pit_Fighter_01_Run_Left_spr_2.png",
+      "width": 25,
+      "height": 49
+    },
+    {
+      "file": "hero-walk-left-3.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Run_Left_spr/Tarot_Bard_Pit_Fighter_01_Run_Left_spr_3.png",
+      "width": 25,
+      "height": 49
+    },
+    {
+      "file": "hero-walk-left-4.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Run_Left_spr/Tarot_Bard_Pit_Fighter_01_Run_Left_spr_4.png",
+      "width": 25,
+      "height": 49
+    },
+    {
+      "file": "hero-walk-left-5.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Run_Left_spr/Tarot_Bard_Pit_Fighter_01_Run_Left_spr_5.png",
+      "width": 25,
+      "height": 49
+    }
+  ],
+  "hero-walk-up": [
+    {
+      "file": "hero-walk-up-0.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Run_Up_spr/Tarot_Bard_Pit_Fighter_01_Run_Up_spr_0.png",
+      "width": 30,
+      "height": 52
+    },
+    {
+      "file": "hero-walk-up-1.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Run_Up_spr/Tarot_Bard_Pit_Fighter_01_Run_Up_spr_1.png",
+      "width": 30,
+      "height": 52
+    },
+    {
+      "file": "hero-walk-up-2.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Run_Up_spr/Tarot_Bard_Pit_Fighter_01_Run_Up_spr_2.png",
+      "width": 30,
+      "height": 52
+    },
+    {
+      "file": "hero-walk-up-3.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Run_Up_spr/Tarot_Bard_Pit_Fighter_01_Run_Up_spr_3.png",
+      "width": 30,
+      "height": 52
+    },
+    {
+      "file": "hero-walk-up-4.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Run_Up_spr/Tarot_Bard_Pit_Fighter_01_Run_Up_spr_4.png",
+      "width": 30,
+      "height": 52
+    },
+    {
+      "file": "hero-walk-up-5.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Run_Up_spr/Tarot_Bard_Pit_Fighter_01_Run_Up_spr_5.png",
+      "width": 30,
+      "height": 52
+    }
+  ],
+  "hero-attack-down": [
+    {
+      "file": "hero-attack-down-0.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Punch_Down_spr/Tarot_Bard_Pit_Fighter_01_Punch_Down_spr_0.png",
+      "width": 38,
+      "height": 56
+    },
+    {
+      "file": "hero-attack-down-1.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Punch_Down_spr/Tarot_Bard_Pit_Fighter_01_Punch_Down_spr_1.png",
+      "width": 38,
+      "height": 56
+    },
+    {
+      "file": "hero-attack-down-2.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Punch_Down_spr/Tarot_Bard_Pit_Fighter_01_Punch_Down_spr_2.png",
+      "width": 38,
+      "height": 56
+    },
+    {
+      "file": "hero-attack-down-3.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Punch_Down_spr/Tarot_Bard_Pit_Fighter_01_Punch_Down_spr_3.png",
+      "width": 38,
+      "height": 56
+    },
+    {
+      "file": "hero-attack-down-4.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Punch_Down_spr/Tarot_Bard_Pit_Fighter_01_Punch_Down_spr_4.png",
+      "width": 38,
+      "height": 56
+    },
+    {
+      "file": "hero-attack-down-5.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Punch_Down_spr/Tarot_Bard_Pit_Fighter_01_Punch_Down_spr_5.png",
+      "width": 38,
+      "height": 56
+    }
+  ],
+  "hero-attack-left": [
+    {
+      "file": "hero-attack-left-0.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Punch_Left_spr/Tarot_Bard_Pit_Fighter_01_Punch_Left_spr_0.png",
+      "width": 54,
+      "height": 47
+    },
+    {
+      "file": "hero-attack-left-1.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Punch_Left_spr/Tarot_Bard_Pit_Fighter_01_Punch_Left_spr_1.png",
+      "width": 54,
+      "height": 47
+    },
+    {
+      "file": "hero-attack-left-2.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Punch_Left_spr/Tarot_Bard_Pit_Fighter_01_Punch_Left_spr_2.png",
+      "width": 54,
+      "height": 47
+    },
+    {
+      "file": "hero-attack-left-3.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Punch_Left_spr/Tarot_Bard_Pit_Fighter_01_Punch_Left_spr_3.png",
+      "width": 54,
+      "height": 47
+    },
+    {
+      "file": "hero-attack-left-4.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Punch_Left_spr/Tarot_Bard_Pit_Fighter_01_Punch_Left_spr_4.png",
+      "width": 54,
+      "height": 47
+    },
+    {
+      "file": "hero-attack-left-5.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Punch_Left_spr/Tarot_Bard_Pit_Fighter_01_Punch_Left_spr_5.png",
+      "width": 54,
+      "height": 47
+    }
+  ],
+  "hero-attack-up": [
+    {
+      "file": "hero-attack-up-0.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Punch_Up_spr/Tarot_Bard_Pit_Fighter_01_Punch_Up_spr_0.png",
+      "width": 32,
+      "height": 56
+    },
+    {
+      "file": "hero-attack-up-1.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Punch_Up_spr/Tarot_Bard_Pit_Fighter_01_Punch_Up_spr_1.png",
+      "width": 32,
+      "height": 56
+    },
+    {
+      "file": "hero-attack-up-2.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Punch_Up_spr/Tarot_Bard_Pit_Fighter_01_Punch_Up_spr_2.png",
+      "width": 32,
+      "height": 56
+    },
+    {
+      "file": "hero-attack-up-3.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Punch_Up_spr/Tarot_Bard_Pit_Fighter_01_Punch_Up_spr_3.png",
+      "width": 32,
+      "height": 56
+    },
+    {
+      "file": "hero-attack-up-4.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Punch_Up_spr/Tarot_Bard_Pit_Fighter_01_Punch_Up_spr_4.png",
+      "width": 32,
+      "height": 56
+    },
+    {
+      "file": "hero-attack-up-5.png",
+      "source": "Tarot_Bard_Pit_Fighter_01_Punch_Up_spr/Tarot_Bard_Pit_Fighter_01_Punch_Up_spr_5.png",
+      "width": 32,
+      "height": 56
+    }
+  ],
+  "ground-sword": [
+    {
+      "file": "ground-sword-0.png",
+      "source": "Pickup_Normal_Sword_Short_Sword_spr/Pickup_Normal_Sword_Short_Sword_spr_0.png",
+      "width": 27,
+      "height": 11
+    }
+  ],
+  "ground-staff": [
+    {
+      "file": "ground-staff-0.png",
+      "source": "Pickup_Normal_Staff_Arcane_Fork_spr/Pickup_Normal_Staff_Arcane_Fork_spr_0.png",
+      "width": 44,
+      "height": 13
+    }
+  ],
+  "ground-bow": [
+    {
+      "file": "ground-bow-0.png",
+      "source": "Pickup_Normal_Bow_Long_Bow_spr/Pickup_Normal_Bow_Long_Bow_spr_0.png",
+      "width": 31,
+      "height": 31
+    }
+  ],
+  "ground-armor": [
+    {
+      "file": "ground-armor-0.png",
+      "source": "Pickup_Armor_Leather_Muscle_Breastplate_spr/Pickup_Armor_Leather_Muscle_Breastplate_spr_0.png",
+      "width": 20,
+      "height": 17
+    }
+  ],
+  "ground-helmet": [
+    {
+      "file": "ground-helmet-0.png",
+      "source": "Pickup_Helmet_Normal_Basinet_spr/Pickup_Helmet_Normal_Basinet_spr_0.png",
+      "width": 13,
+      "height": 17
+    }
+  ],
+  "ground-shield": [
+    {
+      "file": "ground-shield-0.png",
+      "source": "Pickup_Shields_Normal_Buckler_spr/Pickup_Shields_Normal_Buckler_spr_0.png",
+      "width": 20,
+      "height": 17
+    }
+  ],
+  "ground-gloves": [
+    {
+      "file": "ground-gloves-0.png",
+      "source": "Pickup_Gloves_Normal_Leather_Gloves_spr/Pickup_Gloves_Normal_Leather_Gloves_spr_0.png",
+      "width": 24,
+      "height": 19
+    }
+  ],
+  "ground-boots": [
+    {
+      "file": "ground-boots-0.png",
+      "source": "Pickup_Boots_Normal_Boots_spr/Pickup_Boots_Normal_Boots_spr_0.png",
+      "width": 18,
+      "height": 18
+    }
+  ],
+  "ground-ring": [
+    {
+      "file": "ground-ring-0.png",
+      "source": "Pickup_Rings_Normal_Iron_Ring_spr/Pickup_Rings_Normal_Iron_Ring_spr_0.png",
+      "width": 13,
+      "height": 13
+    }
+  ],
+  "ground-amulet": [
+    {
+      "file": "ground-amulet-0.png",
+      "source": "Pickup_Amulet_Normal_Silver_Necklace_spr/Pickup_Amulet_Normal_Silver_Necklace_spr_0.png",
+      "width": 22,
+      "height": 17
+    }
+  ],
+  "ground-belt": [
+    {
+      "file": "ground-belt-0.png",
+      "source": "Pickup_Belts_Normal_Leather_Belt_spr/Pickup_Belts_Normal_Leather_Belt_spr_0.png",
+      "width": 21,
+      "height": 17
+    }
+  ],
+  "ground-fire": [
+    {
+      "file": "ground-fire-0.png",
+      "source": "Pickup_Ruby_spr/Pickup_Ruby_spr_0.png",
+      "width": 9,
+      "height": 10
+    }
+  ],
+  "ground-arrow": [
+    {
+      "file": "ground-arrow-0.png",
+      "source": "Pickup_Emerald_spr/Pickup_Emerald_spr_0.png",
+      "width": 9,
+      "height": 10
+    }
+  ],
+  "ground-slash": [
+    {
+      "file": "ground-slash-0.png",
+      "source": "Pickup_Topaz_spr/Pickup_Topaz_spr_0.png",
+      "width": 9,
+      "height": 10
+    }
+  ],
+  "ground-nova": [
+    {
+      "file": "ground-nova-0.png",
+      "source": "Pickup_Sapphire_spr/Pickup_Sapphire_spr_0.png",
+      "width": 9,
+      "height": 10
+    }
+  ],
+  "ground-multi": [
+    {
+      "file": "ground-multi-0.png",
+      "source": "Pickup_Gem_Moonstone_spr/Pickup_Gem_Moonstone_spr_0.png",
+      "width": 8,
+      "height": 12
+    }
+  ],
+  "ground-haste": [
+    {
+      "file": "ground-haste-0.png",
+      "source": "Pickup_Emerald_spr/Pickup_Emerald_spr_0.png",
+      "width": 9,
+      "height": 10
+    }
+  ],
+  "ground-pierce": [
+    {
+      "file": "ground-pierce-0.png",
+      "source": "Pickup_Topaz_spr/Pickup_Topaz_spr_0.png",
+      "width": 9,
+      "height": 10
+    }
+  ],
+  "mob-ent-idle-down": [
+    {
+      "file": "mob-ent-idle-down-0.png",
+      "source": "Ent_Idle_Down_spr/Ent_Idle_Down_spr_0.png",
+      "width": 35,
+      "height": 44
+    }
+  ],
+  "mob-ent-idle-left": [
+    {
+      "file": "mob-ent-idle-left-0.png",
+      "source": "Ent_Idle_Left_spr/Ent_Idle_Left_spr_0.png",
+      "width": 35,
+      "height": 44
+    }
+  ],
+  "mob-ent-idle-up": [
+    {
+      "file": "mob-ent-idle-up-0.png",
+      "source": "Ent_Idle_Up_spr/Ent_Idle_Up_spr_0.png",
+      "width": 35,
+      "height": 44
+    }
+  ],
+  "mob-ent-walk-down": [
+    {
+      "file": "mob-ent-walk-down-0.png",
+      "source": "Ent_Walk_Down_spr/Ent_Walk_Down_spr_0.png",
+      "width": 35,
+      "height": 44
+    },
+    {
+      "file": "mob-ent-walk-down-1.png",
+      "source": "Ent_Walk_Down_spr/Ent_Walk_Down_spr_1.png",
+      "width": 35,
+      "height": 44
+    },
+    {
+      "file": "mob-ent-walk-down-2.png",
+      "source": "Ent_Walk_Down_spr/Ent_Walk_Down_spr_2.png",
+      "width": 35,
+      "height": 44
+    },
+    {
+      "file": "mob-ent-walk-down-3.png",
+      "source": "Ent_Walk_Down_spr/Ent_Walk_Down_spr_3.png",
+      "width": 35,
+      "height": 44
+    },
+    {
+      "file": "mob-ent-walk-down-4.png",
+      "source": "Ent_Walk_Down_spr/Ent_Walk_Down_spr_4.png",
+      "width": 35,
+      "height": 44
+    },
+    {
+      "file": "mob-ent-walk-down-5.png",
+      "source": "Ent_Walk_Down_spr/Ent_Walk_Down_spr_5.png",
+      "width": 35,
+      "height": 44
+    }
+  ],
+  "mob-ent-walk-left": [
+    {
+      "file": "mob-ent-walk-left-0.png",
+      "source": "Ent_Walk_Left_spr/Ent_Walk_Left_spr_0.png",
+      "width": 35,
+      "height": 44
+    },
+    {
+      "file": "mob-ent-walk-left-1.png",
+      "source": "Ent_Walk_Left_spr/Ent_Walk_Left_spr_1.png",
+      "width": 35,
+      "height": 44
+    },
+    {
+      "file": "mob-ent-walk-left-2.png",
+      "source": "Ent_Walk_Left_spr/Ent_Walk_Left_spr_2.png",
+      "width": 35,
+      "height": 44
+    },
+    {
+      "file": "mob-ent-walk-left-3.png",
+      "source": "Ent_Walk_Left_spr/Ent_Walk_Left_spr_3.png",
+      "width": 35,
+      "height": 44
+    },
+    {
+      "file": "mob-ent-walk-left-4.png",
+      "source": "Ent_Walk_Left_spr/Ent_Walk_Left_spr_4.png",
+      "width": 35,
+      "height": 44
+    },
+    {
+      "file": "mob-ent-walk-left-5.png",
+      "source": "Ent_Walk_Left_spr/Ent_Walk_Left_spr_5.png",
+      "width": 35,
+      "height": 44
+    }
+  ],
+  "mob-ent-walk-up": [
+    {
+      "file": "mob-ent-walk-up-0.png",
+      "source": "Ent_Walk_Up_spr/Ent_Walk_Up_spr_0.png",
+      "width": 35,
+      "height": 44
+    },
+    {
+      "file": "mob-ent-walk-up-1.png",
+      "source": "Ent_Walk_Up_spr/Ent_Walk_Up_spr_1.png",
+      "width": 35,
+      "height": 44
+    },
+    {
+      "file": "mob-ent-walk-up-2.png",
+      "source": "Ent_Walk_Up_spr/Ent_Walk_Up_spr_2.png",
+      "width": 35,
+      "height": 44
+    },
+    {
+      "file": "mob-ent-walk-up-3.png",
+      "source": "Ent_Walk_Up_spr/Ent_Walk_Up_spr_3.png",
+      "width": 35,
+      "height": 44
+    },
+    {
+      "file": "mob-ent-walk-up-4.png",
+      "source": "Ent_Walk_Up_spr/Ent_Walk_Up_spr_4.png",
+      "width": 35,
+      "height": 44
+    },
+    {
+      "file": "mob-ent-walk-up-5.png",
+      "source": "Ent_Walk_Up_spr/Ent_Walk_Up_spr_5.png",
+      "width": 35,
+      "height": 44
+    }
+  ],
+  "mob-ent-attack-down": [
+    {
+      "file": "mob-ent-attack-down-0.png",
+      "source": "Ent_Attack_Down_spr/Ent_Attack_Down_spr_0.png",
+      "width": 33,
+      "height": 49
+    },
+    {
+      "file": "mob-ent-attack-down-1.png",
+      "source": "Ent_Attack_Down_spr/Ent_Attack_Down_spr_1.png",
+      "width": 33,
+      "height": 49
+    },
+    {
+      "file": "mob-ent-attack-down-2.png",
+      "source": "Ent_Attack_Down_spr/Ent_Attack_Down_spr_2.png",
+      "width": 33,
+      "height": 49
+    },
+    {
+      "file": "mob-ent-attack-down-3.png",
+      "source": "Ent_Attack_Down_spr/Ent_Attack_Down_spr_3.png",
+      "width": 33,
+      "height": 49
+    },
+    {
+      "file": "mob-ent-attack-down-4.png",
+      "source": "Ent_Attack_Down_spr/Ent_Attack_Down_spr_4.png",
+      "width": 33,
+      "height": 49
+    },
+    {
+      "file": "mob-ent-attack-down-5.png",
+      "source": "Ent_Attack_Down_spr/Ent_Attack_Down_spr_5.png",
+      "width": 33,
+      "height": 49
+    }
+  ],
+  "mob-ent-attack-left": [
+    {
+      "file": "mob-ent-attack-left-0.png",
+      "source": "Ent_Attack_Left_spr/Ent_Attack_Left_spr_0.png",
+      "width": 42,
+      "height": 45
+    },
+    {
+      "file": "mob-ent-attack-left-1.png",
+      "source": "Ent_Attack_Left_spr/Ent_Attack_Left_spr_1.png",
+      "width": 42,
+      "height": 45
+    },
+    {
+      "file": "mob-ent-attack-left-2.png",
+      "source": "Ent_Attack_Left_spr/Ent_Attack_Left_spr_2.png",
+      "width": 42,
+      "height": 45
+    },
+    {
+      "file": "mob-ent-attack-left-3.png",
+      "source": "Ent_Attack_Left_spr/Ent_Attack_Left_spr_3.png",
+      "width": 42,
+      "height": 45
+    },
+    {
+      "file": "mob-ent-attack-left-4.png",
+      "source": "Ent_Attack_Left_spr/Ent_Attack_Left_spr_4.png",
+      "width": 42,
+      "height": 45
+    },
+    {
+      "file": "mob-ent-attack-left-5.png",
+      "source": "Ent_Attack_Left_spr/Ent_Attack_Left_spr_5.png",
+      "width": 42,
+      "height": 45
+    }
+  ],
+  "mob-ent-attack-up": [
+    {
+      "file": "mob-ent-attack-up-0.png",
+      "source": "Ent_Attack_Up_spr/Ent_Attack_Up_spr_0.png",
+      "width": 33,
+      "height": 44
+    },
+    {
+      "file": "mob-ent-attack-up-1.png",
+      "source": "Ent_Attack_Up_spr/Ent_Attack_Up_spr_1.png",
+      "width": 33,
+      "height": 44
+    },
+    {
+      "file": "mob-ent-attack-up-2.png",
+      "source": "Ent_Attack_Up_spr/Ent_Attack_Up_spr_2.png",
+      "width": 33,
+      "height": 44
+    },
+    {
+      "file": "mob-ent-attack-up-3.png",
+      "source": "Ent_Attack_Up_spr/Ent_Attack_Up_spr_3.png",
+      "width": 33,
+      "height": 44
+    },
+    {
+      "file": "mob-ent-attack-up-4.png",
+      "source": "Ent_Attack_Up_spr/Ent_Attack_Up_spr_4.png",
+      "width": 33,
+      "height": 44
+    },
+    {
+      "file": "mob-ent-attack-up-5.png",
+      "source": "Ent_Attack_Up_spr/Ent_Attack_Up_spr_5.png",
+      "width": 33,
+      "height": 44
+    }
+  ],
+  "mob-ent-dies-down": [
+    {
+      "file": "mob-ent-dies-down-0.png",
+      "source": "Ent_Dies_Down_spr/Ent_Dies_Down_spr_0.png",
+      "width": 33,
+      "height": 28
+    },
+    {
+      "file": "mob-ent-dies-down-1.png",
+      "source": "Ent_Dies_Down_spr/Ent_Dies_Down_spr_1.png",
+      "width": 33,
+      "height": 28
+    },
+    {
+      "file": "mob-ent-dies-down-2.png",
+      "source": "Ent_Dies_Down_spr/Ent_Dies_Down_spr_2.png",
+      "width": 33,
+      "height": 28
+    },
+    {
+      "file": "mob-ent-dies-down-3.png",
+      "source": "Ent_Dies_Down_spr/Ent_Dies_Down_spr_3.png",
+      "width": 33,
+      "height": 28
+    },
+    {
+      "file": "mob-ent-dies-down-4.png",
+      "source": "Ent_Dies_Down_spr/Ent_Dies_Down_spr_4.png",
+      "width": 33,
+      "height": 28
+    }
+  ],
+  "mob-ent-dies-left": [
+    {
+      "file": "mob-ent-dies-left-0.png",
+      "source": "Ent_Dies_Left_spr/Ent_Dies_Left_spr_0.png",
+      "width": 33,
+      "height": 28
+    },
+    {
+      "file": "mob-ent-dies-left-1.png",
+      "source": "Ent_Dies_Left_spr/Ent_Dies_Left_spr_1.png",
+      "width": 33,
+      "height": 28
+    },
+    {
+      "file": "mob-ent-dies-left-2.png",
+      "source": "Ent_Dies_Left_spr/Ent_Dies_Left_spr_2.png",
+      "width": 33,
+      "height": 28
+    },
+    {
+      "file": "mob-ent-dies-left-3.png",
+      "source": "Ent_Dies_Left_spr/Ent_Dies_Left_spr_3.png",
+      "width": 33,
+      "height": 28
+    },
+    {
+      "file": "mob-ent-dies-left-4.png",
+      "source": "Ent_Dies_Left_spr/Ent_Dies_Left_spr_4.png",
+      "width": 33,
+      "height": 28
+    }
+  ],
+  "mob-ent-dies-up": [
+    {
+      "file": "mob-ent-dies-up-0.png",
+      "source": "Ent_Dies_Up_spr/Ent_Dies_Up_spr_0.png",
+      "width": 33,
+      "height": 28
+    },
+    {
+      "file": "mob-ent-dies-up-1.png",
+      "source": "Ent_Dies_Up_spr/Ent_Dies_Up_spr_1.png",
+      "width": 33,
+      "height": 28
+    },
+    {
+      "file": "mob-ent-dies-up-2.png",
+      "source": "Ent_Dies_Up_spr/Ent_Dies_Up_spr_2.png",
+      "width": 33,
+      "height": 28
+    },
+    {
+      "file": "mob-ent-dies-up-3.png",
+      "source": "Ent_Dies_Up_spr/Ent_Dies_Up_spr_3.png",
+      "width": 33,
+      "height": 28
+    },
+    {
+      "file": "mob-ent-dies-up-4.png",
+      "source": "Ent_Dies_Up_spr/Ent_Dies_Up_spr_4.png",
+      "width": 33,
+      "height": 28
+    }
+  ],
+  "mob-mushroom-idle-down": [
+    {
+      "file": "mob-mushroom-idle-down-0.png",
+      "source": "Bog_Mushroom_Idle_Down_spr/Bog_Mushroom_Idle_Down_spr_0.png",
+      "width": 33,
+      "height": 35
+    },
+    {
+      "file": "mob-mushroom-idle-down-1.png",
+      "source": "Bog_Mushroom_Idle_Down_spr/Bog_Mushroom_Idle_Down_spr_1.png",
+      "width": 33,
+      "height": 35
+    },
+    {
+      "file": "mob-mushroom-idle-down-2.png",
+      "source": "Bog_Mushroom_Idle_Down_spr/Bog_Mushroom_Idle_Down_spr_2.png",
+      "width": 33,
+      "height": 35
+    },
+    {
+      "file": "mob-mushroom-idle-down-3.png",
+      "source": "Bog_Mushroom_Idle_Down_spr/Bog_Mushroom_Idle_Down_spr_3.png",
+      "width": 33,
+      "height": 35
+    },
+    {
+      "file": "mob-mushroom-idle-down-4.png",
+      "source": "Bog_Mushroom_Idle_Down_spr/Bog_Mushroom_Idle_Down_spr_4.png",
+      "width": 33,
+      "height": 35
+    },
+    {
+      "file": "mob-mushroom-idle-down-5.png",
+      "source": "Bog_Mushroom_Idle_Down_spr/Bog_Mushroom_Idle_Down_spr_5.png",
+      "width": 33,
+      "height": 35
+    }
+  ],
+  "mob-mushroom-idle-left": [
+    {
+      "file": "mob-mushroom-idle-left-0.png",
+      "source": "Bog_Mushroom_Idle_Left_spr/Bog_Mushroom_Idle_Left_spr_0.png",
+      "width": 33,
+      "height": 35
+    },
+    {
+      "file": "mob-mushroom-idle-left-1.png",
+      "source": "Bog_Mushroom_Idle_Left_spr/Bog_Mushroom_Idle_Left_spr_1.png",
+      "width": 33,
+      "height": 35
+    },
+    {
+      "file": "mob-mushroom-idle-left-2.png",
+      "source": "Bog_Mushroom_Idle_Left_spr/Bog_Mushroom_Idle_Left_spr_2.png",
+      "width": 33,
+      "height": 35
+    },
+    {
+      "file": "mob-mushroom-idle-left-3.png",
+      "source": "Bog_Mushroom_Idle_Left_spr/Bog_Mushroom_Idle_Left_spr_3.png",
+      "width": 33,
+      "height": 35
+    },
+    {
+      "file": "mob-mushroom-idle-left-4.png",
+      "source": "Bog_Mushroom_Idle_Left_spr/Bog_Mushroom_Idle_Left_spr_4.png",
+      "width": 33,
+      "height": 35
+    },
+    {
+      "file": "mob-mushroom-idle-left-5.png",
+      "source": "Bog_Mushroom_Idle_Left_spr/Bog_Mushroom_Idle_Left_spr_5.png",
+      "width": 33,
+      "height": 35
+    }
+  ],
+  "mob-mushroom-idle-up": [
+    {
+      "file": "mob-mushroom-idle-up-0.png",
+      "source": "Bog_Mushroom_Idle_Up_spr/Bog_Mushroom_Idle_Up_spr_0.png",
+      "width": 33,
+      "height": 35
+    },
+    {
+      "file": "mob-mushroom-idle-up-1.png",
+      "source": "Bog_Mushroom_Idle_Up_spr/Bog_Mushroom_Idle_Up_spr_1.png",
+      "width": 33,
+      "height": 35
+    },
+    {
+      "file": "mob-mushroom-idle-up-2.png",
+      "source": "Bog_Mushroom_Idle_Up_spr/Bog_Mushroom_Idle_Up_spr_2.png",
+      "width": 33,
+      "height": 35
+    },
+    {
+      "file": "mob-mushroom-idle-up-3.png",
+      "source": "Bog_Mushroom_Idle_Up_spr/Bog_Mushroom_Idle_Up_spr_3.png",
+      "width": 33,
+      "height": 35
+    },
+    {
+      "file": "mob-mushroom-idle-up-4.png",
+      "source": "Bog_Mushroom_Idle_Up_spr/Bog_Mushroom_Idle_Up_spr_4.png",
+      "width": 33,
+      "height": 35
+    },
+    {
+      "file": "mob-mushroom-idle-up-5.png",
+      "source": "Bog_Mushroom_Idle_Up_spr/Bog_Mushroom_Idle_Up_spr_5.png",
+      "width": 33,
+      "height": 35
+    }
+  ],
+  "mob-mushroom-walk-down": [
+    {
+      "file": "mob-mushroom-walk-down-0.png",
+      "source": "Bog_Mushroom_Walk_Down_spr/Bog_Mushroom_Walk_Down_spr_0.png",
+      "width": 33,
+      "height": 38
+    },
+    {
+      "file": "mob-mushroom-walk-down-1.png",
+      "source": "Bog_Mushroom_Walk_Down_spr/Bog_Mushroom_Walk_Down_spr_1.png",
+      "width": 33,
+      "height": 38
+    },
+    {
+      "file": "mob-mushroom-walk-down-2.png",
+      "source": "Bog_Mushroom_Walk_Down_spr/Bog_Mushroom_Walk_Down_spr_2.png",
+      "width": 33,
+      "height": 38
+    },
+    {
+      "file": "mob-mushroom-walk-down-3.png",
+      "source": "Bog_Mushroom_Walk_Down_spr/Bog_Mushroom_Walk_Down_spr_3.png",
+      "width": 33,
+      "height": 38
+    },
+    {
+      "file": "mob-mushroom-walk-down-4.png",
+      "source": "Bog_Mushroom_Walk_Down_spr/Bog_Mushroom_Walk_Down_spr_4.png",
+      "width": 33,
+      "height": 38
+    },
+    {
+      "file": "mob-mushroom-walk-down-5.png",
+      "source": "Bog_Mushroom_Walk_Down_spr/Bog_Mushroom_Walk_Down_spr_5.png",
+      "width": 33,
+      "height": 38
+    },
+    {
+      "file": "mob-mushroom-walk-down-6.png",
+      "source": "Bog_Mushroom_Walk_Down_spr/Bog_Mushroom_Walk_Down_spr_6.png",
+      "width": 33,
+      "height": 38
+    },
+    {
+      "file": "mob-mushroom-walk-down-7.png",
+      "source": "Bog_Mushroom_Walk_Down_spr/Bog_Mushroom_Walk_Down_spr_7.png",
+      "width": 33,
+      "height": 38
+    },
+    {
+      "file": "mob-mushroom-walk-down-8.png",
+      "source": "Bog_Mushroom_Walk_Down_spr/Bog_Mushroom_Walk_Down_spr_8.png",
+      "width": 33,
+      "height": 38
+    },
+    {
+      "file": "mob-mushroom-walk-down-9.png",
+      "source": "Bog_Mushroom_Walk_Down_spr/Bog_Mushroom_Walk_Down_spr_9.png",
+      "width": 33,
+      "height": 38
+    }
+  ],
+  "mob-mushroom-walk-left": [
+    {
+      "file": "mob-mushroom-walk-left-0.png",
+      "source": "Bog_Mushroom_Walk_Left_spr/Bog_Mushroom_Walk_Left_spr_0.png",
+      "width": 33,
+      "height": 35
+    },
+    {
+      "file": "mob-mushroom-walk-left-1.png",
+      "source": "Bog_Mushroom_Walk_Left_spr/Bog_Mushroom_Walk_Left_spr_1.png",
+      "width": 33,
+      "height": 35
+    },
+    {
+      "file": "mob-mushroom-walk-left-2.png",
+      "source": "Bog_Mushroom_Walk_Left_spr/Bog_Mushroom_Walk_Left_spr_2.png",
+      "width": 33,
+      "height": 35
+    },
+    {
+      "file": "mob-mushroom-walk-left-3.png",
+      "source": "Bog_Mushroom_Walk_Left_spr/Bog_Mushroom_Walk_Left_spr_3.png",
+      "width": 33,
+      "height": 35
+    },
+    {
+      "file": "mob-mushroom-walk-left-4.png",
+      "source": "Bog_Mushroom_Walk_Left_spr/Bog_Mushroom_Walk_Left_spr_4.png",
+      "width": 33,
+      "height": 35
+    },
+    {
+      "file": "mob-mushroom-walk-left-5.png",
+      "source": "Bog_Mushroom_Walk_Left_spr/Bog_Mushroom_Walk_Left_spr_5.png",
+      "width": 33,
+      "height": 35
+    },
+    {
+      "file": "mob-mushroom-walk-left-6.png",
+      "source": "Bog_Mushroom_Walk_Left_spr/Bog_Mushroom_Walk_Left_spr_6.png",
+      "width": 33,
+      "height": 35
+    },
+    {
+      "file": "mob-mushroom-walk-left-7.png",
+      "source": "Bog_Mushroom_Walk_Left_spr/Bog_Mushroom_Walk_Left_spr_7.png",
+      "width": 33,
+      "height": 35
+    },
+    {
+      "file": "mob-mushroom-walk-left-8.png",
+      "source": "Bog_Mushroom_Walk_Left_spr/Bog_Mushroom_Walk_Left_spr_8.png",
+      "width": 33,
+      "height": 35
+    },
+    {
+      "file": "mob-mushroom-walk-left-9.png",
+      "source": "Bog_Mushroom_Walk_Left_spr/Bog_Mushroom_Walk_Left_spr_9.png",
+      "width": 33,
+      "height": 35
+    }
+  ],
+  "mob-mushroom-walk-up": [
+    {
+      "file": "mob-mushroom-walk-up-0.png",
+      "source": "Bog_Mushroom_Walk_Up_spr/Bog_Mushroom_Walk_Up_spr_0.png",
+      "width": 33,
+      "height": 38
+    },
+    {
+      "file": "mob-mushroom-walk-up-1.png",
+      "source": "Bog_Mushroom_Walk_Up_spr/Bog_Mushroom_Walk_Up_spr_1.png",
+      "width": 33,
+      "height": 38
+    },
+    {
+      "file": "mob-mushroom-walk-up-2.png",
+      "source": "Bog_Mushroom_Walk_Up_spr/Bog_Mushroom_Walk_Up_spr_2.png",
+      "width": 33,
+      "height": 38
+    },
+    {
+      "file": "mob-mushroom-walk-up-3.png",
+      "source": "Bog_Mushroom_Walk_Up_spr/Bog_Mushroom_Walk_Up_spr_3.png",
+      "width": 33,
+      "height": 38
+    },
+    {
+      "file": "mob-mushroom-walk-up-4.png",
+      "source": "Bog_Mushroom_Walk_Up_spr/Bog_Mushroom_Walk_Up_spr_4.png",
+      "width": 33,
+      "height": 38
+    },
+    {
+      "file": "mob-mushroom-walk-up-5.png",
+      "source": "Bog_Mushroom_Walk_Up_spr/Bog_Mushroom_Walk_Up_spr_5.png",
+      "width": 33,
+      "height": 38
+    },
+    {
+      "file": "mob-mushroom-walk-up-6.png",
+      "source": "Bog_Mushroom_Walk_Up_spr/Bog_Mushroom_Walk_Up_spr_6.png",
+      "width": 33,
+      "height": 38
+    },
+    {
+      "file": "mob-mushroom-walk-up-7.png",
+      "source": "Bog_Mushroom_Walk_Up_spr/Bog_Mushroom_Walk_Up_spr_7.png",
+      "width": 33,
+      "height": 38
+    },
+    {
+      "file": "mob-mushroom-walk-up-8.png",
+      "source": "Bog_Mushroom_Walk_Up_spr/Bog_Mushroom_Walk_Up_spr_8.png",
+      "width": 33,
+      "height": 38
+    },
+    {
+      "file": "mob-mushroom-walk-up-9.png",
+      "source": "Bog_Mushroom_Walk_Up_spr/Bog_Mushroom_Walk_Up_spr_9.png",
+      "width": 33,
+      "height": 38
+    }
+  ],
+  "mob-mushroom-attack-down": [
+    {
+      "file": "mob-mushroom-attack-down-0.png",
+      "source": "Bog_Mushroom_Attack_Down_spr/Bog_Mushroom_Attack_Down_spr_0.png",
+      "width": 82,
+      "height": 72
+    },
+    {
+      "file": "mob-mushroom-attack-down-1.png",
+      "source": "Bog_Mushroom_Attack_Down_spr/Bog_Mushroom_Attack_Down_spr_1.png",
+      "width": 82,
+      "height": 72
+    },
+    {
+      "file": "mob-mushroom-attack-down-2.png",
+      "source": "Bog_Mushroom_Attack_Down_spr/Bog_Mushroom_Attack_Down_spr_2.png",
+      "width": 82,
+      "height": 72
+    },
+    {
+      "file": "mob-mushroom-attack-down-3.png",
+      "source": "Bog_Mushroom_Attack_Down_spr/Bog_Mushroom_Attack_Down_spr_3.png",
+      "width": 82,
+      "height": 72
+    },
+    {
+      "file": "mob-mushroom-attack-down-4.png",
+      "source": "Bog_Mushroom_Attack_Down_spr/Bog_Mushroom_Attack_Down_spr_4.png",
+      "width": 82,
+      "height": 72
+    },
+    {
+      "file": "mob-mushroom-attack-down-5.png",
+      "source": "Bog_Mushroom_Attack_Down_spr/Bog_Mushroom_Attack_Down_spr_5.png",
+      "width": 82,
+      "height": 72
+    },
+    {
+      "file": "mob-mushroom-attack-down-6.png",
+      "source": "Bog_Mushroom_Attack_Down_spr/Bog_Mushroom_Attack_Down_spr_6.png",
+      "width": 82,
+      "height": 72
+    },
+    {
+      "file": "mob-mushroom-attack-down-7.png",
+      "source": "Bog_Mushroom_Attack_Down_spr/Bog_Mushroom_Attack_Down_spr_7.png",
+      "width": 82,
+      "height": 72
+    },
+    {
+      "file": "mob-mushroom-attack-down-8.png",
+      "source": "Bog_Mushroom_Attack_Down_spr/Bog_Mushroom_Attack_Down_spr_8.png",
+      "width": 82,
+      "height": 72
+    },
+    {
+      "file": "mob-mushroom-attack-down-9.png",
+      "source": "Bog_Mushroom_Attack_Down_spr/Bog_Mushroom_Attack_Down_spr_9.png",
+      "width": 82,
+      "height": 72
+    }
+  ],
+  "mob-mushroom-attack-left": [
+    {
+      "file": "mob-mushroom-attack-left-0.png",
+      "source": "Bog_Mushroom_Attack_Left_spr/Bog_Mushroom_Attack_Left_spr_0.png",
+      "width": 82,
+      "height": 72
+    },
+    {
+      "file": "mob-mushroom-attack-left-1.png",
+      "source": "Bog_Mushroom_Attack_Left_spr/Bog_Mushroom_Attack_Left_spr_1.png",
+      "width": 82,
+      "height": 72
+    },
+    {
+      "file": "mob-mushroom-attack-left-2.png",
+      "source": "Bog_Mushroom_Attack_Left_spr/Bog_Mushroom_Attack_Left_spr_2.png",
+      "width": 82,
+      "height": 72
+    },
+    {
+      "file": "mob-mushroom-attack-left-3.png",
+      "source": "Bog_Mushroom_Attack_Left_spr/Bog_Mushroom_Attack_Left_spr_3.png",
+      "width": 82,
+      "height": 72
+    },
+    {
+      "file": "mob-mushroom-attack-left-4.png",
+      "source": "Bog_Mushroom_Attack_Left_spr/Bog_Mushroom_Attack_Left_spr_4.png",
+      "width": 82,
+      "height": 72
+    },
+    {
+      "file": "mob-mushroom-attack-left-5.png",
+      "source": "Bog_Mushroom_Attack_Left_spr/Bog_Mushroom_Attack_Left_spr_5.png",
+      "width": 82,
+      "height": 72
+    },
+    {
+      "file": "mob-mushroom-attack-left-6.png",
+      "source": "Bog_Mushroom_Attack_Left_spr/Bog_Mushroom_Attack_Left_spr_6.png",
+      "width": 82,
+      "height": 72
+    },
+    {
+      "file": "mob-mushroom-attack-left-7.png",
+      "source": "Bog_Mushroom_Attack_Left_spr/Bog_Mushroom_Attack_Left_spr_7.png",
+      "width": 82,
+      "height": 72
+    },
+    {
+      "file": "mob-mushroom-attack-left-8.png",
+      "source": "Bog_Mushroom_Attack_Left_spr/Bog_Mushroom_Attack_Left_spr_8.png",
+      "width": 82,
+      "height": 72
+    },
+    {
+      "file": "mob-mushroom-attack-left-9.png",
+      "source": "Bog_Mushroom_Attack_Left_spr/Bog_Mushroom_Attack_Left_spr_9.png",
+      "width": 82,
+      "height": 72
+    }
+  ],
+  "mob-mushroom-attack-up": [
+    {
+      "file": "mob-mushroom-attack-up-0.png",
+      "source": "Bog_Mushroom_Attack_Up_spr/Bog_Mushroom_Attack_Up_spr_0.png",
+      "width": 82,
+      "height": 72
+    },
+    {
+      "file": "mob-mushroom-attack-up-1.png",
+      "source": "Bog_Mushroom_Attack_Up_spr/Bog_Mushroom_Attack_Up_spr_1.png",
+      "width": 82,
+      "height": 72
+    },
+    {
+      "file": "mob-mushroom-attack-up-2.png",
+      "source": "Bog_Mushroom_Attack_Up_spr/Bog_Mushroom_Attack_Up_spr_2.png",
+      "width": 82,
+      "height": 72
+    },
+    {
+      "file": "mob-mushroom-attack-up-3.png",
+      "source": "Bog_Mushroom_Attack_Up_spr/Bog_Mushroom_Attack_Up_spr_3.png",
+      "width": 82,
+      "height": 72
+    },
+    {
+      "file": "mob-mushroom-attack-up-4.png",
+      "source": "Bog_Mushroom_Attack_Up_spr/Bog_Mushroom_Attack_Up_spr_4.png",
+      "width": 82,
+      "height": 72
+    },
+    {
+      "file": "mob-mushroom-attack-up-5.png",
+      "source": "Bog_Mushroom_Attack_Up_spr/Bog_Mushroom_Attack_Up_spr_5.png",
+      "width": 82,
+      "height": 72
+    },
+    {
+      "file": "mob-mushroom-attack-up-6.png",
+      "source": "Bog_Mushroom_Attack_Up_spr/Bog_Mushroom_Attack_Up_spr_6.png",
+      "width": 82,
+      "height": 72
+    },
+    {
+      "file": "mob-mushroom-attack-up-7.png",
+      "source": "Bog_Mushroom_Attack_Up_spr/Bog_Mushroom_Attack_Up_spr_7.png",
+      "width": 82,
+      "height": 72
+    },
+    {
+      "file": "mob-mushroom-attack-up-8.png",
+      "source": "Bog_Mushroom_Attack_Up_spr/Bog_Mushroom_Attack_Up_spr_8.png",
+      "width": 82,
+      "height": 72
+    },
+    {
+      "file": "mob-mushroom-attack-up-9.png",
+      "source": "Bog_Mushroom_Attack_Up_spr/Bog_Mushroom_Attack_Up_spr_9.png",
+      "width": 82,
+      "height": 72
+    }
+  ],
+  "mob-mushroom-dies-down": [
+    {
+      "file": "mob-mushroom-dies-down-0.png",
+      "source": "Bog_Mushroom_Dies_Down_spr/Bog_Mushroom_Dies_Down_spr_0.png",
+      "width": 19,
+      "height": 15
+    },
+    {
+      "file": "mob-mushroom-dies-down-1.png",
+      "source": "Bog_Mushroom_Dies_Down_spr/Bog_Mushroom_Dies_Down_spr_1.png",
+      "width": 19,
+      "height": 15
+    },
+    {
+      "file": "mob-mushroom-dies-down-2.png",
+      "source": "Bog_Mushroom_Dies_Down_spr/Bog_Mushroom_Dies_Down_spr_2.png",
+      "width": 19,
+      "height": 15
+    },
+    {
+      "file": "mob-mushroom-dies-down-3.png",
+      "source": "Bog_Mushroom_Dies_Down_spr/Bog_Mushroom_Dies_Down_spr_3.png",
+      "width": 19,
+      "height": 15
+    },
+    {
+      "file": "mob-mushroom-dies-down-4.png",
+      "source": "Bog_Mushroom_Dies_Down_spr/Bog_Mushroom_Dies_Down_spr_4.png",
+      "width": 19,
+      "height": 15
+    }
+  ],
+  "mob-mushroom-dies-left": [
+    {
+      "file": "mob-mushroom-dies-left-0.png",
+      "source": "Bog_Mushroom_Dies_Left_spr/Bog_Mushroom_Dies_Left_spr_0.png",
+      "width": 19,
+      "height": 15
+    },
+    {
+      "file": "mob-mushroom-dies-left-1.png",
+      "source": "Bog_Mushroom_Dies_Left_spr/Bog_Mushroom_Dies_Left_spr_1.png",
+      "width": 19,
+      "height": 15
+    },
+    {
+      "file": "mob-mushroom-dies-left-2.png",
+      "source": "Bog_Mushroom_Dies_Left_spr/Bog_Mushroom_Dies_Left_spr_2.png",
+      "width": 19,
+      "height": 15
+    },
+    {
+      "file": "mob-mushroom-dies-left-3.png",
+      "source": "Bog_Mushroom_Dies_Left_spr/Bog_Mushroom_Dies_Left_spr_3.png",
+      "width": 19,
+      "height": 15
+    },
+    {
+      "file": "mob-mushroom-dies-left-4.png",
+      "source": "Bog_Mushroom_Dies_Left_spr/Bog_Mushroom_Dies_Left_spr_4.png",
+      "width": 19,
+      "height": 15
+    }
+  ],
+  "mob-mushroom-dies-up": [
+    {
+      "file": "mob-mushroom-dies-up-0.png",
+      "source": "Bog_Mushroom_Dies_Up_spr/Bog_Mushroom_Dies_Up_spr_0.png",
+      "width": 19,
+      "height": 15
+    },
+    {
+      "file": "mob-mushroom-dies-up-1.png",
+      "source": "Bog_Mushroom_Dies_Up_spr/Bog_Mushroom_Dies_Up_spr_1.png",
+      "width": 19,
+      "height": 15
+    },
+    {
+      "file": "mob-mushroom-dies-up-2.png",
+      "source": "Bog_Mushroom_Dies_Up_spr/Bog_Mushroom_Dies_Up_spr_2.png",
+      "width": 19,
+      "height": 15
+    },
+    {
+      "file": "mob-mushroom-dies-up-3.png",
+      "source": "Bog_Mushroom_Dies_Up_spr/Bog_Mushroom_Dies_Up_spr_3.png",
+      "width": 19,
+      "height": 15
+    },
+    {
+      "file": "mob-mushroom-dies-up-4.png",
+      "source": "Bog_Mushroom_Dies_Up_spr/Bog_Mushroom_Dies_Up_spr_4.png",
+      "width": 19,
+      "height": 15
+    }
+  ],
+  "mob-scarecrow-idle-down": [
+    {
+      "file": "mob-scarecrow-idle-down-0.png",
+      "source": "Scarecrow_Idle_Down_spr/Scarecrow_Idle_Down_spr_0.png",
+      "width": 66,
+      "height": 66
+    },
+    {
+      "file": "mob-scarecrow-idle-down-1.png",
+      "source": "Scarecrow_Idle_Down_spr/Scarecrow_Idle_Down_spr_1.png",
+      "width": 66,
+      "height": 66
+    },
+    {
+      "file": "mob-scarecrow-idle-down-2.png",
+      "source": "Scarecrow_Idle_Down_spr/Scarecrow_Idle_Down_spr_2.png",
+      "width": 66,
+      "height": 66
+    },
+    {
+      "file": "mob-scarecrow-idle-down-3.png",
+      "source": "Scarecrow_Idle_Down_spr/Scarecrow_Idle_Down_spr_3.png",
+      "width": 66,
+      "height": 66
+    },
+    {
+      "file": "mob-scarecrow-idle-down-4.png",
+      "source": "Scarecrow_Idle_Down_spr/Scarecrow_Idle_Down_spr_4.png",
+      "width": 66,
+      "height": 66
+    },
+    {
+      "file": "mob-scarecrow-idle-down-5.png",
+      "source": "Scarecrow_Idle_Down_spr/Scarecrow_Idle_Down_spr_5.png",
+      "width": 66,
+      "height": 66
+    },
+    {
+      "file": "mob-scarecrow-idle-down-6.png",
+      "source": "Scarecrow_Idle_Down_spr/Scarecrow_Idle_Down_spr_6.png",
+      "width": 66,
+      "height": 66
+    }
+  ],
+  "mob-scarecrow-idle-left": [
+    {
+      "file": "mob-scarecrow-idle-left-0.png",
+      "source": "Scarecrow_Idle_Left_spr/Scarecrow_Idle_Left_spr_0.png",
+      "width": 50,
+      "height": 72
+    },
+    {
+      "file": "mob-scarecrow-idle-left-1.png",
+      "source": "Scarecrow_Idle_Left_spr/Scarecrow_Idle_Left_spr_1.png",
+      "width": 50,
+      "height": 72
+    },
+    {
+      "file": "mob-scarecrow-idle-left-2.png",
+      "source": "Scarecrow_Idle_Left_spr/Scarecrow_Idle_Left_spr_2.png",
+      "width": 50,
+      "height": 72
+    },
+    {
+      "file": "mob-scarecrow-idle-left-3.png",
+      "source": "Scarecrow_Idle_Left_spr/Scarecrow_Idle_Left_spr_3.png",
+      "width": 50,
+      "height": 72
+    },
+    {
+      "file": "mob-scarecrow-idle-left-4.png",
+      "source": "Scarecrow_Idle_Left_spr/Scarecrow_Idle_Left_spr_4.png",
+      "width": 50,
+      "height": 72
+    },
+    {
+      "file": "mob-scarecrow-idle-left-5.png",
+      "source": "Scarecrow_Idle_Left_spr/Scarecrow_Idle_Left_spr_5.png",
+      "width": 50,
+      "height": 72
+    },
+    {
+      "file": "mob-scarecrow-idle-left-6.png",
+      "source": "Scarecrow_Idle_Left_spr/Scarecrow_Idle_Left_spr_6.png",
+      "width": 50,
+      "height": 72
+    }
+  ],
+  "mob-scarecrow-idle-up": [
+    {
+      "file": "mob-scarecrow-idle-up-0.png",
+      "source": "Scarecrow_Idle_Up_spr/Scarecrow_Idle_Up_spr_0.png",
+      "width": 65,
+      "height": 66
+    },
+    {
+      "file": "mob-scarecrow-idle-up-1.png",
+      "source": "Scarecrow_Idle_Up_spr/Scarecrow_Idle_Up_spr_1.png",
+      "width": 65,
+      "height": 66
+    },
+    {
+      "file": "mob-scarecrow-idle-up-2.png",
+      "source": "Scarecrow_Idle_Up_spr/Scarecrow_Idle_Up_spr_2.png",
+      "width": 65,
+      "height": 66
+    },
+    {
+      "file": "mob-scarecrow-idle-up-3.png",
+      "source": "Scarecrow_Idle_Up_spr/Scarecrow_Idle_Up_spr_3.png",
+      "width": 65,
+      "height": 66
+    },
+    {
+      "file": "mob-scarecrow-idle-up-4.png",
+      "source": "Scarecrow_Idle_Up_spr/Scarecrow_Idle_Up_spr_4.png",
+      "width": 65,
+      "height": 66
+    },
+    {
+      "file": "mob-scarecrow-idle-up-5.png",
+      "source": "Scarecrow_Idle_Up_spr/Scarecrow_Idle_Up_spr_5.png",
+      "width": 65,
+      "height": 66
+    },
+    {
+      "file": "mob-scarecrow-idle-up-6.png",
+      "source": "Scarecrow_Idle_Up_spr/Scarecrow_Idle_Up_spr_6.png",
+      "width": 65,
+      "height": 66
+    }
+  ],
+  "mob-scarecrow-walk-down": [
+    {
+      "file": "mob-scarecrow-walk-down-0.png",
+      "source": "Scarecrow_Walk_Down_spr/Scarecrow_Walk_Down_spr_0.png",
+      "width": 67,
+      "height": 69
+    },
+    {
+      "file": "mob-scarecrow-walk-down-1.png",
+      "source": "Scarecrow_Walk_Down_spr/Scarecrow_Walk_Down_spr_1.png",
+      "width": 67,
+      "height": 69
+    },
+    {
+      "file": "mob-scarecrow-walk-down-2.png",
+      "source": "Scarecrow_Walk_Down_spr/Scarecrow_Walk_Down_spr_2.png",
+      "width": 67,
+      "height": 69
+    },
+    {
+      "file": "mob-scarecrow-walk-down-3.png",
+      "source": "Scarecrow_Walk_Down_spr/Scarecrow_Walk_Down_spr_3.png",
+      "width": 67,
+      "height": 69
+    },
+    {
+      "file": "mob-scarecrow-walk-down-4.png",
+      "source": "Scarecrow_Walk_Down_spr/Scarecrow_Walk_Down_spr_4.png",
+      "width": 67,
+      "height": 69
+    },
+    {
+      "file": "mob-scarecrow-walk-down-5.png",
+      "source": "Scarecrow_Walk_Down_spr/Scarecrow_Walk_Down_spr_5.png",
+      "width": 67,
+      "height": 69
+    },
+    {
+      "file": "mob-scarecrow-walk-down-6.png",
+      "source": "Scarecrow_Walk_Down_spr/Scarecrow_Walk_Down_spr_6.png",
+      "width": 67,
+      "height": 69
+    },
+    {
+      "file": "mob-scarecrow-walk-down-7.png",
+      "source": "Scarecrow_Walk_Down_spr/Scarecrow_Walk_Down_spr_7.png",
+      "width": 67,
+      "height": 69
+    },
+    {
+      "file": "mob-scarecrow-walk-down-8.png",
+      "source": "Scarecrow_Walk_Down_spr/Scarecrow_Walk_Down_spr_8.png",
+      "width": 67,
+      "height": 69
+    },
+    {
+      "file": "mob-scarecrow-walk-down-9.png",
+      "source": "Scarecrow_Walk_Down_spr/Scarecrow_Walk_Down_spr_9.png",
+      "width": 67,
+      "height": 69
+    },
+    {
+      "file": "mob-scarecrow-walk-down-10.png",
+      "source": "Scarecrow_Walk_Down_spr/Scarecrow_Walk_Down_spr_10.png",
+      "width": 67,
+      "height": 69
+    },
+    {
+      "file": "mob-scarecrow-walk-down-11.png",
+      "source": "Scarecrow_Walk_Down_spr/Scarecrow_Walk_Down_spr_11.png",
+      "width": 67,
+      "height": 69
+    },
+    {
+      "file": "mob-scarecrow-walk-down-12.png",
+      "source": "Scarecrow_Walk_Down_spr/Scarecrow_Walk_Down_spr_12.png",
+      "width": 67,
+      "height": 69
+    },
+    {
+      "file": "mob-scarecrow-walk-down-13.png",
+      "source": "Scarecrow_Walk_Down_spr/Scarecrow_Walk_Down_spr_13.png",
+      "width": 67,
+      "height": 69
+    }
+  ],
+  "mob-scarecrow-walk-left": [
+    {
+      "file": "mob-scarecrow-walk-left-0.png",
+      "source": "Scarecrow_Walk_Left_spr/Scarecrow_Walk_Left_spr_0.png",
+      "width": 51,
+      "height": 74
+    },
+    {
+      "file": "mob-scarecrow-walk-left-1.png",
+      "source": "Scarecrow_Walk_Left_spr/Scarecrow_Walk_Left_spr_1.png",
+      "width": 51,
+      "height": 74
+    },
+    {
+      "file": "mob-scarecrow-walk-left-2.png",
+      "source": "Scarecrow_Walk_Left_spr/Scarecrow_Walk_Left_spr_2.png",
+      "width": 51,
+      "height": 74
+    },
+    {
+      "file": "mob-scarecrow-walk-left-3.png",
+      "source": "Scarecrow_Walk_Left_spr/Scarecrow_Walk_Left_spr_3.png",
+      "width": 51,
+      "height": 74
+    },
+    {
+      "file": "mob-scarecrow-walk-left-4.png",
+      "source": "Scarecrow_Walk_Left_spr/Scarecrow_Walk_Left_spr_4.png",
+      "width": 51,
+      "height": 74
+    },
+    {
+      "file": "mob-scarecrow-walk-left-5.png",
+      "source": "Scarecrow_Walk_Left_spr/Scarecrow_Walk_Left_spr_5.png",
+      "width": 51,
+      "height": 74
+    },
+    {
+      "file": "mob-scarecrow-walk-left-6.png",
+      "source": "Scarecrow_Walk_Left_spr/Scarecrow_Walk_Left_spr_6.png",
+      "width": 51,
+      "height": 74
+    },
+    {
+      "file": "mob-scarecrow-walk-left-7.png",
+      "source": "Scarecrow_Walk_Left_spr/Scarecrow_Walk_Left_spr_7.png",
+      "width": 51,
+      "height": 74
+    },
+    {
+      "file": "mob-scarecrow-walk-left-8.png",
+      "source": "Scarecrow_Walk_Left_spr/Scarecrow_Walk_Left_spr_8.png",
+      "width": 51,
+      "height": 74
+    },
+    {
+      "file": "mob-scarecrow-walk-left-9.png",
+      "source": "Scarecrow_Walk_Left_spr/Scarecrow_Walk_Left_spr_9.png",
+      "width": 51,
+      "height": 74
+    },
+    {
+      "file": "mob-scarecrow-walk-left-10.png",
+      "source": "Scarecrow_Walk_Left_spr/Scarecrow_Walk_Left_spr_10.png",
+      "width": 51,
+      "height": 74
+    },
+    {
+      "file": "mob-scarecrow-walk-left-11.png",
+      "source": "Scarecrow_Walk_Left_spr/Scarecrow_Walk_Left_spr_11.png",
+      "width": 51,
+      "height": 74
+    },
+    {
+      "file": "mob-scarecrow-walk-left-12.png",
+      "source": "Scarecrow_Walk_Left_spr/Scarecrow_Walk_Left_spr_12.png",
+      "width": 51,
+      "height": 74
+    },
+    {
+      "file": "mob-scarecrow-walk-left-13.png",
+      "source": "Scarecrow_Walk_Left_spr/Scarecrow_Walk_Left_spr_13.png",
+      "width": 51,
+      "height": 74
+    }
+  ],
+  "mob-scarecrow-walk-up": [
+    {
+      "file": "mob-scarecrow-walk-up-0.png",
+      "source": "Scarecrow_Walk_Up_spr/Scarecrow_Walk_Up_spr_0.png",
+      "width": 66,
+      "height": 69
+    },
+    {
+      "file": "mob-scarecrow-walk-up-1.png",
+      "source": "Scarecrow_Walk_Up_spr/Scarecrow_Walk_Up_spr_1.png",
+      "width": 66,
+      "height": 69
+    },
+    {
+      "file": "mob-scarecrow-walk-up-2.png",
+      "source": "Scarecrow_Walk_Up_spr/Scarecrow_Walk_Up_spr_2.png",
+      "width": 66,
+      "height": 69
+    },
+    {
+      "file": "mob-scarecrow-walk-up-3.png",
+      "source": "Scarecrow_Walk_Up_spr/Scarecrow_Walk_Up_spr_3.png",
+      "width": 66,
+      "height": 69
+    },
+    {
+      "file": "mob-scarecrow-walk-up-4.png",
+      "source": "Scarecrow_Walk_Up_spr/Scarecrow_Walk_Up_spr_4.png",
+      "width": 66,
+      "height": 69
+    },
+    {
+      "file": "mob-scarecrow-walk-up-5.png",
+      "source": "Scarecrow_Walk_Up_spr/Scarecrow_Walk_Up_spr_5.png",
+      "width": 66,
+      "height": 69
+    },
+    {
+      "file": "mob-scarecrow-walk-up-6.png",
+      "source": "Scarecrow_Walk_Up_spr/Scarecrow_Walk_Up_spr_6.png",
+      "width": 66,
+      "height": 69
+    },
+    {
+      "file": "mob-scarecrow-walk-up-7.png",
+      "source": "Scarecrow_Walk_Up_spr/Scarecrow_Walk_Up_spr_7.png",
+      "width": 66,
+      "height": 69
+    },
+    {
+      "file": "mob-scarecrow-walk-up-8.png",
+      "source": "Scarecrow_Walk_Up_spr/Scarecrow_Walk_Up_spr_8.png",
+      "width": 66,
+      "height": 69
+    },
+    {
+      "file": "mob-scarecrow-walk-up-9.png",
+      "source": "Scarecrow_Walk_Up_spr/Scarecrow_Walk_Up_spr_9.png",
+      "width": 66,
+      "height": 69
+    },
+    {
+      "file": "mob-scarecrow-walk-up-10.png",
+      "source": "Scarecrow_Walk_Up_spr/Scarecrow_Walk_Up_spr_10.png",
+      "width": 66,
+      "height": 69
+    },
+    {
+      "file": "mob-scarecrow-walk-up-11.png",
+      "source": "Scarecrow_Walk_Up_spr/Scarecrow_Walk_Up_spr_11.png",
+      "width": 66,
+      "height": 69
+    },
+    {
+      "file": "mob-scarecrow-walk-up-12.png",
+      "source": "Scarecrow_Walk_Up_spr/Scarecrow_Walk_Up_spr_12.png",
+      "width": 66,
+      "height": 69
+    },
+    {
+      "file": "mob-scarecrow-walk-up-13.png",
+      "source": "Scarecrow_Walk_Up_spr/Scarecrow_Walk_Up_spr_13.png",
+      "width": 66,
+      "height": 69
+    }
+  ],
+  "mob-scarecrow-attack-down": [
+    {
+      "file": "mob-scarecrow-attack-down-0.png",
+      "source": "Scarecrow_Attack_Down_spr/Scarecrow_Attack_Down_spr_0.png",
+      "width": 67,
+      "height": 117
+    },
+    {
+      "file": "mob-scarecrow-attack-down-1.png",
+      "source": "Scarecrow_Attack_Down_spr/Scarecrow_Attack_Down_spr_1.png",
+      "width": 67,
+      "height": 117
+    },
+    {
+      "file": "mob-scarecrow-attack-down-2.png",
+      "source": "Scarecrow_Attack_Down_spr/Scarecrow_Attack_Down_spr_2.png",
+      "width": 67,
+      "height": 117
+    },
+    {
+      "file": "mob-scarecrow-attack-down-3.png",
+      "source": "Scarecrow_Attack_Down_spr/Scarecrow_Attack_Down_spr_3.png",
+      "width": 67,
+      "height": 117
+    },
+    {
+      "file": "mob-scarecrow-attack-down-4.png",
+      "source": "Scarecrow_Attack_Down_spr/Scarecrow_Attack_Down_spr_4.png",
+      "width": 67,
+      "height": 117
+    },
+    {
+      "file": "mob-scarecrow-attack-down-5.png",
+      "source": "Scarecrow_Attack_Down_spr/Scarecrow_Attack_Down_spr_5.png",
+      "width": 67,
+      "height": 117
+    },
+    {
+      "file": "mob-scarecrow-attack-down-6.png",
+      "source": "Scarecrow_Attack_Down_spr/Scarecrow_Attack_Down_spr_6.png",
+      "width": 67,
+      "height": 117
+    },
+    {
+      "file": "mob-scarecrow-attack-down-7.png",
+      "source": "Scarecrow_Attack_Down_spr/Scarecrow_Attack_Down_spr_7.png",
+      "width": 67,
+      "height": 117
+    }
+  ],
+  "mob-scarecrow-attack-left": [
+    {
+      "file": "mob-scarecrow-attack-left-0.png",
+      "source": "Scarecrow_Attack_Left_spr/Scarecrow_Attack_Left_spr_0.png",
+      "width": 119,
+      "height": 72
+    },
+    {
+      "file": "mob-scarecrow-attack-left-1.png",
+      "source": "Scarecrow_Attack_Left_spr/Scarecrow_Attack_Left_spr_1.png",
+      "width": 119,
+      "height": 72
+    },
+    {
+      "file": "mob-scarecrow-attack-left-2.png",
+      "source": "Scarecrow_Attack_Left_spr/Scarecrow_Attack_Left_spr_2.png",
+      "width": 119,
+      "height": 72
+    },
+    {
+      "file": "mob-scarecrow-attack-left-3.png",
+      "source": "Scarecrow_Attack_Left_spr/Scarecrow_Attack_Left_spr_3.png",
+      "width": 119,
+      "height": 72
+    },
+    {
+      "file": "mob-scarecrow-attack-left-4.png",
+      "source": "Scarecrow_Attack_Left_spr/Scarecrow_Attack_Left_spr_4.png",
+      "width": 119,
+      "height": 72
+    },
+    {
+      "file": "mob-scarecrow-attack-left-5.png",
+      "source": "Scarecrow_Attack_Left_spr/Scarecrow_Attack_Left_spr_5.png",
+      "width": 119,
+      "height": 72
+    },
+    {
+      "file": "mob-scarecrow-attack-left-6.png",
+      "source": "Scarecrow_Attack_Left_spr/Scarecrow_Attack_Left_spr_6.png",
+      "width": 119,
+      "height": 72
+    },
+    {
+      "file": "mob-scarecrow-attack-left-7.png",
+      "source": "Scarecrow_Attack_Left_spr/Scarecrow_Attack_Left_spr_7.png",
+      "width": 119,
+      "height": 72
+    }
+  ],
+  "mob-scarecrow-attack-up": [
+    {
+      "file": "mob-scarecrow-attack-up-0.png",
+      "source": "Scarecrow_Attack_Up_spr/Scarecrow_Attack_Up_spr_0.png",
+      "width": 65,
+      "height": 103
+    },
+    {
+      "file": "mob-scarecrow-attack-up-1.png",
+      "source": "Scarecrow_Attack_Up_spr/Scarecrow_Attack_Up_spr_1.png",
+      "width": 65,
+      "height": 103
+    },
+    {
+      "file": "mob-scarecrow-attack-up-2.png",
+      "source": "Scarecrow_Attack_Up_spr/Scarecrow_Attack_Up_spr_2.png",
+      "width": 65,
+      "height": 103
+    },
+    {
+      "file": "mob-scarecrow-attack-up-3.png",
+      "source": "Scarecrow_Attack_Up_spr/Scarecrow_Attack_Up_spr_3.png",
+      "width": 65,
+      "height": 103
+    },
+    {
+      "file": "mob-scarecrow-attack-up-4.png",
+      "source": "Scarecrow_Attack_Up_spr/Scarecrow_Attack_Up_spr_4.png",
+      "width": 65,
+      "height": 103
+    },
+    {
+      "file": "mob-scarecrow-attack-up-5.png",
+      "source": "Scarecrow_Attack_Up_spr/Scarecrow_Attack_Up_spr_5.png",
+      "width": 65,
+      "height": 103
+    },
+    {
+      "file": "mob-scarecrow-attack-up-6.png",
+      "source": "Scarecrow_Attack_Up_spr/Scarecrow_Attack_Up_spr_6.png",
+      "width": 65,
+      "height": 103
+    },
+    {
+      "file": "mob-scarecrow-attack-up-7.png",
+      "source": "Scarecrow_Attack_Up_spr/Scarecrow_Attack_Up_spr_7.png",
+      "width": 65,
+      "height": 103
+    }
+  ],
+  "coffin-2": [
+    {
+      "file": "coffin-2-0.png",
+      "source": "Fall_Coffin_02_spr/Fall_Coffin_02_spr_0.png",
+      "width": 83,
+      "height": 97
+    }
+  ],
+  "coffin-3": [
+    {
+      "file": "coffin-3-0.png",
+      "source": "Fall_Coffin_03_spr/Fall_Coffin_03_spr_0.png",
+      "width": 86,
+      "height": 56
+    }
+  ],
+  "coffin-4": [
+    {
+      "file": "coffin-4-0.png",
+      "source": "Fall_Coffin_04_spr/Fall_Coffin_04_spr_0.png",
+      "width": 95,
+      "height": 77
+    }
+  ],
+  "coffin-5": [
+    {
+      "file": "coffin-5-0.png",
+      "source": "Fall_Coffin_05_spr/Fall_Coffin_05_spr_0.png",
+      "width": 49,
+      "height": 87
+    }
+  ],
+  "coffin-6": [
+    {
+      "file": "coffin-6-0.png",
+      "source": "Fall_Coffin_06_spr/Fall_Coffin_06_spr_0.png",
+      "width": 45,
+      "height": 79
+    }
+  ],
+  "coffin-7": [
+    {
+      "file": "coffin-7-0.png",
+      "source": "Fall_Coffin_07_spr/Fall_Coffin_07_spr_0.png",
+      "width": 66,
+      "height": 83
+    }
+  ],
+  "corpse-1": [
+    {
+      "file": "corpse-1-0.png",
+      "source": "Fall_Corpse_01_spr/Fall_Corpse_01_spr_0.png",
+      "width": 59,
+      "height": 42
+    }
+  ],
+  "corpse-2": [
+    {
+      "file": "corpse-2-0.png",
+      "source": "Fall_Corpse_02_spr/Fall_Corpse_02_spr_0.png",
+      "width": 59,
+      "height": 42
+    }
+  ],
+  "corpse-3": [
+    {
+      "file": "corpse-3-0.png",
+      "source": "Fall_Corpse_03_spr/Fall_Corpse_03_spr_0.png",
+      "width": 59,
+      "height": 42
+    }
+  ],
+  "corpse-4": [
+    {
+      "file": "corpse-4-0.png",
+      "source": "Fall_Corpse_04_spr/Fall_Corpse_04_spr_0.png",
+      "width": 59,
+      "height": 42
+    }
+  ],
+  "corpse-5": [
+    {
+      "file": "corpse-5-0.png",
+      "source": "Fall_Corpse_05_spr/Fall_Corpse_05_spr_0.png",
+      "width": 48,
+      "height": 48
+    }
+  ],
+  "corpse-6": [
+    {
+      "file": "corpse-6-0.png",
+      "source": "Fall_Corpse_06_spr/Fall_Corpse_06_spr_0.png",
+      "width": 59,
+      "height": 42
+    }
+  ],
+  "ice-nova": [
+    {
+      "file": "ice-nova-0.png",
+      "source": "Cosmos_Pyromancer_Nova_Effect_spr/Cosmos_Pyromancer_Nova_Effect_spr_0.png",
+      "width": 284,
+      "height": 237
+    },
+    {
+      "file": "ice-nova-1.png",
+      "source": "Cosmos_Pyromancer_Nova_Effect_spr/Cosmos_Pyromancer_Nova_Effect_spr_1.png",
+      "width": 284,
+      "height": 237
+    },
+    {
+      "file": "ice-nova-2.png",
+      "source": "Cosmos_Pyromancer_Nova_Effect_spr/Cosmos_Pyromancer_Nova_Effect_spr_2.png",
+      "width": 284,
+      "height": 237
+    },
+    {
+      "file": "ice-nova-3.png",
+      "source": "Cosmos_Pyromancer_Nova_Effect_spr/Cosmos_Pyromancer_Nova_Effect_spr_3.png",
+      "width": 284,
+      "height": 237
+    },
+    {
+      "file": "ice-nova-4.png",
+      "source": "Cosmos_Pyromancer_Nova_Effect_spr/Cosmos_Pyromancer_Nova_Effect_spr_4.png",
+      "width": 284,
+      "height": 237
+    },
+    {
+      "file": "ice-nova-5.png",
+      "source": "Cosmos_Pyromancer_Nova_Effect_spr/Cosmos_Pyromancer_Nova_Effect_spr_5.png",
+      "width": 284,
+      "height": 237
+    },
+    {
+      "file": "ice-nova-6.png",
+      "source": "Cosmos_Pyromancer_Nova_Effect_spr/Cosmos_Pyromancer_Nova_Effect_spr_6.png",
+      "width": 284,
+      "height": 237
+    },
+    {
+      "file": "ice-nova-7.png",
+      "source": "Cosmos_Pyromancer_Nova_Effect_spr/Cosmos_Pyromancer_Nova_Effect_spr_7.png",
+      "width": 284,
+      "height": 237
+    },
+    {
+      "file": "ice-nova-8.png",
+      "source": "Cosmos_Pyromancer_Nova_Effect_spr/Cosmos_Pyromancer_Nova_Effect_spr_8.png",
+      "width": 284,
+      "height": 237
+    },
+    {
+      "file": "ice-nova-9.png",
+      "source": "Cosmos_Pyromancer_Nova_Effect_spr/Cosmos_Pyromancer_Nova_Effect_spr_9.png",
+      "width": 284,
+      "height": 237
+    },
+    {
+      "file": "ice-nova-10.png",
+      "source": "Cosmos_Pyromancer_Nova_Effect_spr/Cosmos_Pyromancer_Nova_Effect_spr_10.png",
+      "width": 284,
+      "height": 237
+    },
+    {
+      "file": "ice-nova-11.png",
+      "source": "Cosmos_Pyromancer_Nova_Effect_spr/Cosmos_Pyromancer_Nova_Effect_spr_11.png",
+      "width": 284,
+      "height": 237
+    },
+    {
+      "file": "ice-nova-12.png",
+      "source": "Cosmos_Pyromancer_Nova_Effect_spr/Cosmos_Pyromancer_Nova_Effect_spr_12.png",
+      "width": 284,
+      "height": 237
+    },
+    {
+      "file": "ice-nova-13.png",
+      "source": "Cosmos_Pyromancer_Nova_Effect_spr/Cosmos_Pyromancer_Nova_Effect_spr_13.png",
+      "width": 284,
+      "height": 237
+    },
+    {
+      "file": "ice-nova-14.png",
+      "source": "Cosmos_Pyromancer_Nova_Effect_spr/Cosmos_Pyromancer_Nova_Effect_spr_14.png",
+      "width": 284,
+      "height": 237
+    }
+  ],
+  "wood-crate": [
+    {
+      "file": "wood-crate-0.png",
+      "source": "Wooden_Box_spr/Wooden_Box_spr_0.png",
+      "width": 32,
+      "height": 35
+    },
+    {
+      "file": "wood-crate-1.png",
+      "source": "Wooden_Box_spr/Wooden_Box_spr_1.png",
+      "width": 32,
+      "height": 35
+    },
+    {
+      "file": "wood-crate-2.png",
+      "source": "Wooden_Box_spr/Wooden_Box_spr_2.png",
+      "width": 32,
+      "height": 35
+    },
+    {
+      "file": "wood-crate-3.png",
+      "source": "Wooden_Box_spr/Wooden_Box_spr_3.png",
+      "width": 32,
+      "height": 35
+    }
+  ],
+  "supply-crate": [
+    {
+      "file": "supply-crate-0.png",
+      "source": "Helheim_Box_spr/Helheim_Box_spr_0.png",
+      "width": 28,
+      "height": 38
+    }
+  ],
+  "cargo-crate": [
+    {
+      "file": "cargo-crate-0.png",
+      "source": "Town_Ship_Box_01_spr/Town_Ship_Box_01_spr_0.png",
+      "width": 76,
+      "height": 76
+    }
+  ],
+  "boss-shadow": [
+    {
+      "file": "boss-shadow-0.png",
+      "source": "Shadow_Reaper_Down_spr/Shadow_Reaper_Down_spr_0.png",
+      "width": 147,
+      "height": 131
+    },
+    {
+      "file": "boss-shadow-1.png",
+      "source": "Shadow_Reaper_Down_spr/Shadow_Reaper_Down_spr_1.png",
+      "width": 147,
+      "height": 131
+    },
+    {
+      "file": "boss-shadow-2.png",
+      "source": "Shadow_Reaper_Down_spr/Shadow_Reaper_Down_spr_2.png",
+      "width": 147,
+      "height": 131
+    },
+    {
+      "file": "boss-shadow-3.png",
+      "source": "Shadow_Reaper_Down_spr/Shadow_Reaper_Down_spr_3.png",
+      "width": 147,
+      "height": 131
+    },
+    {
+      "file": "boss-shadow-4.png",
+      "source": "Shadow_Reaper_Down_spr/Shadow_Reaper_Down_spr_4.png",
+      "width": 147,
+      "height": 131
+    },
+    {
+      "file": "boss-shadow-5.png",
+      "source": "Shadow_Reaper_Down_spr/Shadow_Reaper_Down_spr_5.png",
+      "width": 147,
+      "height": 131
+    }
+  ],
+  "boss-shadow-cast": [
+    {
+      "file": "boss-shadow-cast-0.png",
+      "source": "Shadow_Reaper_Casting_spr/Shadow_Reaper_Casting_spr_0.png",
+      "width": 147,
+      "height": 202
+    },
+    {
+      "file": "boss-shadow-cast-1.png",
+      "source": "Shadow_Reaper_Casting_spr/Shadow_Reaper_Casting_spr_1.png",
+      "width": 147,
+      "height": 202
+    },
+    {
+      "file": "boss-shadow-cast-2.png",
+      "source": "Shadow_Reaper_Casting_spr/Shadow_Reaper_Casting_spr_2.png",
+      "width": 147,
+      "height": 202
+    },
+    {
+      "file": "boss-shadow-cast-3.png",
+      "source": "Shadow_Reaper_Casting_spr/Shadow_Reaper_Casting_spr_3.png",
+      "width": 147,
+      "height": 202
+    },
+    {
+      "file": "boss-shadow-cast-4.png",
+      "source": "Shadow_Reaper_Casting_spr/Shadow_Reaper_Casting_spr_4.png",
+      "width": 147,
+      "height": 202
+    },
+    {
+      "file": "boss-shadow-cast-5.png",
+      "source": "Shadow_Reaper_Casting_spr/Shadow_Reaper_Casting_spr_5.png",
+      "width": 147,
+      "height": 202
+    },
+    {
+      "file": "boss-shadow-cast-6.png",
+      "source": "Shadow_Reaper_Casting_spr/Shadow_Reaper_Casting_spr_6.png",
+      "width": 147,
+      "height": 202
+    },
+    {
+      "file": "boss-shadow-cast-7.png",
+      "source": "Shadow_Reaper_Casting_spr/Shadow_Reaper_Casting_spr_7.png",
+      "width": 147,
+      "height": 202
+    },
+    {
+      "file": "boss-shadow-cast-8.png",
+      "source": "Shadow_Reaper_Casting_spr/Shadow_Reaper_Casting_spr_8.png",
+      "width": 147,
+      "height": 202
+    },
+    {
+      "file": "boss-shadow-cast-9.png",
+      "source": "Shadow_Reaper_Casting_spr/Shadow_Reaper_Casting_spr_9.png",
+      "width": 147,
+      "height": 202
+    },
+    {
+      "file": "boss-shadow-cast-10.png",
+      "source": "Shadow_Reaper_Casting_spr/Shadow_Reaper_Casting_spr_10.png",
+      "width": 147,
+      "height": 202
+    },
+    {
+      "file": "boss-shadow-cast-11.png",
+      "source": "Shadow_Reaper_Casting_spr/Shadow_Reaper_Casting_spr_11.png",
+      "width": 147,
+      "height": 202
+    }
+  ],
+  "boss-scythe": [
+    {
+      "file": "boss-scythe-0.png",
+      "source": "Shadow_Reaper_Scythe_spr/Shadow_Reaper_Scythe_spr_0.png",
+      "width": 168,
+      "height": 122
+    },
+    {
+      "file": "boss-scythe-1.png",
+      "source": "Shadow_Reaper_Scythe_spr/Shadow_Reaper_Scythe_spr_1.png",
+      "width": 168,
+      "height": 122
+    },
+    {
+      "file": "boss-scythe-2.png",
+      "source": "Shadow_Reaper_Scythe_spr/Shadow_Reaper_Scythe_spr_2.png",
+      "width": 168,
+      "height": 122
+    },
+    {
+      "file": "boss-scythe-3.png",
+      "source": "Shadow_Reaper_Scythe_spr/Shadow_Reaper_Scythe_spr_3.png",
+      "width": 168,
+      "height": 122
+    }
+  ],
+  "boss-fill": [
+    {
+      "file": "boss-fill-0.png",
+      "source": "Boss_Health_Fill_spr/Boss_Health_Fill_spr_0.png",
+      "width": 1,
+      "height": 22
+    },
+    {
+      "file": "boss-fill-1.png",
+      "source": "Boss_Health_Fill_spr/Boss_Health_Fill_spr_1.png",
+      "width": 1,
+      "height": 22
+    },
+    {
+      "file": "boss-fill-2.png",
+      "source": "Boss_Health_Fill_spr/Boss_Health_Fill_spr_2.png",
+      "width": 1,
+      "height": 22
+    },
+    {
+      "file": "boss-fill-3.png",
+      "source": "Boss_Health_Fill_spr/Boss_Health_Fill_spr_3.png",
+      "width": 1,
+      "height": 22
+    },
+    {
+      "file": "boss-fill-4.png",
+      "source": "Boss_Health_Fill_spr/Boss_Health_Fill_spr_4.png",
+      "width": 1,
+      "height": 22
+    },
+    {
+      "file": "boss-fill-5.png",
+      "source": "Boss_Health_Fill_spr/Boss_Health_Fill_spr_5.png",
+      "width": 1,
+      "height": 22
+    },
+    {
+      "file": "boss-fill-6.png",
+      "source": "Boss_Health_Fill_spr/Boss_Health_Fill_spr_6.png",
+      "width": 1,
+      "height": 22
+    },
+    {
+      "file": "boss-fill-7.png",
+      "source": "Boss_Health_Fill_spr/Boss_Health_Fill_spr_7.png",
+      "width": 1,
+      "height": 22
+    },
+    {
+      "file": "boss-fill-8.png",
+      "source": "Boss_Health_Fill_spr/Boss_Health_Fill_spr_8.png",
+      "width": 1,
+      "height": 22
+    },
+    {
+      "file": "boss-fill-9.png",
+      "source": "Boss_Health_Fill_spr/Boss_Health_Fill_spr_9.png",
+      "width": 1,
+      "height": 22
+    },
+    {
+      "file": "boss-fill-10.png",
+      "source": "Boss_Health_Fill_spr/Boss_Health_Fill_spr_10.png",
+      "width": 1,
+      "height": 22
+    }
+  ],
+  "meteor-fx": [
+    {
+      "file": "meteor-fx-0.png",
+      "source": "Pyromancer_Meteor_spr/Pyromancer_Meteor_spr_0.png",
+      "width": 32,
+      "height": 30
+    },
+    {
+      "file": "meteor-fx-1.png",
+      "source": "Pyromancer_Meteor_spr/Pyromancer_Meteor_spr_1.png",
+      "width": 32,
+      "height": 30
+    },
+    {
+      "file": "meteor-fx-2.png",
+      "source": "Pyromancer_Meteor_spr/Pyromancer_Meteor_spr_2.png",
+      "width": 32,
+      "height": 30
+    },
+    {
+      "file": "meteor-fx-3.png",
+      "source": "Pyromancer_Meteor_spr/Pyromancer_Meteor_spr_3.png",
+      "width": 32,
+      "height": 30
+    },
+    {
+      "file": "meteor-fx-4.png",
+      "source": "Pyromancer_Meteor_spr/Pyromancer_Meteor_spr_4.png",
+      "width": 32,
+      "height": 30
+    },
+    {
+      "file": "meteor-fx-5.png",
+      "source": "Pyromancer_Meteor_spr/Pyromancer_Meteor_spr_5.png",
+      "width": 32,
+      "height": 30
+    },
+    {
+      "file": "meteor-fx-6.png",
+      "source": "Pyromancer_Meteor_spr/Pyromancer_Meteor_spr_6.png",
+      "width": 32,
+      "height": 30
+    },
+    {
+      "file": "meteor-fx-7.png",
+      "source": "Pyromancer_Meteor_spr/Pyromancer_Meteor_spr_7.png",
+      "width": 32,
+      "height": 30
+    },
+    {
+      "file": "meteor-fx-8.png",
+      "source": "Pyromancer_Meteor_spr/Pyromancer_Meteor_spr_8.png",
+      "width": 32,
+      "height": 30
+    },
+    {
+      "file": "meteor-fx-9.png",
+      "source": "Pyromancer_Meteor_spr/Pyromancer_Meteor_spr_9.png",
+      "width": 32,
+      "height": 30
+    },
+    {
+      "file": "meteor-fx-10.png",
+      "source": "Pyromancer_Meteor_spr/Pyromancer_Meteor_spr_10.png",
+      "width": 32,
+      "height": 30
+    },
+    {
+      "file": "meteor-fx-11.png",
+      "source": "Pyromancer_Meteor_spr/Pyromancer_Meteor_spr_11.png",
+      "width": 32,
+      "height": 30
+    },
+    {
+      "file": "meteor-fx-12.png",
+      "source": "Pyromancer_Meteor_spr/Pyromancer_Meteor_spr_12.png",
+      "width": 32,
+      "height": 30
+    },
+    {
+      "file": "meteor-fx-13.png",
+      "source": "Pyromancer_Meteor_spr/Pyromancer_Meteor_spr_13.png",
+      "width": 32,
+      "height": 30
+    },
+    {
+      "file": "meteor-fx-14.png",
+      "source": "Pyromancer_Meteor_spr/Pyromancer_Meteor_spr_14.png",
+      "width": 32,
+      "height": 30
+    }
+  ],
+  "meteor-impact": [
+    {
+      "file": "meteor-impact-0.png",
+      "source": "Pyromancer_Meteor_Shred_spr/Pyromancer_Meteor_Shred_spr_0.png",
+      "width": 32,
+      "height": 30
+    },
+    {
+      "file": "meteor-impact-1.png",
+      "source": "Pyromancer_Meteor_Shred_spr/Pyromancer_Meteor_Shred_spr_1.png",
+      "width": 32,
+      "height": 30
+    },
+    {
+      "file": "meteor-impact-2.png",
+      "source": "Pyromancer_Meteor_Shred_spr/Pyromancer_Meteor_Shred_spr_2.png",
+      "width": 32,
+      "height": 30
+    },
+    {
+      "file": "meteor-impact-3.png",
+      "source": "Pyromancer_Meteor_Shred_spr/Pyromancer_Meteor_Shred_spr_3.png",
+      "width": 32,
+      "height": 30
+    },
+    {
+      "file": "meteor-impact-4.png",
+      "source": "Pyromancer_Meteor_Shred_spr/Pyromancer_Meteor_Shred_spr_4.png",
+      "width": 32,
+      "height": 30
+    }
+  ],
+  "heal-fx": [
+    {
+      "file": "heal-fx-0.png",
+      "source": "Flash_Heal_spr/Flash_Heal_spr_0.png",
+      "width": 31,
+      "height": 68
+    },
+    {
+      "file": "heal-fx-1.png",
+      "source": "Flash_Heal_spr/Flash_Heal_spr_1.png",
+      "width": 31,
+      "height": 68
+    },
+    {
+      "file": "heal-fx-2.png",
+      "source": "Flash_Heal_spr/Flash_Heal_spr_2.png",
+      "width": 31,
+      "height": 68
+    },
+    {
+      "file": "heal-fx-3.png",
+      "source": "Flash_Heal_spr/Flash_Heal_spr_3.png",
+      "width": 31,
+      "height": 68
+    },
+    {
+      "file": "heal-fx-4.png",
+      "source": "Flash_Heal_spr/Flash_Heal_spr_4.png",
+      "width": 31,
+      "height": 68
+    },
+    {
+      "file": "heal-fx-5.png",
+      "source": "Flash_Heal_spr/Flash_Heal_spr_5.png",
+      "width": 31,
+      "height": 68
+    },
+    {
+      "file": "heal-fx-6.png",
+      "source": "Flash_Heal_spr/Flash_Heal_spr_6.png",
+      "width": 31,
+      "height": 68
+    },
+    {
+      "file": "heal-fx-7.png",
+      "source": "Flash_Heal_spr/Flash_Heal_spr_7.png",
+      "width": 31,
+      "height": 68
+    },
+    {
+      "file": "heal-fx-8.png",
+      "source": "Flash_Heal_spr/Flash_Heal_spr_8.png",
+      "width": 31,
+      "height": 68
+    },
+    {
+      "file": "heal-fx-9.png",
+      "source": "Flash_Heal_spr/Flash_Heal_spr_9.png",
+      "width": 31,
+      "height": 68
+    }
+  ],
+  "boss-reaper": [
+    {
+      "file": "boss-reaper-0.png",
+      "source": "Reaper_Down_spr/Reaper_Down_spr_0.png",
+      "width": 143,
+      "height": 128
+    },
+    {
+      "file": "boss-reaper-1.png",
+      "source": "Reaper_Down_spr/Reaper_Down_spr_1.png",
+      "width": 143,
+      "height": 128
+    },
+    {
+      "file": "boss-reaper-2.png",
+      "source": "Reaper_Down_spr/Reaper_Down_spr_2.png",
+      "width": 143,
+      "height": 128
+    },
+    {
+      "file": "boss-reaper-3.png",
+      "source": "Reaper_Down_spr/Reaper_Down_spr_3.png",
+      "width": 143,
+      "height": 128
+    },
+    {
+      "file": "boss-reaper-4.png",
+      "source": "Reaper_Down_spr/Reaper_Down_spr_4.png",
+      "width": 143,
+      "height": 128
+    },
+    {
+      "file": "boss-reaper-5.png",
+      "source": "Reaper_Down_spr/Reaper_Down_spr_5.png",
+      "width": 143,
+      "height": 128
+    }
+  ],
+  "boss-reaper-cast": [
+    {
+      "file": "boss-reaper-cast-0.png",
+      "source": "Reaper_Casting_spr/Reaper_Casting_spr_0.png",
+      "width": 143,
+      "height": 192
+    },
+    {
+      "file": "boss-reaper-cast-1.png",
+      "source": "Reaper_Casting_spr/Reaper_Casting_spr_1.png",
+      "width": 143,
+      "height": 192
+    },
+    {
+      "file": "boss-reaper-cast-2.png",
+      "source": "Reaper_Casting_spr/Reaper_Casting_spr_2.png",
+      "width": 143,
+      "height": 192
+    },
+    {
+      "file": "boss-reaper-cast-3.png",
+      "source": "Reaper_Casting_spr/Reaper_Casting_spr_3.png",
+      "width": 143,
+      "height": 192
+    },
+    {
+      "file": "boss-reaper-cast-4.png",
+      "source": "Reaper_Casting_spr/Reaper_Casting_spr_4.png",
+      "width": 143,
+      "height": 192
+    },
+    {
+      "file": "boss-reaper-cast-5.png",
+      "source": "Reaper_Casting_spr/Reaper_Casting_spr_5.png",
+      "width": 143,
+      "height": 192
+    },
+    {
+      "file": "boss-reaper-cast-6.png",
+      "source": "Reaper_Casting_spr/Reaper_Casting_spr_6.png",
+      "width": 143,
+      "height": 192
+    },
+    {
+      "file": "boss-reaper-cast-7.png",
+      "source": "Reaper_Casting_spr/Reaper_Casting_spr_7.png",
+      "width": 143,
+      "height": 192
+    },
+    {
+      "file": "boss-reaper-cast-8.png",
+      "source": "Reaper_Casting_spr/Reaper_Casting_spr_8.png",
+      "width": 143,
+      "height": 192
+    },
+    {
+      "file": "boss-reaper-cast-9.png",
+      "source": "Reaper_Casting_spr/Reaper_Casting_spr_9.png",
+      "width": 143,
+      "height": 192
+    },
+    {
+      "file": "boss-reaper-cast-10.png",
+      "source": "Reaper_Casting_spr/Reaper_Casting_spr_10.png",
+      "width": 143,
+      "height": 192
+    }
+  ],
+  "boss-gurag": [
+    {
+      "file": "boss-gurag-0.png",
+      "source": "Gurag_Down_spr/Gurag_Down_spr_0.png",
+      "width": 135,
+      "height": 157
+    },
+    {
+      "file": "boss-gurag-1.png",
+      "source": "Gurag_Down_spr/Gurag_Down_spr_1.png",
+      "width": 135,
+      "height": 157
+    },
+    {
+      "file": "boss-gurag-2.png",
+      "source": "Gurag_Down_spr/Gurag_Down_spr_2.png",
+      "width": 135,
+      "height": 157
+    },
+    {
+      "file": "boss-gurag-3.png",
+      "source": "Gurag_Down_spr/Gurag_Down_spr_3.png",
+      "width": 135,
+      "height": 157
+    },
+    {
+      "file": "boss-gurag-4.png",
+      "source": "Gurag_Down_spr/Gurag_Down_spr_4.png",
+      "width": 135,
+      "height": 157
+    },
+    {
+      "file": "boss-gurag-5.png",
+      "source": "Gurag_Down_spr/Gurag_Down_spr_5.png",
+      "width": 135,
+      "height": 157
+    },
+    {
+      "file": "boss-gurag-6.png",
+      "source": "Gurag_Down_spr/Gurag_Down_spr_6.png",
+      "width": 135,
+      "height": 157
+    },
+    {
+      "file": "boss-gurag-7.png",
+      "source": "Gurag_Down_spr/Gurag_Down_spr_7.png",
+      "width": 135,
+      "height": 157
+    },
+    {
+      "file": "boss-gurag-8.png",
+      "source": "Gurag_Down_spr/Gurag_Down_spr_8.png",
+      "width": 135,
+      "height": 157
+    }
+  ],
+  "boss-gurag-cast": [
+    {
+      "file": "boss-gurag-cast-0.png",
+      "source": "Gurag_Attack_Down_spr/Gurag_Attack_Down_spr_0.png",
+      "width": 139,
+      "height": 175
+    },
+    {
+      "file": "boss-gurag-cast-1.png",
+      "source": "Gurag_Attack_Down_spr/Gurag_Attack_Down_spr_1.png",
+      "width": 139,
+      "height": 175
+    },
+    {
+      "file": "boss-gurag-cast-2.png",
+      "source": "Gurag_Attack_Down_spr/Gurag_Attack_Down_spr_2.png",
+      "width": 139,
+      "height": 175
+    },
+    {
+      "file": "boss-gurag-cast-3.png",
+      "source": "Gurag_Attack_Down_spr/Gurag_Attack_Down_spr_3.png",
+      "width": 139,
+      "height": 175
+    },
+    {
+      "file": "boss-gurag-cast-4.png",
+      "source": "Gurag_Attack_Down_spr/Gurag_Attack_Down_spr_4.png",
+      "width": 139,
+      "height": 175
+    },
+    {
+      "file": "boss-gurag-cast-5.png",
+      "source": "Gurag_Attack_Down_spr/Gurag_Attack_Down_spr_5.png",
+      "width": 139,
+      "height": 175
+    },
+    {
+      "file": "boss-gurag-cast-6.png",
+      "source": "Gurag_Attack_Down_spr/Gurag_Attack_Down_spr_6.png",
+      "width": 139,
+      "height": 175
+    },
+    {
+      "file": "boss-gurag-cast-7.png",
+      "source": "Gurag_Attack_Down_spr/Gurag_Attack_Down_spr_7.png",
+      "width": 139,
+      "height": 175
+    },
+    {
+      "file": "boss-gurag-cast-8.png",
+      "source": "Gurag_Attack_Down_spr/Gurag_Attack_Down_spr_8.png",
+      "width": 139,
+      "height": 175
+    },
+    {
+      "file": "boss-gurag-cast-9.png",
+      "source": "Gurag_Attack_Down_spr/Gurag_Attack_Down_spr_9.png",
+      "width": 139,
+      "height": 175
+    },
+    {
+      "file": "boss-gurag-cast-10.png",
+      "source": "Gurag_Attack_Down_spr/Gurag_Attack_Down_spr_10.png",
+      "width": 139,
+      "height": 175
+    },
+    {
+      "file": "boss-gurag-cast-11.png",
+      "source": "Gurag_Attack_Down_spr/Gurag_Attack_Down_spr_11.png",
+      "width": 139,
+      "height": 175
+    },
+    {
+      "file": "boss-gurag-cast-12.png",
+      "source": "Gurag_Attack_Down_spr/Gurag_Attack_Down_spr_12.png",
+      "width": 139,
+      "height": 175
+    },
+    {
+      "file": "boss-gurag-cast-13.png",
+      "source": "Gurag_Attack_Down_spr/Gurag_Attack_Down_spr_13.png",
+      "width": 139,
+      "height": 175
+    },
+    {
+      "file": "boss-gurag-cast-14.png",
+      "source": "Gurag_Attack_Down_spr/Gurag_Attack_Down_spr_14.png",
+      "width": 139,
+      "height": 175
+    },
+    {
+      "file": "boss-gurag-cast-15.png",
+      "source": "Gurag_Attack_Down_spr/Gurag_Attack_Down_spr_15.png",
+      "width": 139,
+      "height": 175
+    },
+    {
+      "file": "boss-gurag-cast-16.png",
+      "source": "Gurag_Attack_Down_spr/Gurag_Attack_Down_spr_16.png",
+      "width": 139,
+      "height": 175
+    },
+    {
+      "file": "boss-gurag-cast-17.png",
+      "source": "Gurag_Attack_Down_spr/Gurag_Attack_Down_spr_17.png",
+      "width": 139,
+      "height": 175
+    },
+    {
+      "file": "boss-gurag-cast-18.png",
+      "source": "Gurag_Attack_Down_spr/Gurag_Attack_Down_spr_18.png",
+      "width": 139,
+      "height": 175
+    },
+    {
+      "file": "boss-gurag-cast-19.png",
+      "source": "Gurag_Attack_Down_spr/Gurag_Attack_Down_spr_19.png",
+      "width": 139,
+      "height": 175
+    },
+    {
+      "file": "boss-gurag-cast-20.png",
+      "source": "Gurag_Attack_Down_spr/Gurag_Attack_Down_spr_20.png",
+      "width": 139,
+      "height": 175
+    },
+    {
+      "file": "boss-gurag-cast-21.png",
+      "source": "Gurag_Attack_Down_spr/Gurag_Attack_Down_spr_21.png",
+      "width": 139,
+      "height": 175
+    },
+    {
+      "file": "boss-gurag-cast-22.png",
+      "source": "Gurag_Attack_Down_spr/Gurag_Attack_Down_spr_22.png",
+      "width": 139,
+      "height": 175
+    }
+  ],
+  "boss-frame": [
+    {
+      "file": "boss-frame-0.png",
+      "source": "Boss_Health_Frame_spr/Boss_Health_Frame_spr_0.png",
+      "width": 404,
+      "height": 52
+    },
+    {
+      "file": "boss-frame-1.png",
+      "source": "Boss_Health_Frame_spr/Boss_Health_Frame_spr_1.png",
+      "width": 404,
+      "height": 52
+    },
+    {
+      "file": "boss-frame-2.png",
+      "source": "Boss_Health_Frame_spr/Boss_Health_Frame_spr_2.png",
+      "width": 404,
+      "height": 52
+    },
+    {
+      "file": "boss-frame-3.png",
+      "source": "Boss_Health_Frame_spr/Boss_Health_Frame_spr_3.png",
+      "width": 404,
+      "height": 52
+    }
+  ],
+  "impact-fire": [
+    {
+      "file": "impact-fire-0.png",
+      "source": "Pyromancer_Explosion_spr/Pyromancer_Explosion_spr_0.png",
+      "width": 144,
+      "height": 142
+    },
+    {
+      "file": "impact-fire-1.png",
+      "source": "Pyromancer_Explosion_spr/Pyromancer_Explosion_spr_1.png",
+      "width": 144,
+      "height": 142
+    },
+    {
+      "file": "impact-fire-2.png",
+      "source": "Pyromancer_Explosion_spr/Pyromancer_Explosion_spr_2.png",
+      "width": 144,
+      "height": 142
+    },
+    {
+      "file": "impact-fire-3.png",
+      "source": "Pyromancer_Explosion_spr/Pyromancer_Explosion_spr_3.png",
+      "width": 144,
+      "height": 142
+    },
+    {
+      "file": "impact-fire-4.png",
+      "source": "Pyromancer_Explosion_spr/Pyromancer_Explosion_spr_4.png",
+      "width": 144,
+      "height": 142
+    },
+    {
+      "file": "impact-fire-5.png",
+      "source": "Pyromancer_Explosion_spr/Pyromancer_Explosion_spr_5.png",
+      "width": 144,
+      "height": 142
+    },
+    {
+      "file": "impact-fire-6.png",
+      "source": "Pyromancer_Explosion_spr/Pyromancer_Explosion_spr_6.png",
+      "width": 144,
+      "height": 142
+    },
+    {
+      "file": "impact-fire-7.png",
+      "source": "Pyromancer_Explosion_spr/Pyromancer_Explosion_spr_7.png",
+      "width": 144,
+      "height": 142
+    },
+    {
+      "file": "impact-fire-8.png",
+      "source": "Pyromancer_Explosion_spr/Pyromancer_Explosion_spr_8.png",
+      "width": 144,
+      "height": 142
+    }
+  ],
+  "impact-ring": [
+    {
+      "file": "impact-ring-0.png",
+      "source": "Pyromancer_Explosion_Circle_spr/Pyromancer_Explosion_Circle_spr_0.png",
+      "width": 360,
+      "height": 70
+    }
+  ],
+  "shadow-bolt": [
+    {
+      "file": "shadow-bolt-0.png",
+      "source": "Shadow_Ball_spr/Shadow_Ball_spr_0.png",
+      "width": 32,
+      "height": 24
+    }
+  ],
+  "boss-rock": [
+    {
+      "file": "boss-rock-0.png",
+      "source": "Gurag_Rock_spr/Gurag_Rock_spr_0.png",
+      "width": 37,
+      "height": 39
+    }
+  ],
+  "skill-icon-fire": [
+    {
+      "file": "skill-icon-fire-0.png",
+      "source": "Talent_Fireball_spr/Talent_Fireball_spr_0.png",
+      "width": 41,
+      "height": 41
+    }
+  ],
+  "skill-icon-arrow": [
+    {
+      "file": "skill-icon-arrow-0.png",
+      "source": "Talent_Piercingshot_spr/Talent_Piercingshot_spr_0.png",
+      "width": 41,
+      "height": 41
+    }
+  ],
+  "skill-icon-slash": [
+    {
+      "file": "skill-icon-slash-0.png",
+      "source": "Talent_Inferno_Slash_spr/Talent_Inferno_Slash_spr_0.png",
+      "width": 41,
+      "height": 41
+    }
+  ],
+  "skill-icon-nova": [
+    {
+      "file": "skill-icon-nova-0.png",
+      "source": "Talent_Arcane_Nova_spr/Talent_Arcane_Nova_spr_0.png",
+      "width": 41,
+      "height": 41
+    }
+  ],
+  "skill-icon-meteor": [
+    {
+      "file": "skill-icon-meteor-0.png",
+      "source": "Talent_Meteor_spr/Talent_Meteor_spr_0.png",
+      "width": 41,
+      "height": 41
+    }
+  ],
+  "skill-icon-rain": [
+    {
+      "file": "skill-icon-rain-0.png",
+      "source": "Talent_Arrow_Rain_spr/Talent_Arrow_Rain_spr_0.png",
+      "width": 41,
+      "height": 41
+    }
+  ],
+  "skill-icon-juggernaut": [
+    {
+      "file": "skill-icon-juggernaut-0.png",
+      "source": "Talent_Whirlwind_spr/Talent_Whirlwind_spr_0.png",
+      "width": 41,
+      "height": 41
+    }
+  ],
+  "skill-icon-healing": [
+    {
+      "file": "skill-icon-healing-0.png",
+      "source": "Talent_Flash_Heal_spr/Talent_Flash_Heal_spr_0.png",
+      "width": 41,
+      "height": 41
+    }
+  ],
+  "skill-icon-blink": [
+    {
+      "file": "skill-icon-blink-0.png",
+      "source": "Talent_Teleport_spr/Talent_Teleport_spr_0.png",
+      "width": 41,
+      "height": 41
+    }
+  ],
+  "skill-icon-multi": [
+    {
+      "file": "skill-icon-multi-0.png",
+      "source": "Talent_Multishot_spr/Talent_Multishot_spr_0.png",
+      "width": 41,
+      "height": 41
+    }
+  ],
+  "skill-icon-haste": [
+    {
+      "file": "skill-icon-haste-0.png",
+      "source": "Talent_Rapidfire_spr/Talent_Rapidfire_spr_0.png",
+      "width": 41,
+      "height": 41
+    }
+  ],
+  "skill-icon-pierce": [
+    {
+      "file": "skill-icon-pierce-0.png",
+      "source": "Talent_Piercing_Sand_spr/Talent_Piercing_Sand_spr_0.png",
+      "width": 41,
+      "height": 41
+    }
+  ],
+  "skill-icon-duration": [
+    {
+      "file": "skill-icon-duration-0.png",
+      "source": "Talent_Time_Deceleration_spr/Talent_Time_Deceleration_spr_0.png",
+      "width": 41,
+      "height": 41
+    }
+  ],
+  "merchant-smith": [
+    {
+      "file": "merchant-smith-0.png",
+      "source": "Torstein_New_spr/Torstein_New_spr_0.png",
+      "width": 47,
+      "height": 67
+    },
+    {
+      "file": "merchant-smith-1.png",
+      "source": "Torstein_New_spr/Torstein_New_spr_1.png",
+      "width": 47,
+      "height": 67
+    },
+    {
+      "file": "merchant-smith-2.png",
+      "source": "Torstein_New_spr/Torstein_New_spr_2.png",
+      "width": 47,
+      "height": 67
+    },
+    {
+      "file": "merchant-smith-3.png",
+      "source": "Torstein_New_spr/Torstein_New_spr_3.png",
+      "width": 47,
+      "height": 67
+    },
+    {
+      "file": "merchant-smith-4.png",
+      "source": "Torstein_New_spr/Torstein_New_spr_4.png",
+      "width": 47,
+      "height": 67
+    },
+    {
+      "file": "merchant-smith-5.png",
+      "source": "Torstein_New_spr/Torstein_New_spr_5.png",
+      "width": 47,
+      "height": 67
+    },
+    {
+      "file": "merchant-smith-6.png",
+      "source": "Torstein_New_spr/Torstein_New_spr_6.png",
+      "width": 47,
+      "height": 67
+    },
+    {
+      "file": "merchant-smith-7.png",
+      "source": "Torstein_New_spr/Torstein_New_spr_7.png",
+      "width": 47,
+      "height": 67
+    },
+    {
+      "file": "merchant-smith-8.png",
+      "source": "Torstein_New_spr/Torstein_New_spr_8.png",
+      "width": 47,
+      "height": 67
+    },
+    {
+      "file": "merchant-smith-9.png",
+      "source": "Torstein_New_spr/Torstein_New_spr_9.png",
+      "width": 47,
+      "height": 67
+    },
+    {
+      "file": "merchant-smith-10.png",
+      "source": "Torstein_New_spr/Torstein_New_spr_10.png",
+      "width": 47,
+      "height": 67
+    },
+    {
+      "file": "merchant-smith-11.png",
+      "source": "Torstein_New_spr/Torstein_New_spr_11.png",
+      "width": 47,
+      "height": 67
+    }
+  ],
+  "merchant-tailor": [
+    {
+      "file": "merchant-tailor-0.png",
+      "source": "Abigail_NPC_spr/Abigail_NPC_spr_0.png",
+      "width": 22,
+      "height": 35
+    },
+    {
+      "file": "merchant-tailor-1.png",
+      "source": "Abigail_NPC_spr/Abigail_NPC_spr_1.png",
+      "width": 22,
+      "height": 35
+    },
+    {
+      "file": "merchant-tailor-2.png",
+      "source": "Abigail_NPC_spr/Abigail_NPC_spr_2.png",
+      "width": 22,
+      "height": 35
+    },
+    {
+      "file": "merchant-tailor-3.png",
+      "source": "Abigail_NPC_spr/Abigail_NPC_spr_3.png",
+      "width": 22,
+      "height": 35
+    },
+    {
+      "file": "merchant-tailor-4.png",
+      "source": "Abigail_NPC_spr/Abigail_NPC_spr_4.png",
+      "width": 22,
+      "height": 35
+    },
+    {
+      "file": "merchant-tailor-5.png",
+      "source": "Abigail_NPC_spr/Abigail_NPC_spr_5.png",
+      "width": 22,
+      "height": 35
+    }
+  ],
+  "merchant-armorer": [
+    {
+      "file": "merchant-armorer-0.png",
+      "source": "Brynjar_NPC_spr/Brynjar_NPC_spr_0.png",
+      "width": 24,
+      "height": 38
+    },
+    {
+      "file": "merchant-armorer-1.png",
+      "source": "Brynjar_NPC_spr/Brynjar_NPC_spr_1.png",
+      "width": 24,
+      "height": 38
+    },
+    {
+      "file": "merchant-armorer-2.png",
+      "source": "Brynjar_NPC_spr/Brynjar_NPC_spr_2.png",
+      "width": 24,
+      "height": 38
+    },
+    {
+      "file": "merchant-armorer-3.png",
+      "source": "Brynjar_NPC_spr/Brynjar_NPC_spr_3.png",
+      "width": 24,
+      "height": 38
+    }
+  ],
+  "merchant-jeweler": [
+    {
+      "file": "merchant-jeweler-0.png",
+      "source": "Land_Lord_Kukkonen_New_spr/Land_Lord_Kukkonen_New_spr_0.png",
+      "width": 26,
+      "height": 35
+    },
+    {
+      "file": "merchant-jeweler-1.png",
+      "source": "Land_Lord_Kukkonen_New_spr/Land_Lord_Kukkonen_New_spr_1.png",
+      "width": 26,
+      "height": 35
+    },
+    {
+      "file": "merchant-jeweler-2.png",
+      "source": "Land_Lord_Kukkonen_New_spr/Land_Lord_Kukkonen_New_spr_2.png",
+      "width": 26,
+      "height": 35
+    },
+    {
+      "file": "merchant-jeweler-3.png",
+      "source": "Land_Lord_Kukkonen_New_spr/Land_Lord_Kukkonen_New_spr_3.png",
+      "width": 26,
+      "height": 35
+    },
+    {
+      "file": "merchant-jeweler-4.png",
+      "source": "Land_Lord_Kukkonen_New_spr/Land_Lord_Kukkonen_New_spr_4.png",
+      "width": 26,
+      "height": 35
+    },
+    {
+      "file": "merchant-jeweler-5.png",
+      "source": "Land_Lord_Kukkonen_New_spr/Land_Lord_Kukkonen_New_spr_5.png",
+      "width": 26,
+      "height": 35
+    },
+    {
+      "file": "merchant-jeweler-6.png",
+      "source": "Land_Lord_Kukkonen_New_spr/Land_Lord_Kukkonen_New_spr_6.png",
+      "width": 26,
+      "height": 35
+    },
+    {
+      "file": "merchant-jeweler-7.png",
+      "source": "Land_Lord_Kukkonen_New_spr/Land_Lord_Kukkonen_New_spr_7.png",
+      "width": 26,
+      "height": 35
+    }
+  ],
+  "reaper-flame": [
+    {
+      "file": "reaper-flame-0.png",
+      "source": "Reaper_Flames_01_spr/Reaper_Flames_01_spr_0.png",
+      "width": 183,
+      "height": 184
+    },
+    {
+      "file": "reaper-flame-1.png",
+      "source": "Reaper_Flames_01_spr/Reaper_Flames_01_spr_1.png",
+      "width": 183,
+      "height": 184
+    },
+    {
+      "file": "reaper-flame-2.png",
+      "source": "Reaper_Flames_01_spr/Reaper_Flames_01_spr_2.png",
+      "width": 183,
+      "height": 184
+    },
+    {
+      "file": "reaper-flame-3.png",
+      "source": "Reaper_Flames_01_spr/Reaper_Flames_01_spr_3.png",
+      "width": 183,
+      "height": 184
+    },
+    {
+      "file": "reaper-flame-4.png",
+      "source": "Reaper_Flames_01_spr/Reaper_Flames_01_spr_4.png",
+      "width": 183,
+      "height": 184
+    },
+    {
+      "file": "reaper-flame-5.png",
+      "source": "Reaper_Flames_01_spr/Reaper_Flames_01_spr_5.png",
+      "width": 183,
+      "height": 184
+    }
+  ],
+  "shadow-impact": [
+    {
+      "file": "shadow-impact-0.png",
+      "source": "Dark_Mage_Shadow_Bolt_Explosion_spr/Dark_Mage_Shadow_Bolt_Explosion_spr_0.png",
+      "width": 96,
+      "height": 95
+    },
+    {
+      "file": "shadow-impact-1.png",
+      "source": "Dark_Mage_Shadow_Bolt_Explosion_spr/Dark_Mage_Shadow_Bolt_Explosion_spr_1.png",
+      "width": 96,
+      "height": 95
+    },
+    {
+      "file": "shadow-impact-2.png",
+      "source": "Dark_Mage_Shadow_Bolt_Explosion_spr/Dark_Mage_Shadow_Bolt_Explosion_spr_2.png",
+      "width": 96,
+      "height": 95
+    },
+    {
+      "file": "shadow-impact-3.png",
+      "source": "Dark_Mage_Shadow_Bolt_Explosion_spr/Dark_Mage_Shadow_Bolt_Explosion_spr_3.png",
+      "width": 96,
+      "height": 95
+    },
+    {
+      "file": "shadow-impact-4.png",
+      "source": "Dark_Mage_Shadow_Bolt_Explosion_spr/Dark_Mage_Shadow_Bolt_Explosion_spr_4.png",
+      "width": 96,
+      "height": 95
+    },
+    {
+      "file": "shadow-impact-5.png",
+      "source": "Dark_Mage_Shadow_Bolt_Explosion_spr/Dark_Mage_Shadow_Bolt_Explosion_spr_5.png",
+      "width": 96,
+      "height": 95
+    },
+    {
+      "file": "shadow-impact-6.png",
+      "source": "Dark_Mage_Shadow_Bolt_Explosion_spr/Dark_Mage_Shadow_Bolt_Explosion_spr_6.png",
+      "width": 96,
+      "height": 95
+    },
+    {
+      "file": "shadow-impact-7.png",
+      "source": "Dark_Mage_Shadow_Bolt_Explosion_spr/Dark_Mage_Shadow_Bolt_Explosion_spr_7.png",
+      "width": 96,
+      "height": 95
+    },
+    {
+      "file": "shadow-impact-8.png",
+      "source": "Dark_Mage_Shadow_Bolt_Explosion_spr/Dark_Mage_Shadow_Bolt_Explosion_spr_8.png",
+      "width": 96,
+      "height": 95
+    }
+  ],
+  "ground-crack": [
+    {
+      "file": "ground-crack-0.png",
+      "source": "Universal_Shockwave_Effect_spr/Universal_Shockwave_Effect_spr_0.png",
+      "width": 72,
+      "height": 40
+    }
+  ],
+  "gear-staff-0": [
+    {
+      "file": "gear-staff-0-0.png",
+      "source": "Normal_Staff_Ancient_Staff_spr/Normal_Staff_Ancient_Staff_spr_0.png",
+      "width": 31,
+      "height": 130
+    }
+  ],
+  "gear-staff-1": [
+    {
+      "file": "gear-staff-1-0.png",
+      "source": "Normal_Staff_Arcane_Fork_spr/Normal_Staff_Arcane_Fork_spr_0.png",
+      "width": 31,
+      "height": 95
+    }
+  ],
+  "gear-staff-2": [
+    {
+      "file": "gear-staff-2-0.png",
+      "source": "Normal_Staff_Elder_Staff_spr/Normal_Staff_Elder_Staff_spr_0.png",
+      "width": 31,
+      "height": 130
+    }
+  ],
+  "gear-staff-3": [
+    {
+      "file": "gear-staff-3-0.png",
+      "source": "Normal_Staff_Gnarled_Staff_spr/Normal_Staff_Gnarled_Staff_spr_0.png",
+      "width": 31,
+      "height": 130
+    }
+  ],
+  "gear-staff-4": [
+    {
+      "file": "gear-staff-4-0.png",
+      "source": "Normal_Staff_Spectral_Tristaff_spr/Normal_Staff_Spectral_Tristaff_spr_0.png",
+      "width": 31,
+      "height": 95
+    }
+  ],
+  "gear-staff-5": [
+    {
+      "file": "gear-staff-5-0.png",
+      "source": "Normal_Staff_Stygian_Fork_spr/Normal_Staff_Stygian_Fork_spr_0.png",
+      "width": 31,
+      "height": 95
+    }
+  ],
+  "gear-sword-0": [
+    {
+      "file": "gear-sword-0-0.png",
+      "source": "Normal_Sword_Broad_Sword_spr/Normal_Sword_Broad_Sword_spr_0.png",
+      "width": 34,
+      "height": 34
+    }
+  ],
+  "gear-sword-1": [
+    {
+      "file": "gear-sword-1-0.png",
+      "source": "Normal_Sword_Claymore_spr/Normal_Sword_Claymore_spr_0.png",
+      "width": 25,
+      "height": 84
+    }
+  ],
+  "gear-sword-2": [
+    {
+      "file": "gear-sword-2-0.png",
+      "source": "Normal_Sword_Falchion_spr/Normal_Sword_Falchion_spr_0.png",
+      "width": 19,
+      "height": 92
+    }
+  ],
+  "gear-sword-3": [
+    {
+      "file": "gear-sword-3-0.png",
+      "source": "Normal_Sword_Flamberge_spr/Normal_Sword_Flamberge_spr_0.png",
+      "width": 25,
+      "height": 84
+    }
+  ],
+  "gear-sword-4": [
+    {
+      "file": "gear-sword-4-0.png",
+      "source": "Normal_Sword_Giant_Sword_spr/Normal_Sword_Giant_Sword_spr_0.png",
+      "width": 25,
+      "height": 84
+    }
+  ],
+  "gear-sword-5": [
+    {
+      "file": "gear-sword-5-0.png",
+      "source": "Normal_Sword_Katana_spr/Normal_Sword_Katana_spr_0.png",
+      "width": 21,
+      "height": 97
+    }
+  ],
+  "gear-bow-0": [
+    {
+      "file": "gear-bow-0-0.png",
+      "source": "Normal_Bow_Crossbow_spr/Normal_Bow_Crossbow_spr_0.png",
+      "width": 44,
+      "height": 44
+    }
+  ],
+  "gear-bow-1": [
+    {
+      "file": "gear-bow-1-0.png",
+      "source": "Normal_Bow_Long_Bow_spr/Normal_Bow_Long_Bow_spr_0.png",
+      "width": 48,
+      "height": 75
+    }
+  ],
+  "gear-bow-2": [
+    {
+      "file": "gear-bow-2-0.png",
+      "source": "Normal_Bow_Razor_Bow_spr/Normal_Bow_Razor_Bow_spr_0.png",
+      "width": 41,
+      "height": 52
+    }
+  ],
+  "gear-bow-3": [
+    {
+      "file": "gear-bow-3-0.png",
+      "source": "Normal_Bow_Short_War_Bow_spr/Normal_Bow_Short_War_Bow_spr_0.png",
+      "width": 37,
+      "height": 62
+    }
+  ],
+  "gear-helmet-0": [
+    {
+      "file": "gear-helmet-0-0.png",
+      "source": "Helmet_Normal_Basilisk_Skull_spr/Helmet_Normal_Basilisk_Skull_spr_0.png",
+      "width": 31,
+      "height": 44
+    }
+  ],
+  "gear-helmet-1": [
+    {
+      "file": "gear-helmet-1-0.png",
+      "source": "Helmet_Normal_Basinet_spr/Helmet_Normal_Basinet_spr_0.png",
+      "width": 24,
+      "height": 29
+    }
+  ],
+  "gear-helmet-2": [
+    {
+      "file": "gear-helmet-2-0.png",
+      "source": "Helmet_Normal_Cap_spr/Helmet_Normal_Cap_spr_0.png",
+      "width": 27,
+      "height": 41
+    }
+  ],
+  "gear-helmet-3": [
+    {
+      "file": "gear-helmet-3-0.png",
+      "source": "Helmet_Normal_Casque_spr/Helmet_Normal_Casque_spr_0.png",
+      "width": 31,
+      "height": 25
+    }
+  ],
+  "gear-helmet-4": [
+    {
+      "file": "gear-helmet-4-0.png",
+      "source": "Helmet_Normal_Geat_Helm_spr/Helmet_Normal_Geat_Helm_spr_0.png",
+      "width": 23,
+      "height": 29
+    }
+  ],
+  "gear-helmet-5": [
+    {
+      "file": "gear-helmet-5-0.png",
+      "source": "Helmet_Normal_Horned_Helm_spr/Helmet_Normal_Horned_Helm_spr_0.png",
+      "width": 35,
+      "height": 44
+    }
+  ],
+  "gear-boots-0": [
+    {
+      "file": "gear-boots-0-0.png",
+      "source": "Boots_Normal_Battle_Boots_spr/Boots_Normal_Battle_Boots_spr_0.png",
+      "width": 36,
+      "height": 39
+    }
+  ],
+  "gear-boots-1": [
+    {
+      "file": "gear-boots-1-0.png",
+      "source": "Boots_Normal_Boneweave_Boots_spr/Boots_Normal_Boneweave_Boots_spr_0.png",
+      "width": 33,
+      "height": 34
+    }
+  ],
+  "gear-boots-2": [
+    {
+      "file": "gear-boots-2-0.png",
+      "source": "Boots_Normal_Boots_spr/Boots_Normal_Boots_spr_0.png",
+      "width": 34,
+      "height": 32
+    }
+  ],
+  "gear-boots-3": [
+    {
+      "file": "gear-boots-3-0.png",
+      "source": "Boots_Normal_Chain_Boots_spr/Boots_Normal_Chain_Boots_spr_0.png",
+      "width": 33,
+      "height": 34
+    }
+  ],
+  "gear-boots-4": [
+    {
+      "file": "gear-boots-4-0.png",
+      "source": "Boots_Normal_Crusader_Marchers_spr/Boots_Normal_Crusader_Marchers_spr_0.png",
+      "width": 36,
+      "height": 39
+    }
+  ],
+  "gear-boots-5": [
+    {
+      "file": "gear-boots-5-0.png",
+      "source": "Boots_Normal_Demonplate_Boots_spr/Boots_Normal_Demonplate_Boots_spr_0.png",
+      "width": 36,
+      "height": 39
+    }
+  ],
+  "gear-gloves-0": [
+    {
+      "file": "gear-gloves-0-0.png",
+      "source": "Gloves_Normal_Archmage_Wraps_spr/Gloves_Normal_Archmage_Wraps_spr_0.png",
+      "width": 47,
+      "height": 36
+    }
+  ],
+  "gear-gloves-1": [
+    {
+      "file": "gear-gloves-1-0.png",
+      "source": "Gloves_Normal_Chain_Gloves_spr/Gloves_Normal_Chain_Gloves_spr_0.png",
+      "width": 38,
+      "height": 45
+    }
+  ],
+  "gear-gloves-2": [
+    {
+      "file": "gear-gloves-2-0.png",
+      "source": "Gloves_Normal_Demonbraces_spr/Gloves_Normal_Demonbraces_spr_0.png",
+      "width": 38,
+      "height": 45
+    }
+  ],
+  "gear-gloves-3": [
+    {
+      "file": "gear-gloves-3-0.png",
+      "source": "Gloves_Normal_Devilhide_Gloves_spr/Gloves_Normal_Devilhide_Gloves_spr_0.png",
+      "width": 47,
+      "height": 36
+    }
+  ],
+  "gear-gloves-4": [
+    {
+      "file": "gear-gloves-4-0.png",
+      "source": "Gloves_Normal_Gauntlets_spr/Gloves_Normal_Gauntlets_spr_0.png",
+      "width": 43,
+      "height": 41
+    }
+  ],
+  "gear-gloves-5": [
+    {
+      "file": "gear-gloves-5-0.png",
+      "source": "Gloves_Normal_Heavy_Braces_spr/Gloves_Normal_Heavy_Braces_spr_0.png",
+      "width": 38,
+      "height": 45
+    }
+  ],
+  "gear-ring-0": [
+    {
+      "file": "gear-ring-0-0.png",
+      "source": "Rings_Normal_Bronze_Ring_spr/Rings_Normal_Bronze_Ring_spr_0.png",
+      "width": 24,
+      "height": 24
+    }
+  ],
+  "gear-ring-1": [
+    {
+      "file": "gear-ring-1-0.png",
+      "source": "Rings_Normal_Golden_Ring_spr/Rings_Normal_Golden_Ring_spr_0.png",
+      "width": 25,
+      "height": 27
+    }
+  ],
+  "gear-ring-2": [
+    {
+      "file": "gear-ring-2-0.png",
+      "source": "Rings_Normal_Iron_Ring_spr/Rings_Normal_Iron_Ring_spr_0.png",
+      "width": 24,
+      "height": 25
+    }
+  ],
+  "gear-ring-3": [
+    {
+      "file": "gear-ring-3-0.png",
+      "source": "Rings_Normal_Primal_Ring_spr/Rings_Normal_Primal_Ring_spr_0.png",
+      "width": 24,
+      "height": 24
+    }
+  ],
+  "gear-ring-4": [
+    {
+      "file": "gear-ring-4-0.png",
+      "source": "Rings_Normal_Ring_spr/Rings_Normal_Ring_spr_0.png",
+      "width": 25,
+      "height": 27
+    }
+  ],
+  "gear-ring-5": [
+    {
+      "file": "gear-ring-5-0.png",
+      "source": "Rings_Normal_Socketed_Ring_spr/Rings_Normal_Socketed_Ring_spr_0.png",
+      "width": 24,
+      "height": 25
+    }
+  ],
+  "gear-amulet-0": [
+    {
+      "file": "gear-amulet-0-0.png",
+      "source": "Amulet_Normal_Elven_Necklace_spr/Amulet_Normal_Elven_Necklace_spr_0.png",
+      "width": 32,
+      "height": 32
+    }
+  ],
+  "gear-amulet-1": [
+    {
+      "file": "gear-amulet-1-0.png",
+      "source": "Amulet_Normal_Golden_Amulet_spr/Amulet_Normal_Golden_Amulet_spr_0.png",
+      "width": 32,
+      "height": 32
+    }
+  ],
+  "gear-amulet-2": [
+    {
+      "file": "gear-amulet-2-0.png",
+      "source": "Amulet_Normal_Hawks_Claw_Amulet_spr/Amulet_Normal_Hawks_Claw_Amulet_spr_0.png",
+      "width": 32,
+      "height": 32
+    }
+  ],
+  "gear-amulet-3": [
+    {
+      "file": "gear-amulet-3-0.png",
+      "source": "Amulet_Normal_Jade_Stone_spr/Amulet_Normal_Jade_Stone_spr_0.png",
+      "width": 28,
+      "height": 28
+    }
+  ],
+  "gear-amulet-4": [
+    {
+      "file": "gear-amulet-4-0.png",
+      "source": "Amulet_Normal_Silver_Necklace_spr/Amulet_Normal_Silver_Necklace_spr_0.png",
+      "width": 28,
+      "height": 28
+    }
+  ],
+  "gear-amulet-5": [
+    {
+      "file": "gear-amulet-5-0.png",
+      "source": "Amulet_Normal_Skull_Trophy_spr/Amulet_Normal_Skull_Trophy_spr_0.png",
+      "width": 28,
+      "height": 30
+    }
+  ],
+  "gear-belt-0": [
+    {
+      "file": "gear-belt-0-0.png",
+      "source": "Belts_Normal_Battle_Belt_spr/Belts_Normal_Battle_Belt_spr_0.png",
+      "width": 43,
+      "height": 41
+    }
+  ],
+  "gear-belt-1": [
+    {
+      "file": "gear-belt-1-0.png",
+      "source": "Belts_Normal_Devilhide_Sash_spr/Belts_Normal_Devilhide_Sash_spr_0.png",
+      "width": 43,
+      "height": 41
+    }
+  ],
+  "gear-belt-2": [
+    {
+      "file": "gear-belt-2-0.png",
+      "source": "Belts_Normal_Heavy_Belt_spr/Belts_Normal_Heavy_Belt_spr_0.png",
+      "width": 43,
+      "height": 41
+    }
+  ],
+  "gear-belt-3": [
+    {
+      "file": "gear-belt-3-0.png",
+      "source": "Belts_Normal_Leather_Belt_spr/Belts_Normal_Leather_Belt_spr_0.png",
+      "width": 43,
+      "height": 41
+    }
+  ],
+  "gear-belt-4": [
+    {
+      "file": "gear-belt-4-0.png",
+      "source": "Belts_Normal_Mithril_Coil_spr/Belts_Normal_Mithril_Coil_spr_0.png",
+      "width": 43,
+      "height": 41
+    }
+  ],
+  "gear-belt-5": [
+    {
+      "file": "gear-belt-5-0.png",
+      "source": "Belts_Normal_Sash_spr/Belts_Normal_Sash_spr_0.png",
+      "width": 43,
+      "height": 41
+    }
+  ],
+  "gear-shield-0": [
+    {
+      "file": "gear-shield-0-0.png",
+      "source": "Shields_Normal_Aegis_spr/Shields_Normal_Aegis_spr_0.png",
+      "width": 38,
+      "height": 64
+    }
+  ],
+  "gear-shield-1": [
+    {
+      "file": "gear-shield-1-0.png",
+      "source": "Shields_Normal_Bone_Shield_spr/Shields_Normal_Bone_Shield_spr_0.png",
+      "width": 58,
+      "height": 64
+    }
+  ],
+  "gear-shield-2": [
+    {
+      "file": "gear-shield-2-0.png",
+      "source": "Shields_Normal_Buckler_spr/Shields_Normal_Buckler_spr_0.png",
+      "width": 53,
+      "height": 53
+    }
+  ],
+  "gear-shield-3": [
+    {
+      "file": "gear-shield-3-0.png",
+      "source": "Shields_Normal_Kite_Shield_spr/Shields_Normal_Kite_Shield_spr_0.png",
+      "width": 39,
+      "height": 44
+    }
+  ],
+  "gear-shield-4": [
+    {
+      "file": "gear-shield-4-0.png",
+      "source": "Shields_Normal_Luna_spr/Shields_Normal_Luna_spr_0.png",
+      "width": 53,
+      "height": 53
+    }
+  ],
+  "gear-shield-5": [
+    {
+      "file": "gear-shield-5-0.png",
+      "source": "Shields_Normal_Monarch_spr/Shields_Normal_Monarch_spr_0.png",
+      "width": 39,
+      "height": 44
+    }
+  ],
+  "bounty-board": [
+    {
+      "file": "bounty-board-0.png",
+      "source": "Fall_Bounty_Board_spr/Fall_Bounty_Board_spr_0.png",
+      "width": 102,
+      "height": 86
+    },
+    {
+      "file": "bounty-board-1.png",
+      "source": "Fall_Bounty_Board_spr/Fall_Bounty_Board_spr_1.png",
+      "width": 102,
+      "height": 86
+    }
+  ],
+  "gear-armor-0": [
+    {
+      "file": "gear-armor-0-0.png",
+      "source": "Armor_Leather_Muscle_Breastplate_spr/Armor_Leather_Muscle_Breastplate_spr_0.png",
+      "width": 33,
+      "height": 36
+    }
+  ],
+  "gear-armor-1": [
+    {
+      "file": "gear-armor-1-0.png",
+      "source": "Armor_Arcane_Robes_of_Authority_spr/Armor_Arcane_Robes_of_Authority_spr_0.png",
+      "width": 44,
+      "height": 47
+    }
+  ],
+  "gear-armor-2": [
+    {
+      "file": "gear-armor-2-0.png",
+      "source": "Armor_Black_Knights_Carapace_spr/Armor_Black_Knights_Carapace_spr_0.png",
+      "width": 57,
+      "height": 73
+    }
+  ],
+  "gear-armor-3": [
+    {
+      "file": "gear-armor-3-0.png",
+      "source": "Armor_Captains_Attire_spr/Armor_Captains_Attire_spr_0.png",
+      "width": 59,
+      "height": 66
+    }
+  ],
+  "map-item": [
+    {
+      "file": "map-item-0.png",
+      "source": "Charms_Travelers_Map_Journal_spr/Charms_Travelers_Map_Journal_spr_0.png",
+      "width": 70,
+      "height": 70
+    }
+  ],
+  "merchant-cartographer": [
+    {
+      "file": "merchant-cartographer-0.png",
+      "source": "Isaac_NPC_spr/Isaac_NPC_spr_0.png",
+      "width": 51,
+      "height": 52
+    },
+    {
+      "file": "merchant-cartographer-1.png",
+      "source": "Isaac_NPC_spr/Isaac_NPC_spr_1.png",
+      "width": 51,
+      "height": 52
+    },
+    {
+      "file": "merchant-cartographer-2.png",
+      "source": "Isaac_NPC_spr/Isaac_NPC_spr_2.png",
+      "width": 51,
+      "height": 52
+    },
+    {
+      "file": "merchant-cartographer-3.png",
+      "source": "Isaac_NPC_spr/Isaac_NPC_spr_3.png",
+      "width": 51,
+      "height": 52
+    },
+    {
+      "file": "merchant-cartographer-4.png",
+      "source": "Isaac_NPC_spr/Isaac_NPC_spr_4.png",
+      "width": 51,
+      "height": 52
+    },
+    {
+      "file": "merchant-cartographer-5.png",
+      "source": "Isaac_NPC_spr/Isaac_NPC_spr_5.png",
+      "width": 51,
+      "height": 52
+    }
+  ],
+  "jewel-table": [
+    {
+      "file": "jewel-table-0.png",
+      "source": "Jewel_Crafting_Table_spr/Jewel_Crafting_Table_spr_0.png",
+      "width": 143,
+      "height": 91
+    }
+  ],
+  "work-table": [
+    {
+      "file": "work-table-0.png",
+      "source": "Cabin_Table_02_spr/Cabin_Table_02_spr_0.png",
+      "width": 81,
+      "height": 60
+    }
+  ],
+  "weapon-shelf": [
+    {
+      "file": "weapon-shelf-0.png",
+      "source": "Cabin_Weapon_Shelf_Left_spr/Cabin_Weapon_Shelf_Left_spr_0.png",
+      "width": 30,
+      "height": 161
+    },
+    {
+      "file": "weapon-shelf-1.png",
+      "source": "Cabin_Weapon_Shelf_Left_spr/Cabin_Weapon_Shelf_Left_spr_1.png",
+      "width": 30,
+      "height": 161
+    },
+    {
+      "file": "weapon-shelf-2.png",
+      "source": "Cabin_Weapon_Shelf_Left_spr/Cabin_Weapon_Shelf_Left_spr_2.png",
+      "width": 30,
+      "height": 161
+    }
+  ],
+  "clothesline": [
+    {
+      "file": "clothesline-0.png",
+      "source": "Helheim_Clothesline_spr/Helheim_Clothesline_spr_0.png",
+      "width": 117,
+      "height": 51
+    },
+    {
+      "file": "clothesline-1.png",
+      "source": "Helheim_Clothesline_spr/Helheim_Clothesline_spr_1.png",
+      "width": 117,
+      "height": 51
+    }
+  ],
+  "camp-cloth": [
+    {
+      "file": "camp-cloth-0.png",
+      "source": "Camp_Cloth_spr/Camp_Cloth_spr_0.png",
+      "width": 23,
+      "height": 33
+    },
+    {
+      "file": "camp-cloth-1.png",
+      "source": "Camp_Cloth_spr/Camp_Cloth_spr_1.png",
+      "width": 23,
+      "height": 33
+    },
+    {
+      "file": "camp-cloth-2.png",
+      "source": "Camp_Cloth_spr/Camp_Cloth_spr_2.png",
+      "width": 23,
+      "height": 33
+    },
+    {
+      "file": "camp-cloth-3.png",
+      "source": "Camp_Cloth_spr/Camp_Cloth_spr_3.png",
+      "width": 23,
+      "height": 33
+    },
+    {
+      "file": "camp-cloth-4.png",
+      "source": "Camp_Cloth_spr/Camp_Cloth_spr_4.png",
+      "width": 23,
+      "height": 33
+    },
+    {
+      "file": "camp-cloth-5.png",
+      "source": "Camp_Cloth_spr/Camp_Cloth_spr_5.png",
+      "width": 23,
+      "height": 33
+    },
+    {
+      "file": "camp-cloth-6.png",
+      "source": "Camp_Cloth_spr/Camp_Cloth_spr_6.png",
+      "width": 23,
+      "height": 33
+    }
+  ],
+  "camp-chair": [
+    {
+      "file": "camp-chair-0.png",
+      "source": "Cabin_Chair_01_spr/Cabin_Chair_01_spr_0.png",
+      "width": 19,
+      "height": 31
     }
   ]
 }
